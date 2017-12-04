@@ -11,6 +11,7 @@ How to access remote serial port on Ethernet device.
    assume 5 devices exists on network then usGetConnectedDeviceIP will return 5 and 
 
    char ip1st[256],ip2st[256],ip3st[256],ip4st[256],ip4st[256];
+
    usGetConnectedDeviceIP(0,ip1st); // First IP address), function returns 5 => (5 devices)
    usGetConnectedDeviceIP(1,ip1st); // Second IP address), function returns 5 => (5 devices)
    usGetConnectedDeviceIP(2,ip1st); // Third IP address), function returns 5 => (5 devices)
