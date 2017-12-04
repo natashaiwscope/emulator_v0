@@ -48,7 +48,7 @@ How to access remote serial port on Ethernet device.
    // uart_write(1,TEST_STRING,strlen(TEST_STRING);=> RS485 port
    // len== number of read bytes
 
-6. What is multiple devices are on network how to pick particular board.
+5. What if multiple devices are on network how to pick particular board.
 
    If multiple devices are connected on network then
    => usSelectDev(0); // Selects first device
@@ -59,18 +59,7 @@ How to access remote serial port on Ethernet device.
    now uart_write will write corresponding network devices.
 
     
-6. What is multiple devices are on network how to pick particular board.
-
-   If multiple devices are connected on network then
-   => usSelectDev(0); // Selects first device
-   => usSelectDev(2); // Selects second device
-
-   => usSelectDev(4); // Selects 5th device
-   
-   now uart_write will write corresponding network devices.
-
-    
-7. How to modify UART baud rate
+6. How to modify UART baud rate
 
    PREFIX int fun_uart_term(unsigned short uartNum, unsigned int uartBaud, unsigned int uartStop, unsigned int uartDataBits, unsigned int parity);
 
@@ -85,3 +74,5 @@ How to access remote serial port on Ethernet device.
         arrival of WM_CONSOLE1 windows message indicates data available on RS485 port.
         arrival of WM_CONSOLE2 windows message indicates data available on TTL UART2 port.
         arrival of WM_CONSOLE3 windows message indicates data available on TTL UART3 port.
+
+
