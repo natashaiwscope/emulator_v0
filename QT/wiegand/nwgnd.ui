@@ -287,7 +287,7 @@
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Uint Card&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="cardNumIntLineEdit">
+    <widget class="QLineEdit" name="int_cardNumLineEdit">
      <property name="geometry">
       <rect>
        <x>130</x>
@@ -322,7 +322,7 @@
       <string>RAW Scan</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="cardNumRAWLineEdit">
+    <widget class="QLineEdit" name="raw_cardNumLineEdit">
      <property name="geometry">
       <rect>
        <x>130</x>
@@ -357,7 +357,7 @@
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;RAW Card&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="wiegScanRAW_2">
+    <widget class="QPushButton" name="wiegScanBIN">
      <property name="geometry">
       <rect>
        <x>740</x>

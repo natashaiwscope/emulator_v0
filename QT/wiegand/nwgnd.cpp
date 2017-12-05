@@ -53,7 +53,9 @@ Nwgnd::Nwgnd(QWidget *parent) : QWidget(parent)
     connect(ui.startCScript, SIGNAL(clicked()),     this,     SLOT(run_C_Code()));
     connect(ui.startCSV,     SIGNAL(clicked()),     this,     SLOT(run_CSV()));
 
-    connect(ui.wiegScan, SIGNAL(clicked()),     this,     SLOT(scan_Wieg()));
+    connect(ui.wiegScan, SIGNAL(clicked()),     this,   SLOT(scan_Wieg()));
+    connect(ui.wiegScanRAW, SIGNAL(clicked()),  this,   SLOT(scan_WiegRAW()));
+    connect(ui.wiegScanBIN, SIGNAL(clicked()),  this,   SLOT(scan_WiegBIN()));
 
     sinRec = new RecordData();
 
@@ -125,6 +127,18 @@ void Nwgnd::run_C_Code()
 void Nwgnd::run_CSV()
 {
 
+}
+
+void Nwgnd::scan_WiegRAW()
+{
+    QString s=ui.raw_cardNumLineEdit->text();
+    ui.statusLineEdit->setText(s);
+}
+
+void Nwgnd::scan_WiegBIN()
+{
+    QString s=ui.int_cardNumLineEdit->text();
+    ui.statusLineEdit->setText(s);
 }
 
 void Nwgnd::scan_Wieg()

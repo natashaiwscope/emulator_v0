@@ -65,6 +65,8 @@ private Q_SLOTS:
     void run_C_Code();
     void run_CSV();
     void scan_Wieg();
+    void scan_WiegRAW();
+    void scan_WiegBIN();
 };
 
 #endif
