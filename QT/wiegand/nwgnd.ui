@@ -33,7 +33,7 @@
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TEST APPLICATION&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="status">
+  <widget class="QLineEdit" name="statusLineEdit">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -71,11 +71,11 @@
     <attribute name="title">
      <string>Tab 1</string>
     </attribute>
-    <widget class="QLineEdit" name="facCode_2">
+    <widget class="QLineEdit" name="facCodeLineEdit">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>90</y>
+       <x>130</x>
+       <y>140</y>
        <width>201</width>
        <height>41</height>
       </rect>
@@ -86,7 +86,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QLineEdit" name="csvFilePath">
+    <widget class="QLineEdit" name="csvFilePathLineEdit">
      <property name="geometry">
       <rect>
        <x>200</x>
@@ -101,11 +101,11 @@
       </font>
      </property>
     </widget>
-    <widget class="QLineEdit" name="cardNum_2">
+    <widget class="QLineEdit" name="cardNumLineEdit">
      <property name="geometry">
       <rect>
-       <x>350</x>
-       <y>90</y>
+       <x>340</x>
+       <y>140</y>
        <width>391</width>
        <height>41</height>
       </rect>
@@ -159,8 +159,8 @@
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>100</y>
+       <x>0</x>
+       <y>150</y>
        <width>131</width>
        <height>31</height>
       </rect>
@@ -179,8 +179,8 @@
     <widget class="QPushButton" name="wiegScan">
      <property name="geometry">
       <rect>
-       <x>750</x>
-       <y>90</y>
+       <x>740</x>
+       <y>140</y>
        <width>121</width>
        <height>41</height>
       </rect>
@@ -196,7 +196,7 @@
       <string>SCAN</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="cFilePath">
+    <widget class="QLineEdit" name="cFilePathLineEdit">
      <property name="geometry">
       <rect>
        <x>200</x>
@@ -270,8 +270,8 @@
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>30</y>
+       <x>0</x>
+       <y>80</y>
        <width>121</width>
        <height>31</height>
       </rect>
@@ -287,11 +287,11 @@
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Uint Card&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="cardNumInt">
+    <widget class="QLineEdit" name="cardNumIntLineEdit">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>30</y>
+       <x>130</x>
+       <y>80</y>
        <width>601</width>
        <height>41</height>
       </rect>
@@ -305,8 +305,8 @@
     <widget class="QPushButton" name="wiegScanRAW">
      <property name="geometry">
       <rect>
-       <x>750</x>
-       <y>150</y>
+       <x>740</x>
+       <y>200</y>
        <width>121</width>
        <height>41</height>
       </rect>
@@ -322,11 +322,11 @@
       <string>RAW Scan</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="cardNumRAW">
+    <widget class="QLineEdit" name="cardNumRAWLineEdit">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>150</y>
+       <x>130</x>
+       <y>200</y>
        <width>601</width>
        <height>41</height>
       </rect>
@@ -340,8 +340,8 @@
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>160</y>
+       <x>0</x>
+       <y>210</y>
        <width>121</width>
        <height>31</height>
       </rect>
@@ -360,8 +360,8 @@
     <widget class="QPushButton" name="wiegScanRAW_2">
      <property name="geometry">
       <rect>
-       <x>750</x>
-       <y>30</y>
+       <x>740</x>
+       <y>80</y>
        <width>121</width>
        <height>41</height>
       </rect>
@@ -375,6 +375,41 @@
      </property>
      <property name="text">
       <string>INTCardScan</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>10</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TIMEOUT&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="timeOUTLineEdit">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>10</y>
+       <width>201</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
      </property>
     </widget>
    </widget>

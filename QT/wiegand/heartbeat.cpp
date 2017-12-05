@@ -93,6 +93,8 @@ HeartBeat::HeartBeat(QWidget *parent)
     connect(d_reboot, SIGNAL(toggled(bool)), this, SLOT(slot_Reboot(bool)));
     connect(d_fwupdate, SIGNAL(toggled(bool)), this, SLOT(slot_FwUpdate(bool)));
 
+
+
 #ifdef LINUX_WAY
     RegisterWin(getpid());
 #else

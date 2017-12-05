@@ -37,8 +37,8 @@ Nwgnd::Nwgnd(QWidget *parent) : QWidget(parent)
     csvFileName = settings.value(CTRL_CSV_FILENAME, "carddata.csv").toString();
     cFileName   = settings.value(CTRL_C_FILENAME, "autoexec.c").toString();
 
-    ui.csvFilePath->setText(csvFileName);
-    ui.cFilePath->setText(cFileName);
+    ui.csvFilePathLineEdit->setText(csvFileName);
+    ui.cFilePathLineEdit->setText(cFileName);
 
     settings.sync();
 
@@ -73,7 +73,7 @@ void Nwgnd::browse_C_Code()
                 &selectedFilter,
                 options);
 
-    ui.cFilePath->setText(cFileName);
+    ui.cFilePathLineEdit->setText(cFileName);
     QSettings settings(CTRL_INI, QSettings::IniFormat);
     settings.setValue(CTRL_C_FILENAME, cFileName);
     settings.sync();
@@ -93,7 +93,7 @@ void Nwgnd::browse_CSV()
                   &selectedFilter,
                   options);
 
-    ui.csvFilePath->setText(csvFileName);
+    ui.csvFilePathLineEdit->setText(csvFileName);
     QSettings settings(CTRL_INI, QSettings::IniFormat);
     settings.setValue(CTRL_CSV_FILENAME, csvFileName);
     settings.sync();
@@ -150,7 +150,7 @@ void Nwgnd::wiegnStatusLine(unsigned char l1, char *line)
     QPalette palette;
     palette.setColor(QPalette::Base, enum2col(l1));
     palette.setColor(QPalette::Text, Qt::black);
-    ui.status->setPalette(palette);
+    ui.statusLineEdit->setPalette(palette);
 
-    ui.status->setText(line);
+    ui.statusLineEdit->setText(line);
 }
