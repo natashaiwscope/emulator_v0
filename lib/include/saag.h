@@ -401,8 +401,17 @@ typedef struct
 
     union
     {
+        unsigned int cardRaw;
+    };
+
+    union
+    {
         unsigned short cardBitsLen;
-        unsigned char  charNum[1024];
+        union
+        {
+            unsigned char  ucharNum[1024];
+            char  charNum[1024];
+        };
     };
 } __attribute__((__packed__)) WiegnedCard;
 

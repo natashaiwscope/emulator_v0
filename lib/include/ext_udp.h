@@ -293,11 +293,14 @@ PREFIX void fn_set_ssco(void *);
 
 PREFIX unsigned short usInitWiegCSVFile(char *filename);
 PREFIX unsigned char usReadRecord(unsigned long *fcCode, unsigned long *cnNum);
+
 PREFIX unsigned short usFetchOneCSVRecord();
 PREFIX unsigned short WiegScanCSVFetchedCard();
+PREFIX void fn_scan_raw(unsigned int cardNum);
 PREFIX unsigned short WiegScanCard(unsigned long facCode, unsigned long cardNum);
 PREFIX void WiegScanLED();
 PREFIX void fn_scan_wieg(unsigned long fcode, unsigned long cardNum);
+
 PREFIX void Q2C(QString temp, char *outstr);
 PREFIX unsigned short usWsHWEmulate();
 PREFIX unsigned short usWsHWEmulateCard(unsigned long i, unsigned long j);
