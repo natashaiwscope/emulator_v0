@@ -37,7 +37,7 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>450</y>
+     <y>490</y>
      <width>881</width>
      <height>41</height>
     </rect>
@@ -54,7 +54,7 @@
      <x>0</x>
      <y>50</y>
      <width>881</width>
-     <height>391</height>
+     <height>441</height>
     </rect>
    </property>
    <property name="font">
@@ -74,9 +74,9 @@
     <widget class="QLineEdit" name="facCode_2">
      <property name="geometry">
       <rect>
-       <x>190</x>
+       <x>140</x>
        <y>90</y>
-       <width>161</width>
+       <width>201</width>
        <height>41</height>
       </rect>
      </property>
@@ -89,8 +89,8 @@
     <widget class="QLineEdit" name="csvFilePath">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>160</y>
+       <x>200</x>
+       <y>310</y>
        <width>661</width>
        <height>41</height>
       </rect>
@@ -104,9 +104,9 @@
     <widget class="QLineEdit" name="cardNum_2">
      <property name="geometry">
       <rect>
-       <x>360</x>
+       <x>350</x>
        <y>90</y>
-       <width>161</width>
+       <width>391</width>
        <height>41</height>
       </rect>
      </property>
@@ -119,8 +119,8 @@
     <widget class="QPushButton" name="startCScript">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>290</y>
+       <x>10</x>
+       <y>360</y>
        <width>181</width>
        <height>41</height>
       </rect>
@@ -139,8 +139,8 @@
     <widget class="QPushButton" name="startCSV">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>220</y>
+       <x>450</x>
+       <y>260</y>
        <width>181</width>
        <height>41</height>
       </rect>
@@ -159,9 +159,9 @@
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>90</y>
-       <width>151</width>
+       <x>10</x>
+       <y>100</y>
+       <width>131</width>
        <height>31</height>
       </rect>
      </property>
@@ -176,30 +176,10 @@
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CARD Num&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QLabel" name="labelBrowse">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>160</y>
-       <width>171</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>15</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Browse CSV&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
     <widget class="QPushButton" name="wiegScan">
      <property name="geometry">
       <rect>
-       <x>530</x>
+       <x>750</x>
        <y>90</y>
        <width>121</width>
        <height>41</height>
@@ -219,8 +199,8 @@
     <widget class="QLineEdit" name="cFilePath">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>290</y>
+       <x>200</x>
+       <y>360</y>
        <width>661</width>
        <height>41</height>
       </rect>
@@ -250,9 +230,9 @@
     <widget class="QPushButton" name="browseCSVFile">
      <property name="geometry">
       <rect>
-       <x>730</x>
-       <y>110</y>
-       <width>121</width>
+       <x>10</x>
+       <y>310</y>
+       <width>181</width>
        <height>41</height>
       </rect>
      </property>
@@ -271,7 +251,7 @@
      <property name="geometry">
       <rect>
        <x>730</x>
-       <y>240</y>
+       <y>260</y>
        <width>121</width>
        <height>41</height>
       </rect>
@@ -285,6 +265,116 @@
      </property>
      <property name="text">
       <string>Browse &quot;C&quot;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Uint Card&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="cardNumInt">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>30</y>
+       <width>601</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="wiegScanRAW">
+     <property name="geometry">
+      <rect>
+       <x>750</x>
+       <y>150</y>
+       <width>121</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>RAW Scan</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="cardNumRAW">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>150</y>
+       <width>601</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;RAW Card&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="wiegScanRAW_2">
+     <property name="geometry">
+      <rect>
+       <x>750</x>
+       <y>30</y>
+       <width>121</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>INTCardScan</string>
      </property>
     </widget>
    </widget>
