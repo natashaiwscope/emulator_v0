@@ -371,6 +371,43 @@ typedef struct
     unsigned short led3Read;
 } __attribute__((__packed__)) WiegnedGPIO;
 
+enum
+{
+    WIEGAND_26=0,
+    WIEGAND_37=1,
+    WIEGAND_RAW=2,
+    WIEGAND_BIN=3,
+};
+
+typedef struct
+{
+    unsigned short cardFormat;
+
+    union
+    {
+        unsigned short facCode;
+        unsigned short cardNum16Bit;
+    };
+
+    union
+    {
+        unsigned int cardNum26Bit;
+    };
+
+    union
+    {
+        unsigned int cardNum37Bit;
+    };
+
+    union
+    {
+        unsigned short cardBitsLen;
+        unsigned char  charNum[1024];
+    };
+} __attribute__((__packed__)) WiegnedCard;
+
+
+
 typedef struct
 {
     unsigned short wieg_scanID;
