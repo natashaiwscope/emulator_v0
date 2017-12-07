@@ -133,12 +133,26 @@ void Nwgnd::scan_WiegRAW()
 {
     QString s=ui.raw_cardNumLineEdit->text();
     ui.statusLineEdit->setText(s);
+
+    //long hex = str.toLong(&ok, 16);     // hex == 255, ok == true
+    bool ok;
+   long dec = s.toLong(&ok, 10);
+   if(ok)
+   {
+    fn_scan_raw(dec);
+   }
 }
 
 void Nwgnd::scan_WiegBIN()
 {
     QString s=ui.int_cardNumLineEdit->text();
     ui.statusLineEdit->setText(s);
+    bool ok;
+   long dec = s.toLong(&ok, 10);
+   if(ok)
+   {
+    fn_scan_raw(dec);
+   }
 }
 
 void Nwgnd::scan_Wieg()

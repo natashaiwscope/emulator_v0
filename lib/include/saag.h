@@ -404,13 +404,18 @@ typedef struct
         unsigned int cardRaw;
     };
 
+    unsigned int cardAccessGranted;
+    unsigned int Processing_TIME;
+    unsigned int RED_LED_TransitionCount;
+    unsigned int GRN_LED_TransitionCount;
+
     union
     {
         unsigned short cardBitsLen;
         union
         {
-            unsigned char  ucharNum[1024];
-            char  charNum[1024];
+            unsigned char  ucharNum[512];
+            char  charNum[512];
         };
     };
 } __attribute__((__packed__)) WiegnedCard;
