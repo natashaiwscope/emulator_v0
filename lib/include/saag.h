@@ -379,6 +379,13 @@ enum
     WIEGAND_BIN=3,
 };
 
+enum
+{
+    WIEGAND_GRANTED=2,
+    WIEGAND_DENIED=3,
+    WIEGAND_TIMEOUT=4
+};
+
 typedef struct
 {
     unsigned short cardFormat;

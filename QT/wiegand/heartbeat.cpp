@@ -737,6 +737,11 @@ void HeartBeat::commonMsgHandle(void)
         case WM_SCRIPT_TAB:
             tabWidget->setCurrentIndex(3);
             break;
+
+        case WM_WIEGAND_RESULT:
+
+            break;
+
         case WM_WIEGAND:
             //DEBUG_LINE_OPTION;
             switch (wPar)

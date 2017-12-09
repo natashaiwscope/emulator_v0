@@ -31,7 +31,9 @@ Nwgnd::Nwgnd(QWidget *parent) : QWidget(parent)
     ui.setupUi(this);
     mindex = 0;
 
-    ui.connLED->setStyleSheet("background: red");
+    ui.connLED->setStyleSheet("background: gray");
+    ui.grnLED->setStyleSheet("background: green");
+    ui.redLED->setStyleSheet("background: red");
 
     QSettings settings(CTRL_INI, QSettings::IniFormat);
     csvFileName = settings.value(CTRL_CSV_FILENAME, "carddata.csv").toString();
