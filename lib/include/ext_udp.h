@@ -114,13 +114,14 @@
 #define WM_CHANGE_TAB         (WM_USER_MSG+76)
 #define WM_RESP_GOT         (WM_USER_MSG+77)
 #define WM_WIEGAND           (WM_USER_MSG+78)
-#define WM_DISCONNECT         (WM_USER_MSG+79)
-#define WM_CONSOLE         (WM_USER_MSG+80)
-#define WM_CONSOLE1         (WM_USER_MSG+81)
-#define WM_CONSOLE2         (WM_USER_MSG+82)
-#define WM_CONSOLE3         (WM_USER_MSG+83)
-#define WM_USART            (WM_USER_MSG+84)
-#define WM_REBOOT           (WM_USER_MSG+85)
+#define WM_WIEGAND_RESULT    (WM_USER_MSG+79)
+#define WM_DISCONNECT         (WM_USER_MSG+80)
+#define WM_CONSOLE         (WM_USER_MSG+81)
+#define WM_CONSOLE1         (WM_USER_MSG+82)
+#define WM_CONSOLE2         (WM_USER_MSG+83)
+#define WM_CONSOLE3         (WM_USER_MSG+84)
+#define WM_USART            (WM_USER_MSG+85)
+#define WM_REBOOT           (WM_USER_MSG+86)
 
 
 typedef void (*callback_alarm)(int, int);

@@ -412,6 +412,7 @@ typedef struct
     };
 
     unsigned int cardAccessGranted;
+    unsigned int cardScanDone;
     unsigned int Processing_TIME;
     unsigned int RED_LED_TransitionCount;
     unsigned int GRN_LED_TransitionCount;
