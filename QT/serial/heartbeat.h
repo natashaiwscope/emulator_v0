@@ -61,6 +61,8 @@ public:
     Console     *cConsole3;
     Console     *cConsole2;
     Console     *cConsole1;
+    QMutex      ipMutex;
+    bool        boolSelectReady;
 
     Ui::HeartBeat      *ui;
     Ui::SettingsDialog *settingsUi;
