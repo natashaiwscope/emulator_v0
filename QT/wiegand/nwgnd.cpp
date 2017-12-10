@@ -134,11 +134,15 @@ void Nwgnd::run_CSV()
 
 void Nwgnd::slot_WIEG_RESULT()
 {
+    char buff[128];
     getWiegCSVResult(&w);
 
     qDebug() << "Card Num = " << w.cardRaw << "\n";
     qDebug() << "Access Status = " << w.cardAccessGranted << "\n";
     qDebug() << "Access Time = " << w.Processing_TIME << "\n";
+
+    sprintf(buff,"%d",w.Processing_TIME);
+    ui.timeOUTLineEdit->setText(buff);
 
     if(w.cardAccessGranted==WIEGAND_GRANTED)
     {

@@ -422,7 +422,7 @@
       <rect>
        <x>570</x>
        <y>10</y>
-       <width>81</width>
+       <width>121</width>
        <height>31</height>
       </rect>
      </property>
@@ -440,9 +440,9 @@
     <widget class="QLineEdit" name="timeOUTLineEdit">
      <property name="geometry">
       <rect>
-       <x>660</x>
+       <x>700</x>
        <y>10</y>
-       <width>201</width>
+       <width>161</width>
        <height>41</height>
       </rect>
      </property>

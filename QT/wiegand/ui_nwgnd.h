@@ -190,7 +190,7 @@ public:
         grnLED->setFrameShadow(QFrame::Plain);
         timeoutLED = new QLabel(tab_3);
         timeoutLED->setObjectName(QString::fromUtf8("timeoutLED"));
-        timeoutLED->setGeometry(QRect(520, 10, 30, 30));
+        timeoutLED->setGeometry(QRect(510, 10, 40, 30));
         QPalette palette3;
         palette3.setBrush(QPalette::Active, QPalette::ButtonText, brush);
         palette3.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
