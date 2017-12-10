@@ -61,8 +61,6 @@ HeartBeat::HeartBeat(QWidget *parent): settingsUi(new Ui::SettingsDialog)
 
     settingsUi->setupUi(&settingsDialog);
 
-    boolSelectReady=false;
-
 #ifdef LINUX_WAY
     ext_msgPump = new ExternSig();
 #endif
@@ -585,7 +583,6 @@ void HeartBeat::FoundDataLoggerHWString(QString s)
     {
         oscope_ip->addItem(s);
         connLED->setStyleSheet("background: lightGreen");
-        boolSelectReady=true;
     }
 
 }
@@ -842,9 +839,11 @@ void HeartBeat::slot_FormatSDCard()
 
 void HeartBeat::selectNewIPDevice(int index)
 {
-    if(boolSelectReady)
+    if(oscope_ip->count())
     {
-        usSelectDev(index);
+        usSelectDevIndex(index);
+        //qDebug() << "selected index=" << index << "\r\n";
+        //fflush(stdout);
     }
 }
 

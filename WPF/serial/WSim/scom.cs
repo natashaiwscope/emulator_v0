@@ -125,7 +125,7 @@ namespace slib
         [DllImport("udp.dll", EntryPoint = "GetVersionInfo", CallingConvention = CallingConvention.StdCall)]
         public static extern Int32 GetVersionInfo(char[] versionInfo);
 
-        [DllImport("udp.dll", EntryPoint = "usSelectDev", CallingConvention = CallingConvention.StdCall)]
+        [DllImport("udp.dll", EntryPoint = "usSelectDevIndex", CallingConvention = CallingConvention.StdCall)]
         public static extern Int32 usSelectDev(Int32 i);
 
         [DllImport("udp.dll", EntryPoint = "start_lib_interface_task", CallingConvention = CallingConvention.StdCall)]

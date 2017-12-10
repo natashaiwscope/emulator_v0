@@ -841,7 +841,10 @@ void HeartBeat::slot_FormatSDCard()
 
 void HeartBeat::selectNewIPDevice(int index)
 {
-    //usSelectDev(index);
+    if(oscope_ip->count())
+    {
+        usSelectDevIndex(index);
+    }
 }
 
 void HeartBeat::slot_FwUpdate(bool x)
