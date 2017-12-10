@@ -21,6 +21,7 @@
 
 #include "csql_db.h"
 #include "ui_nwgnd.h"
+#include "saag.h"
 
 QT_BEGIN_NAMESPACE
 class WheelBox;
