@@ -455,7 +455,7 @@
     <widget class="QLabel" name="redLED">
      <property name="geometry">
       <rect>
-       <x>490</x>
+       <x>470</x>
        <y>10</y>
        <width>10</width>
        <height>30</height>
@@ -511,7 +511,7 @@
     <widget class="QLabel" name="grnLED">
      <property name="geometry">
       <rect>
-       <x>510</x>
+       <x>490</x>
        <y>10</y>
        <width>10</width>
        <height>30</height>
@@ -567,9 +567,9 @@
     <widget class="QLabel" name="timeoutLED">
      <property name="geometry">
       <rect>
-       <x>540</x>
+       <x>510</x>
        <y>10</y>
-       <width>10</width>
+       <width>40</width>
        <height>30</height>
       </rect>
      </property>

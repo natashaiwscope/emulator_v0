@@ -170,7 +170,7 @@ public:
         timeOUTLineEdit->setFont(font1);
         redLED = new QLabel(tab_3);
         redLED->setObjectName(QString::fromUtf8("redLED"));
-        redLED->setGeometry(QRect(490, 10, 10, 30));
+        redLED->setGeometry(QRect(470, 10, 10, 30));
         QPalette palette1;
         palette1.setBrush(QPalette::Active, QPalette::ButtonText, brush);
         palette1.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
@@ -180,7 +180,7 @@ public:
         redLED->setFrameShadow(QFrame::Plain);
         grnLED = new QLabel(tab_3);
         grnLED->setObjectName(QString::fromUtf8("grnLED"));
-        grnLED->setGeometry(QRect(510, 10, 10, 30));
+        grnLED->setGeometry(QRect(490, 10, 10, 30));
         QPalette palette2;
         palette2.setBrush(QPalette::Active, QPalette::ButtonText, brush);
         palette2.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
@@ -190,7 +190,7 @@ public:
         grnLED->setFrameShadow(QFrame::Plain);
         timeoutLED = new QLabel(tab_3);
         timeoutLED->setObjectName(QString::fromUtf8("timeoutLED"));
-        timeoutLED->setGeometry(QRect(540, 10, 10, 30));
+        timeoutLED->setGeometry(QRect(520, 10, 30, 30));
         QPalette palette3;
         palette3.setBrush(QPalette::Active, QPalette::ButtonText, brush);
         palette3.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
