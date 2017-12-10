@@ -731,6 +731,7 @@ void HeartBeat::commonMsgHandle(void)
             }
             break;
 
+
         case WM_PLUGIN_TAB:
             tabWidget->setCurrentIndex(2);
             break;
