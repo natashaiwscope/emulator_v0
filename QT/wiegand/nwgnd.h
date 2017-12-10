@@ -40,6 +40,7 @@ public:
     ~Nwgnd();
     Ui::Nwgnd   ui;
     void fn_LedMsg(int wPar, int lPar, int fVal);
+    WiegnedCard w;
 
 private:
     RecordData *sinRec;
