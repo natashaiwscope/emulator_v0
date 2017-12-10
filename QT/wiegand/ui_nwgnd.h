@@ -50,6 +50,7 @@ public:
     QLineEdit *timeOUTLineEdit;
     QLabel *redLED;
     QLabel *grnLED;
+    QLabel *timeoutLED;
     QWidget *tab_4;
 
     void setupUi(QWidget *Nwgnd)
@@ -187,6 +188,16 @@ public:
         grnLED->setPalette(palette2);
         grnLED->setAutoFillBackground(true);
         grnLED->setFrameShadow(QFrame::Plain);
+        timeoutLED = new QLabel(tab_3);
+        timeoutLED->setObjectName(QString::fromUtf8("timeoutLED"));
+        timeoutLED->setGeometry(QRect(540, 10, 10, 30));
+        QPalette palette3;
+        palette3.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette3.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette3.setBrush(QPalette::Disabled, QPalette::ButtonText, brush1);
+        timeoutLED->setPalette(palette3);
+        timeoutLED->setAutoFillBackground(true);
+        timeoutLED->setFrameShadow(QFrame::Plain);
         tabWidget->addTab(tab_3, QString());
         tab_4 = new QWidget();
         tab_4->setObjectName(QString::fromUtf8("tab_4"));
@@ -218,6 +229,7 @@ public:
         label_7->setText(QApplication::translate("Nwgnd", "<html><head/><body><p>TIMEOUT</p></body></html>", 0, QApplication::UnicodeUTF8));
         redLED->setText(QString());
         grnLED->setText(QString());
+        timeoutLED->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("Nwgnd", "Tab 1", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("Nwgnd", "Tab 2", 0, QApplication::UnicodeUTF8));
     } // retranslateUi

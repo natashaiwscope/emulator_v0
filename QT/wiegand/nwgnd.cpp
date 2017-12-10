@@ -32,8 +32,9 @@ Nwgnd::Nwgnd(QWidget *parent) : QWidget(parent)
     mindex = 0;
 
     ui.connLED->setStyleSheet("background: gray");
-    ui.grnLED->setStyleSheet("background: green");
-    ui.redLED->setStyleSheet("background: red");
+    ui.grnLED->setStyleSheet("background: gray");
+    ui.redLED->setStyleSheet("background: gray");
+    ui.timeoutLED->setStyleSheet("background: gray");
 
     QSettings settings(CTRL_INI, QSettings::IniFormat);
     csvFileName = settings.value(CTRL_CSV_FILENAME, "carddata.csv").toString();
@@ -139,6 +140,19 @@ void Nwgnd::slot_WIEG_RESULT()
     qDebug() << "Access Status = " << w.cardAccessGranted << "\n";
     qDebug() << "Access Time = " << w.Processing_TIME << "\n";
 
+    if(w.cardAccessGranted==WIEGAND_GRANTED)
+    {
+        ui.grnLED->setStyleSheet("background: green");
+    }
+    else if(w.cardAccessGranted==WIEGAND_DENIED)
+    {
+        ui.redLED->setStyleSheet("background: red");
+    }
+    else if(w.cardAccessGranted==WIEGAND_TIMEOUT)
+    {
+        ui.timeoutLED->setStyleSheet("background: yellow");
+    }
+
     qDebug() << __FUNCTION__ << "\r\n";
     fflush(stdout);
 }
@@ -153,6 +167,9 @@ void Nwgnd::scan_WiegRAW()
    long dec = s.toLong(&ok, 10);
    if(ok)
    {
+    ui.grnLED->setStyleSheet("background: gray");
+    ui.redLED->setStyleSheet("background: gray");
+    ui.timeoutLED->setStyleSheet("background: gray");
     fn_scan_raw(dec);
    }
 }
@@ -165,6 +182,9 @@ void Nwgnd::scan_WiegBIN()
    long dec = s.toLong(&ok, 10);
    if(ok)
    {
+    ui.grnLED->setStyleSheet("background: gray");
+    ui.redLED->setStyleSheet("background: gray");
+    ui.timeoutLED->setStyleSheet("background: gray");
     fn_scan_raw(dec);
    }
 }
