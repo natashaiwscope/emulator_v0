@@ -48,6 +48,8 @@ public:
     QPushButton *wiegScanBIN;
     QLabel *label_7;
     QLineEdit *timeOUTLineEdit;
+    QLabel *redLED;
+    QLabel *grnLED;
     QWidget *tab_4;
 
     void setupUi(QWidget *Nwgnd)
@@ -114,7 +116,17 @@ public:
         connLED = new QLabel(tab_3);
         connLED->setObjectName(QString::fromUtf8("connLED"));
         connLED->setGeometry(QRect(0, 10, 10, 30));
+        QPalette palette;
+        QBrush brush(QColor(13, 12, 54, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        QBrush brush1(QColor(141, 144, 145, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Disabled, QPalette::ButtonText, brush1);
+        connLED->setPalette(palette);
         connLED->setAutoFillBackground(true);
+        connLED->setFrameShadow(QFrame::Plain);
         browseCSVFile = new QPushButton(tab_3);
         browseCSVFile->setObjectName(QString::fromUtf8("browseCSVFile"));
         browseCSVFile->setGeometry(QRect(10, 310, 181, 41));
@@ -149,12 +161,32 @@ public:
         wiegScanBIN->setFont(font2);
         label_7 = new QLabel(tab_3);
         label_7->setObjectName(QString::fromUtf8("label_7"));
-        label_7->setGeometry(QRect(540, 10, 111, 31));
+        label_7->setGeometry(QRect(570, 10, 81, 31));
         label_7->setFont(font);
         timeOUTLineEdit = new QLineEdit(tab_3);
         timeOUTLineEdit->setObjectName(QString::fromUtf8("timeOUTLineEdit"));
         timeOUTLineEdit->setGeometry(QRect(660, 10, 201, 41));
         timeOUTLineEdit->setFont(font1);
+        redLED = new QLabel(tab_3);
+        redLED->setObjectName(QString::fromUtf8("redLED"));
+        redLED->setGeometry(QRect(520, 10, 10, 30));
+        QPalette palette1;
+        palette1.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette1.setBrush(QPalette::Disabled, QPalette::ButtonText, brush1);
+        redLED->setPalette(palette1);
+        redLED->setAutoFillBackground(true);
+        redLED->setFrameShadow(QFrame::Plain);
+        grnLED = new QLabel(tab_3);
+        grnLED->setObjectName(QString::fromUtf8("grnLED"));
+        grnLED->setGeometry(QRect(540, 10, 10, 30));
+        QPalette palette2;
+        palette2.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::ButtonText, brush1);
+        grnLED->setPalette(palette2);
+        grnLED->setAutoFillBackground(true);
+        grnLED->setFrameShadow(QFrame::Plain);
         tabWidget->addTab(tab_3, QString());
         tab_4 = new QWidget();
         tab_4->setObjectName(QString::fromUtf8("tab_4"));
@@ -184,6 +216,8 @@ public:
         label_6->setText(QApplication::translate("Nwgnd", "<html><head/><body><p>RAW Card</p></body></html>", 0, QApplication::UnicodeUTF8));
         wiegScanBIN->setText(QApplication::translate("Nwgnd", "INTCardScan", 0, QApplication::UnicodeUTF8));
         label_7->setText(QApplication::translate("Nwgnd", "<html><head/><body><p>TIMEOUT</p></body></html>", 0, QApplication::UnicodeUTF8));
+        redLED->setText(QString());
+        grnLED->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("Nwgnd", "Tab 1", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("Nwgnd", "Tab 2", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
