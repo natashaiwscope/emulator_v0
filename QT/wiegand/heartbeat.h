@@ -187,6 +187,7 @@ signals:
     void sig_script_run();
     void do_plot();
 
+    void sig_WIEG_RESULT();
     void sig_CSCRIPT_SCOPE(int);
     void sig_CSCRIPT_SIGNAL(int);
     void sig_CSCRIPT_GPIO(int);

@@ -67,6 +67,8 @@ private Q_SLOTS:
     void scan_Wieg();
     void scan_WiegRAW();
     void scan_WiegBIN();
+public Q_SLOTS:
+    void slot_WIEG_RESULT();
 };
 
 #endif

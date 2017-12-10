@@ -131,6 +131,12 @@ void Nwgnd::run_CSV()
 
 }
 
+void Nwgnd::slot_WIEG_RESULT()
+{
+    qDebug() << __FUNCTION__ << "\r\n";
+    fflush(stdout);
+}
+
 void Nwgnd::scan_WiegRAW()
 {
     QString s=ui.raw_cardNumLineEdit->text();
