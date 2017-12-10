@@ -315,6 +315,7 @@ PREFIX unsigned short WiegAppStatus(char *status);
 PREFIX unsigned short WiegAppPrevLED(unsigned short led1, unsigned short led2, unsigned short led3);
 PREFIX unsigned short WiegAppCurrLED(unsigned short led1, unsigned short led2, unsigned short led3);
 PREFIX unsigned short WiegAppendCSVScan();
+PREFIX void getWiegCSVResult(void *w);
 
 PREFIX void WiegSetPLED(unsigned char led1, unsigned char led2, unsigned char led3);
 PREFIX void WiegSetCLED(unsigned char led1, unsigned char led2, unsigned char led3);
