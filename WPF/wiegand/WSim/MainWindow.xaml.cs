@@ -47,6 +47,10 @@ namespace WSim
             {
                 //i++;
             }
+            else if (msg == slib.scom.WM_WIEGAND_RESULT)
+            {
+            
+            }
             return IntPtr.Zero;
         }
 

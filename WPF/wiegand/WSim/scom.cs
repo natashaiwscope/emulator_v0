@@ -93,12 +93,14 @@ namespace slib
         public const  Int32 WM_CHANGE_TAB = (0x400 + 76);
         public const  Int32 WM_RESP_GOT = (0x400 + 77);
         public const  Int32 WM_WIEGAND = (0x400 + 78);
-        public const  Int32 WM_DISCONNECT = (0x400 + 79);
-        public const  Int32 WM_CONSOLE = (0x400 + 80);
-        public const  Int32 WM_CONSOLE1 = (0x400 + 81);
-        public const  Int32 WM_CONSOLE2 = (0x400 + 82);
-        public const  Int32 WM_CONSOLE3 = (0x400 + 83);
-        public const  Int32 WM_USART = (0x400 + 84);
+        public const  Int32 WM_WIEGAND_RESULT= (0x400 + 79);
+        public const  Int32 WM_DISCONNECT= (0x400 + 80);
+        public const  Int32 WM_CONSOLE = (0x400 + 81);
+        public const  Int32 WM_CONSOLE1 = (0x400 + 82);
+        public const  Int32 WM_CONSOLE2 = (0x400 + 83);
+        public const  Int32 WM_CONSOLE3 = (0x400 + 84);
+        public const  Int32 WM_USART = (0x400 + 85);
+        public const  Int32 WM_REBOOT = (0x400 + 86);
         public const  Int32 WM_REGISTERED = (0x400 + 90);
 
         [DllImport("udp.dll", EntryPoint = "heartbeat_1ms", CallingConvention = CallingConvention.StdCall)]
