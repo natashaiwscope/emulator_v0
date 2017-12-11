@@ -133,6 +133,11 @@ namespace slib
         [DllImport("udp.dll", EntryPoint = "weigResult", CallingConvention = CallingConvention.StdCall)]
         public static extern Int32 weigResult(Int32 i);
 
+
+        [DllImport("udp.dll", EntryPoint = "fn_scan_raw", CallingConvention = CallingConvention.StdCall)]
+        public static extern Int32 fn_scan_raw(Int32 i);
+
+
         [DllImport("udp.dll", EntryPoint = "start_lib_interface_task", CallingConvention = CallingConvention.StdCall)]
         public static extern Int16 start_lib_interface_task();
 
