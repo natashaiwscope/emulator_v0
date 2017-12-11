@@ -1,0 +1,15 @@
+INPUT(
+./debug/csql_db.o
+./debug/main.o
+./debug/heartbeat.o
+./debug/console.o
+./debug/led.o
+./debug/codeeditor.o
+./debug/highlighter.o
+./debug/moc_heartbeat.o
+./debug/moc_console.o
+./debug/moc_led.o
+./debug/moc_codeeditor.o
+./debug/moc_highlighter.o
+./debug/qrc_communicator.o
+);
