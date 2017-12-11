@@ -146,5 +146,10 @@ namespace WSim
             this.statusLine.Text = "FacCode" + int.Parse(this.facCode.Text) + "CardNum" + int.Parse(this.cardNum.Text);
              
         }
+
+        private void scanSingleRaw_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
