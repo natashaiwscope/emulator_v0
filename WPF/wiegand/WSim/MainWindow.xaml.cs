@@ -55,15 +55,15 @@ namespace WSim
 
                 if(access==2)
                 {
-                    this.redLED.Background = Brushes.LimeGreen;
+                    this.greenLED.Background = Brushes.LimeGreen;
                 }
                 else if(access==3)
                 {
-                    this.greenLED.Background = Brushes.LimeGreen;
+                    this.redLED.Background = Brushes.LimeGreen;
                 }
                 else if(access==4)
                 {
-                    this.timeoutLED.Background = Brushes.LimeGreen;
+                    this.timeoutLED.Background = Brushes.Yellow;
                 }
 
                     this.time.Text = "" + ptime;
@@ -168,6 +168,9 @@ namespace WSim
 
         private void scanSingleRaw_Click(object sender, RoutedEventArgs e)
         {
+                    this.redLED.Background = Brushes.Gray;
+                    this.timeoutLED.Background = Brushes.Gray;
+                    this.greenLED.Background = Brushes.Gray;
             slib.scom.fn_scan_raw(int.Parse(this.cardNumRAW.Text));
         }
     }
