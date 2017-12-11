@@ -1,0 +1,15 @@
+INPUT(
+./release/nwgnd.o
+./release/csql_db.o
+./release/main.o
+./release/heartbeat.o
+./release/led.o
+./release/codeeditor.o
+./release/highlighter.o
+./release/moc_nwgnd.o
+./release/moc_heartbeat.o
+./release/moc_led.o
+./release/moc_codeeditor.o
+./release/moc_highlighter.o
+./release/qrc_communicator.o
+);

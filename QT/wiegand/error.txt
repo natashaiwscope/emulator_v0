@@ -1,0 +1,362 @@
+In file included from heartbeat.cpp:13:0:
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+ "...................."};
+                       ^
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/run.xpm:26:23: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+In file included from heartbeat.cpp:16:0:
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+ };
+ ^
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_red.xpm:75:1: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+In file included from heartbeat.cpp:17:0:
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+ "           .................................      "};
+                                                     ^
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_grn.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+In file included from heartbeat.cpp:18:0:
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+ "           .................................      "};
+                                                     ^
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+images/script_yel.xpm:70:53: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+In file included from heartbeat.h:15:0,
+                 from heartbeat.cpp:39:
+shared_struct.h:215:53: warning: 'packed' attribute ignored [-Wattributes]
+ } IW_CDATE_CTIME __attribute__ ((aligned(4), packed));
+                                                     ^
+shared_struct.h:228:55: warning: 'packed' attribute ignored [-Wattributes]
+ } IW_TEMP_HUMIDITY __attribute__ ((aligned(4), packed));
+                                                       ^
+shared_struct.h:260:50: warning: 'packed' attribute ignored [-Wattributes]
+ } iUARTStruct __attribute__ ((aligned(4), packed));
+                                                  ^
+shared_struct.h:278:59: warning: 'packed' attribute ignored [-Wattributes]
+ } iNFileExchangeStruct __attribute__ ((aligned(4), packed));
+                                                           ^
+shared_struct.h:295:56: warning: 'packed' attribute ignored [-Wattributes]
+ } io_ADC_DAC_Exchng __attribute__ ((aligned(4), packed));
+                                                        ^
+shared_struct.h:311:58: warning: 'packed' attribute ignored [-Wattributes]
+ } ioDualUARTLogStruct __attribute__ ((aligned(4), packed));
+                                                          ^
+shared_struct.h:327:58: warning: 'packed' attribute ignored [-Wattributes]
+ } ioMonoUARTLogStruct __attribute__ ((aligned(4), packed));
+                                                          ^
+shared_struct.h:348:59: warning: 'packed' attribute ignored [-Wattributes]
+ } ioFileExchangeStruct __attribute__ ((aligned(4), packed));
+                                                           ^
+shared_struct.h:385:58: warning: 'packed' attribute ignored [-Wattributes]
+ } ioTxtGrpthExchStrct __attribute__ ((aligned(4), packed));
+                                                          ^
+shared_struct.h:420:54: warning: 'packed' attribute ignored [-Wattributes]
+ } ioExchangeUnion __attribute__ ((aligned(4), packed));
+                                                      ^
+heartbeat.cpp:49:1: warning: unused parameter 'parent' [-Wunused-parameter]
+ HeartBeat::HeartBeat(QWidget *parent)
+ ^
+heartbeat.cpp: In member function 'void HeartBeat::CheckDeviceSlot()':
+heartbeat.cpp:111:16: warning: unused variable 'i' [-Wunused-variable]
+     static int i = 0;
+                ^
+heartbeat.cpp:112:16: warning: unused variable 'direction' [-Wunused-variable]
+     static int direction = 0;
+                ^
+heartbeat.cpp: At global scope:
+heartbeat.cpp:142:6: warning: unused parameter 'x' [-Wunused-parameter]
+ void HeartBeat::slot_Show_Script(bool x)
+      ^
+heartbeat.cpp: In member function 'void HeartBeat::slot_Run_Script_In_PC(bool)':
+heartbeat.cpp:154:26: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+     RunCFile("autoexec.c");
+                          ^
+heartbeat.cpp: At global scope:
+heartbeat.cpp:152:6: warning: unused parameter 'x' [-Wunused-parameter]
+ void HeartBeat::slot_Run_Script_In_PC(bool x)
+      ^
+heartbeat.cpp:157:6: warning: unused parameter 'x' [-Wunused-parameter]
+ void HeartBeat::slot_Reboot(bool x)
+      ^
+heartbeat.cpp:162:6: warning: unused parameter 'x' [-Wunused-parameter]
+ void HeartBeat::slot_Edit_OR_PUSH_INI(bool x)
+      ^
+heartbeat.cpp:180:6: warning: unused parameter 'x' [-Wunused-parameter]
+ void HeartBeat::slot_Edit_OR_PUSH_C_Script(bool x)
+      ^
+heartbeat.cpp: In member function 'void HeartBeat::FoundDataLoggerHWString(QString)':
+heartbeat.cpp:574:20: warning: unused variable 'len' [-Wunused-variable]
+     unsigned short len;
+                    ^
+heartbeat.cpp: At global scope:
+heartbeat.cpp:591:6: warning: unused parameter 'n' [-Wunused-parameter]
+ void HeartBeat::slotEditAutoExecScriptC(bool n)
+      ^
+heartbeat.cpp: In member function 'void HeartBeat::slot_script_load_and_run()':
+heartbeat.cpp:639:20: warning: unused variable 'len' [-Wunused-variable]
+     unsigned short len;
+                    ^
+heartbeat.cpp: In member function 'void HeartBeat::slot_script_run()':
+heartbeat.cpp:645:20: warning: unused variable 'len' [-Wunused-variable]
+     unsigned short len;
+                    ^
+heartbeat.cpp: At global scope:
+heartbeat.cpp:667:6: warning: unused parameter 'result' [-Wunused-parameter]
+ bool HeartBeat::winEvent(MSG *m, long *result)
+      ^
+heartbeat.cpp: In member function 'void HeartBeat::slot_FormatSDCard()':
+heartbeat.cpp:837:20: warning: unused variable 'len' [-Wunused-variable]
+     unsigned short len;
+                    ^
+heartbeat.cpp: At global scope:
+heartbeat.cpp:853:6: warning: unused parameter 'x' [-Wunused-parameter]
+ void HeartBeat::slot_FwUpdate(bool x)
+      ^
+heartbeat.cpp: In member function 'void HeartBeat::onActionCommand(QString)':
+heartbeat.cpp:881:20: warning: variable 'len' set but not used [-Wunused-but-set-variable]
+     unsigned short len = 0;
+                    ^
+In file included from heartbeat.cpp:11:0:
+images/disconnect.xpm: At global scope:
+images/disconnect.xpm:2:21: warning: 'disconnect' defined but not used [-Wunused-variable]
+ static const char * disconnect[] = {
+                     ^
+In file included from heartbeat.cpp:12:0:
+images/sd.xpm:2:20: warning: 'sd' defined but not used [-Wunused-variable]
+ static const char *sd[] = {
+                    ^
+In file included from heartbeat.cpp:13:0:
+images/run.xpm:2:15: warning: 'run_xpm' defined but not used [-Wunused-variable]
+ static char * run_xpm[] = {
+               ^
+In file included from heartbeat.cpp:14:0:
+images/startscript.xpm:2:21: warning: 'startscript' defined but not used [-Wunused-variable]
+ static const char * startscript[] = {
+                     ^
+In file included from heartbeat.cpp:15:0:
+images/boot.xpm:2:21: warning: 'boot' defined but not used [-Wunused-variable]
+ static const char * boot[] = {
+                     ^
+In file included from heartbeat.cpp:19:0:
+images/oscilloscope.xpm:2:20: warning: 'oscilloscope' defined but not used [-Wunused-variable]
+ static const char *oscilloscope[] = {
+                    ^

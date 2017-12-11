@@ -3,8 +3,4 @@ del /q release\*.exe
 qmake project.pro
 make
 make -f Makefile.Release 2>error.txt
-strip Release\iwscope.exe
-copy c:\sw\gsl\bin\* bin /y
-copy ..\udplib\bin\*.* bin  /y
 copy ..\..\lib\win32\*.* bin  /y
-copy au..\..\lib\win32\*.* bin  /y

@@ -841,9 +841,12 @@ void HeartBeat::slot_FormatSDCard()
 
 void HeartBeat::selectNewIPDevice(int index)
 {
+    if(index>0)
+    {
     if(oscope_ip->count())
     {
         usSelectDevIndex(index);
+    }
     }
 }
 
