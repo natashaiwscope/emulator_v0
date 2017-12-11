@@ -142,6 +142,7 @@ namespace WSim
 
             iCount=slib.scom.usDeviceIPAddress(0, out s_ip);
 
+            ipAddrBox.Items.Clear();
             ipAddrBox.Text = String.Empty;
             ipAddrBox.SelectedItem = -1;
 
