@@ -308,6 +308,7 @@ PREFIX unsigned short usWsHWEmulateCard(unsigned long i, unsigned long j);
 PREFIX void append_csv(char *buffer, unsigned short l);
 PREFIX void append_test_csv(char *buffer, unsigned short l);
 PREFIX unsigned short usSelectDevIndex(short i);
+PREFIX unsigned int weigResult(unsigned int i);
 PREFIX unsigned short usGetConnectedDeviceIP(unsigned short i, char *devName);
 PREFIX void RebootCurrentDevice();
 
