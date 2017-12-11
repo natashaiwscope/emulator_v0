@@ -49,6 +49,9 @@ namespace WSim
             }
             else if (msg == slib.scom.WM_WIEGAND_RESULT)
             {
+                int access=weigResult(0);
+                int ptime=weigResult(1);
+                int cNum=weigResult(100);
             
             }
             return IntPtr.Zero;
@@ -149,7 +152,7 @@ namespace WSim
 
         private void scanSingleRaw_Click(object sender, RoutedEventArgs e)
         {
-
+            fn_scan_raw(int.Parse(this.cardNumRAW.Text));
         }
     }
 }
