@@ -52,6 +52,22 @@ namespace WSim
                 int access= slib.scom.weigResult(0);
                 int ptime= slib.scom.weigResult(1);
                 int cNum= slib.scom.weigResult(100);
+
+                if(access==2)
+                {
+                    this.redLED.Background = Brushes.LimeGreen;
+                }
+                else if(access==3)
+                {
+                    this.greenLED.Background = Brushes.LimeGreen;
+                }
+                else if(access==4)
+                {
+                    this.timeoutLED.Background = Brushes.LimeGreen;
+                }
+
+                    this.time.Text = "" + ptime;
+                    this.statusLine.Text = "Card Num" + cNum;
             
             }
             return IntPtr.Zero;
