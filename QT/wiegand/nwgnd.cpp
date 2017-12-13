@@ -148,11 +148,11 @@ void Nwgnd::slot_WIEG_RESULT()
     {
         ui.grnLED->setStyleSheet("background: green");
     }
-    else if(w.cardAccessGranted==WIEGAND_DENIED)
+    if(w.cardAccessGranted==WIEGAND_DENIED)
     {
         ui.redLED->setStyleSheet("background: red");
     }
-    else if(w.cardAccessGranted==WIEGAND_TIMEOUT)
+    if(w.cardAccessGranted==WIEGAND_TIMEOUT)
     {
         ui.timeoutLED->setStyleSheet("background: yellow");
     }
