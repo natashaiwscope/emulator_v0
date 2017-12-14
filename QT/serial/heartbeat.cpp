@@ -70,20 +70,11 @@ HeartBeat::HeartBeat(QWidget *parent): settingsUi(new Ui::SettingsDialog)
 
     iMode = 0;
 
-
     createActions();
-    //createMenus();
     createToolBars();
     createStatusBar();
     createTabWidget();
-    //createDockWindows();
 
-    //setWindowTitle(tr("Data Logger"));
-
-    timerHeartBeat = new QTimer(this);
-    timerHeartBeat->start(1);
-
-    connect(timerHeartBeat, SIGNAL(timeout()), this, SLOT(supply_heartbeat()));
     connect(this, SIGNAL(consoleInp3()), cConsole3, SLOT(consoleInpSlot()));
     connect(this, SIGNAL(consoleInp2()), cConsole2, SLOT(consoleInpSlot()));
     connect(this, SIGNAL(consoleInp1()), cConsole1, SLOT(consoleInpSlot()));

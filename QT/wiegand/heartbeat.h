@@ -174,7 +174,6 @@ private:
     QAction *d_run_script;
     QAction *d_ram_script;
 
-    QTimer *timerHeartBeat;
 
 protected:
     void closeEvent(QCloseEvent *event);

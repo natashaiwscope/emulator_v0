@@ -73,11 +73,6 @@ HeartBeat::HeartBeat(QWidget *parent)
 
     //setWindowTitle(tr("Data Logger"));
 
-    timerHeartBeat = new QTimer(this);
-    timerHeartBeat->start(1);
-
-    connect(timerHeartBeat, SIGNAL(timeout()), this, SLOT(supply_heartbeat()));
-
 #ifdef LINUX_WAY
     connect(ext_msgPump, SIGNAL(msg_Pumped()), SIGNAL(msg_Pumped()));
     connect(this, SIGNAL(msg_Pumped()), SLOT(msg_PumpedRcvd()));

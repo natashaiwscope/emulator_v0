@@ -73,21 +73,6 @@ public partial class MainWindow : Window
         return IntPtr.Zero;
     }
 
-    void m_oWorker_DoWork(object sender, DoWorkEventArgs e)
-    {
-        //NOTE : Never play with the UI thread here...
-
-        //time consuming operation
-        for (;;)
-        {
-            Thread.Sleep(1);
-            slib.scom.heartbeat_1ms();
-        }
-
-        //Report 100% completion on operation completed
-        //m_oWorker.ReportProgress(100);
-    }
-
     public MainWindow()
     {
         InitializeComponent();
@@ -107,13 +92,6 @@ public partial class MainWindow : Window
             slib.scom.OnNewStart();
             //iwInitSerial();
 
-            m_oWorker = new BackgroundWorker();
-            m_oWorker.DoWork += new DoWorkEventHandler(m_oWorker_DoWork);
-            //m_oWorker.ProgressChanged += new ProgressChangedEventHandler(m_oWorker_ProgressChanged);
-            //m_oWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(m_oWorker_RunWorkerCompleted);
-            m_oWorker.WorkerReportsProgress = false;
-            m_oWorker.WorkerSupportsCancellation = true;
-            m_oWorker.RunWorkerAsync();
             isConnNotInitialized = false;
         }
 
