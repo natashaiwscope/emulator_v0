@@ -56,8 +56,16 @@ typedef struct
 {
     unsigned short i2c_addr;
     unsigned short len;
+    unsigned short transaction_type;
+    unsigned short transaction_token;
     unsigned char  buff[MAX_1K_SIZE];
 } __attribute__((__packed__)) I2C_IO;
+
+typedef union
+{
+    I2C_Comm m;
+    I2C_IO   io;
+} __attribute__((__packed__)) I2C_TRANSACTION;
 
 typedef struct
 {
