@@ -53,6 +53,10 @@ public:
     bool winEvent(MSG *m, long *result);
 #endif
     bool eventFilter(QObject *object, QEvent *e);
+#ifdef LINUX_WAY
+    ExternSig   *ext_msgPump;
+#endif
+
     bool reinit_done;
     unsigned char iMode;
     ioTxtGrpthExchStrct  iGuiUpdate;
@@ -85,7 +89,6 @@ signals:
 private slots:
 
     void supply_heartbeat();
-    void GUI_UPDATE(ioTxtGrpthExchStrct &);
     void timerExpired();
     void delayRAMCodeTimerrExpired();
     void onActionCommand(QString);
@@ -111,9 +114,6 @@ private slots:
 private:
     QTimer      delayRAMCodeTimer;
     QToolBar    *tBar;
-#ifdef LINUX_WAY
-    ExternSig   *ext_msgPump;
-#endif
 #ifdef NO_ANALOG_FEATURE
     Oscope      *oscope;
     Osignal     *osignal;

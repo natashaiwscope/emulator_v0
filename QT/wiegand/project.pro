@@ -101,7 +101,9 @@ INCLUDEPATH += $${QWT_LOCATION}/src
 LIBS += -L$${QWT_LOCATION}/lib -lqwt
 }
 
-
+###################################################################
+# ADD THESE IN IN YOUR QT PROJECT
+## START OF LINES
 INCLUDEPATH += ../../lib/include
 
 QMAKE_CXXFLAGS_RELEASE  = -O0
@@ -122,3 +124,4 @@ win32 {
     LIBS        += -L../../lib/win32 -ludp
 #   QMAKE_POST_LINK += "copy ..\..\lib\win32\*.* bin  /y /q"
 }
+###################################################################

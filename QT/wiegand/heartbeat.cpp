@@ -682,12 +682,6 @@ bool HeartBeat::winEvent(MSG *m, long *result)
 }
 #endif
 
-void HeartBeat::GUI_UPDATE(ioTxtGrpthExchStrct &)
-{
-    printf("run-->%s\n", __FUNCTION__);
-    fflush(stdout);
-}
-
 void HeartBeat::commonMsgHandle(void)
 {
     unsigned short winMsg, wPar, lPar;

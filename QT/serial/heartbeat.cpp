@@ -709,6 +709,19 @@ void HeartBeat::commonMsgHandle(void)
             fn_get_ver();
             slot_ReInitDevList();
             break;
+        case WM_CONSOLE1:
+            Q_EMIT consoleInp1();
+            //qDebug() << "console1 rx" << endl; fflush(stdout);
+            break;
+        case WM_CONSOLE2:
+            Q_EMIT consoleInp2();
+            //qDebug() << "console2 rx" << endl; fflush(stdout);
+            break;
+        case WM_CONSOLE3:
+            /* data just arrived from remote device send signal */
+            Q_EMIT consoleInp3();
+            //qDebug() << "console3 rx" << endl; fflush(stdout);
+            break;
 
         case WM_DISCONNECT:
             slot_ReInitDevList();
@@ -731,19 +744,6 @@ void HeartBeat::commonMsgHandle(void)
             Q_EMIT consoleInp3();
             //qDebug() << "console message rx" << endl;
             //fflush(stdout);
-            break;
-        case WM_CONSOLE1:
-            Q_EMIT consoleInp1();
-            //qDebug() << "console1 rx" << endl; fflush(stdout);
-            break;
-        case WM_CONSOLE2:
-            Q_EMIT consoleInp2();
-            //qDebug() << "console2 rx" << endl; fflush(stdout);
-            break;
-        case WM_CONSOLE3:
-            /* data just arrived from remote device send signal */
-            Q_EMIT consoleInp3();
-            //qDebug() << "console3 rx" << endl; fflush(stdout);
             break;
         case WM_WIEGAND:
             //DEBUG_LINE_OPTION;
