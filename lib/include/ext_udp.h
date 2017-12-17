@@ -21,9 +21,9 @@
 #else
 #define PREFIX extern "C"
 #endif
-#define uint32_t  unsigned int 
-#define uint16_t  unsigned short 
-#define uint8_t   unsigned char 
+#define uint32_t  unsigned int
+#define uint16_t  unsigned short
+#define uint8_t   unsigned char
 
 #define FULL_ARRAY_SIZE             2048
 #define MAX_PLOT_POINT 4096
@@ -242,6 +242,8 @@ PREFIX unsigned short pull_gui_text(char *cstr, unsigned short len);
 PREFIX unsigned short us_isDevReady();
 PREFIX int isWinRegistered();
 
+PREFIX void start_lib_interface_task();
+PREFIX void stop_lib_interface_task();
 PREFIX short test(unsigned short *i);
 PREFIX void usTestMsg(unsigned short winMsg, unsigned short wPar, unsigned short lPar);
 
@@ -262,6 +264,8 @@ PREFIX void fun_i2c_settings(unsigned long int slaveAddr, unsigned long int is10
 PREFIX void fun_i2c_write(unsigned short i2c_addr, unsigned short len, unsigned char *buff);
 PREFIX void fun_i2c_read(unsigned short i2c_addr, unsigned short len, unsigned char *buff);
 
+PREFIX unsigned short uart_read(unsigned char bus_num, unsigned char *buff);
+PREFIX unsigned short uart_write(unsigned char bus_num, unsigned char *buff, unsigned short len);
 
 PREFIX int fun_incap_start(int i, int len);
 PREFIX int fun_outcap_start(int i, int len);
@@ -303,6 +307,7 @@ PREFIX unsigned short usWsHWEmulate();
 PREFIX unsigned short usWsHWEmulateCard(unsigned long i, unsigned long j);
 PREFIX void append_csv(char *buffer, unsigned short l);
 PREFIX void append_test_csv(char *buffer, unsigned short l);
+PREFIX unsigned short usSelectDevIndex(short i);
 PREFIX unsigned int weigResult(unsigned int i);
 PREFIX unsigned short usGetConnectedDeviceIP(unsigned short i, char *devName);
 PREFIX void RebootCurrentDevice();
@@ -349,14 +354,6 @@ PREFIX ExternSig *createWidget1();
 #endif
 
 PREFIX LibComm     *libComm();
-
-
-PREFIX unsigned short uart_read(unsigned char bus_num, unsigned char *buff);
-PREFIX unsigned short uart_write(unsigned char bus_num, unsigned char *buff, unsigned short len);
-PREFIX void start_lib_interface_task();
-PREFIX void stop_lib_interface_task();
-
-PREFIX unsigned short usSelectDevIndex(short i);
 
 #if _WIN32
 PREFIX void RegisterWin(HWND hwnd);
