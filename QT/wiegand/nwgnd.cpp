@@ -122,7 +122,7 @@ void Nwgnd::run_C_Code()
         Q2C(cFileName, file_name_buff);
         //RunCFile(file_name_buff);
         qDebug() << file_name_buff;
-        RunCFile(cFileName);
+        RunCFile(file_name_buff);
 
     }
 }
