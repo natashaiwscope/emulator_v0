@@ -348,6 +348,13 @@ PREFIX short I2C_Master_Abort_IT(uint16_t DevAddress);
 PREFIX short I2C_EnableListen_IT();
 PREFIX short I2C_DisableListen_IT();
 
+
+PREFIX int fun_adc_read(unsigned short period,unsigned short prescale,unsigned short buff_size);
+PREFIX int fun_dac_write(unsigned short period,unsigned short prescale,unsigned short buff_size);
+
+
+
+
 PREFIX void RunCFile(char *fileName);
 #ifdef LINUX_WAY
 PREFIX ExternSig *createWidget1();

@@ -583,11 +583,8 @@ typedef struct
     unsigned short        prescale;
     unsigned short        buff_size;
 
-    union
-    {
-        unsigned short  uc_p[MAX_EP_ADC_DAC_SIZE];
-        short            c_p[MAX_EP_ADC_DAC_SIZE];
-    };
+    unsigned short  Ch1[MAX_EP_ADC_DAC_SIZE/2];
+    unsigned short  Ch2[MAX_EP_ADC_DAC_SIZE/2];
 } __attribute__((__packed__)) DAC_ADC;
 
 
