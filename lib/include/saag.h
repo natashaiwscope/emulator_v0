@@ -20,6 +20,8 @@ typedef unsigned short  IWenum;
 #define MAX_DATA_PKT_SIZE (10*DATA_PKT_SIZE)
 #define MAX_1K_SIZE 1024
 
+#define MAX_EP_ADC_DAC_SIZE 500
+
 typedef enum
 {
     I2C_OK       = 0x00,
@@ -574,6 +576,19 @@ typedef struct
     unsigned short        ID3_High;
     unsigned short        ID3_Low;
 } __attribute__((__packed__)) SAAGMicro;
+
+typedef struct
+{
+    unsigned short        period;
+    unsigned short        prescale;
+    unsigned short        buff_size;
+
+    union
+    {
+        unsigned short  uc_p[MAX_EP_ADC_DAC_SIZE];
+        short            c_p[MAX_EP_ADC_DAC_SIZE];
+    };
+} __attribute__((__packed__)) DAC_ADC;
 
 
 #endif
