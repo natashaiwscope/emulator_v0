@@ -351,6 +351,7 @@ PREFIX short I2C_DisableListen_IT();
 
 PREFIX int fun_adc_read(unsigned short period,unsigned short prescale,unsigned short buff_size);
 PREFIX int fun_dac_write(unsigned short period,unsigned short prescale,unsigned short buff_size);
+PREFIX int fun_dac_write_channel(unsigned short Ch1,unsigned short Ch2);
 
 
 
