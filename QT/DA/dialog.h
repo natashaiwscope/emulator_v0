@@ -20,6 +20,10 @@ public:
     Dialog(QWidget *parent = 0, bool smallScreen = false);
     ~Dialog();
     bool found;
+    unsigned short adc_Ch1;
+    unsigned short adc_Ch2;
+    unsigned short dac_Ch1;
+    unsigned short dac_Ch2;
 
 #ifndef LINUX_WAY
     bool winEvent(MSG *m, long *result);

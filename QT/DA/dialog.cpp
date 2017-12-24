@@ -25,6 +25,11 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent),ui(new Ui::D
     QLineEdit *lineEdit = new QLineEdit;
     ui->setupUi(this);
     found = false;
+    dac_Ch1=0;
+    dac_Ch2=0;
+
+    adc_Ch1=0;
+    adc_Ch2=0;
 
     ui->dacSliderCh1->setRange(0,4095);
     ui->dacSliderCh2->setRange(0,4095);
@@ -99,12 +104,16 @@ Dialog::~Dialog()
 
 void Dialog::fn_DAC_Ch1(int i)
 {
+    dac_Ch1=i;
     ui->lcdDAC_Chnl1->display(i);
+    fun_dac_write_channel(dac_Ch1,dac_Ch2);
 }
 
 void Dialog::fn_DAC_Ch2(int i)
 {
+    dac_Ch2=i;
     ui->lcdDAC_Chnl2->display(i);
+    fun_dac_write_channel(dac_Ch1,dac_Ch2);
 }
 
 
