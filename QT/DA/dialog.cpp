@@ -62,6 +62,8 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent),ui(new Ui::D
 
     connect(ui->oscope_ip, SIGNAL(currentIndexChanged(int)), this, SLOT(selectNewIPDevice(int)));
 
+    connect(ui->readADCButton,     SIGNAL(clicked()),this,SLOT(fn_ADC_clicked()));
+
 #ifdef LINUX_WAY
     connect(ext_msgPump, SIGNAL(msg_Pumped()), SIGNAL(msg_Pumped()));
     connect(this, SIGNAL(msg_Pumped()), SLOT(msg_PumpedRcvd()));
@@ -89,6 +91,11 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent),ui(new Ui::D
     RegisterWin(this->winId());
 #endif
     start_lib_interface_task();
+}
+
+void Dialog::fn_ADC_clicked()
+{
+    fun_adc_read(10,10,10);
 }
 
 Dialog::~Dialog()

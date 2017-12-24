@@ -43,6 +43,7 @@ public slots:
     void fn_DAC_Ch1(int);
     void fn_DAC_Ch2(int);
     void msg_PumpedRcvd();
+    void fn_ADC_clicked();
 
 signals:
     void responseRcvd();
