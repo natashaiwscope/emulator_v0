@@ -19,6 +19,17 @@
 #include <windows.h>
 #endif
 
+void Dialog::dacTimerExp()
+{
+
+
+}
+
+void Dialog::adcTimerExp()
+{
+
+
+}
 
 Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent),ui(new Ui::Dialog)
 {
@@ -59,6 +70,9 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent),ui(new Ui::D
 
     connect(ui->dacSliderCh1,      SIGNAL(valueChanged(int)),SLOT(fn_DAC_Ch1(int)));
     connect(ui->dacSliderCh2,      SIGNAL(valueChanged(int)),SLOT(fn_DAC_Ch2(int)));
+
+    connect(&dacTimer, SIGNAL(timeout()), this, SLOT(dacTimerExp()));
+    connect(&adcTimer, SIGNAL(timeout()), this, SLOT(adcTimerExp()));
 
     connect(ui->oscope_ip, SIGNAL(currentIndexChanged(int)), this, SLOT(selectNewIPDevice(int)));
 

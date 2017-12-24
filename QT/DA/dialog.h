@@ -25,6 +25,9 @@ public:
     unsigned short dac_Ch1;
     unsigned short dac_Ch2;
 
+    QTimer      dacTimer;
+    QTimer      adcTimer;
+
 #ifndef LINUX_WAY
     bool winEvent(MSG *m, long *result);
 #endif
@@ -44,6 +47,9 @@ public slots:
     void fn_DAC_Ch2(int);
     void msg_PumpedRcvd();
     void fn_ADC_clicked();
+
+    void dacTimerExp();
+    void adcTimerExp();
 
 signals:
     void responseRcvd();
