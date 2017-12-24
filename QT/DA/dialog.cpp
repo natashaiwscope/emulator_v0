@@ -27,6 +27,7 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent),ui(new Ui::D
     ui->lcdADC_Chnl1->setDecMode();
     ui->lcdADC_Chnl2->setDecMode();
 
+    ui->readADCButton->setStyleSheet("background: yellow");
 }
 
 void Dialog::fn_DAC_Ch1(int i)
