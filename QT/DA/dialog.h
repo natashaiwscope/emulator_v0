@@ -18,6 +18,7 @@ class Dialog : public QDialog
 public:
     Ui::Dialog *ui;
     Dialog(QWidget *parent = 0, bool smallScreen = false);
+    ~Dialog();
     bool found;
 
 #ifndef LINUX_WAY

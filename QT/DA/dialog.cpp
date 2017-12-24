@@ -86,6 +86,17 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent),ui(new Ui::D
     start_lib_interface_task();
 }
 
+Dialog::~Dialog()
+{
+    exit_all();
+    osDelay(100);
+
+    fflush(stdout);
+#ifdef LINUX_WAY
+    delete ext_msgPump;
+#endif
+}
+
 void Dialog::fn_DAC_Ch1(int i)
 {
     ui->lcdDAC_Chnl1->display(i);
