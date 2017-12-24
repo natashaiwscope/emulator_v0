@@ -1,5 +1,6 @@
-HEADERS       = dialog.h
-SOURCES       = dialog.cpp  main.cpp
+HEADERS      += dialog.h
+SOURCES      += dialog.cpp  main.cpp
+FORMS   += display.ui
 
 # install
 target.path = $$[QT_INSTALL_EXAMPLES]/widgets/wiggly
