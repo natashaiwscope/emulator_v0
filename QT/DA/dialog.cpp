@@ -33,8 +33,8 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent),ui(new Ui::D
     ui->commLED->setStyleSheet("background: red");
 
 
-    ui->qlbl->setObjectName(QString::fromUtf8("qlbl"));
-    ui->qlbl->setGeometry(QRect(30, 30, 821, 61));
+    //ui->qlbl->setObjectName(QString::fromUtf8("qlbl"));
+    //ui->qlbl->setGeometry(QRect(30, 30, 821, 61));
     QFont font3;
     font3.setPointSize(14);
     font3.setBold(true);
@@ -44,7 +44,7 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent),ui(new Ui::D
     ui->oscope_ip->setFont(font3);
     //lineEdit->setFont(font3);
 
-    qlbl->setText("CNT#0");
+    ui->qlbl->setText("CNT#0");
 
 
 
