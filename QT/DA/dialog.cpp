@@ -2,7 +2,6 @@
 
 #include "dialog.h"
 
-//! [0]
 Dialog::Dialog(QWidget *parent, bool smallScreen)
     : QDialog(parent)
 {
@@ -34,4 +33,3 @@ Dialog::Dialog(QWidget *parent, bool smallScreen)
     setWindowTitle(tr("Wiggly"));
     resize(360, 145);
 }
-//! [0]

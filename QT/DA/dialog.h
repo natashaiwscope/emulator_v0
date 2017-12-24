@@ -3,7 +3,6 @@
 
 #include <QDialog>
 
-//! [0]
 class Dialog : public QDialog
 {
     Q_OBJECT
@@ -11,6 +10,5 @@ class Dialog : public QDialog
 public:
     Dialog(QWidget *parent = 0, bool smallScreen = false);
 };
-//! [0]
 
 #endif
