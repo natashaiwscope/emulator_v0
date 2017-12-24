@@ -15,7 +15,7 @@ Dialog::Dialog(QWidget *parent, bool smallScreen)
 #ifdef QT_SOFTKEYS_ENABLED
     QAction *exitAction = new QAction(tr("Exit"), this);
     exitAction->setSoftKeyRole(QAction::NegativeSoftKey);
-    connect (exitAction, SIGNAL(triggered()),this, SLOT(close()));
+    connect (exitAction, SIGNAL(triggered()), this, SLOT(close()));
     addAction (exitAction);
 
     Qt::WindowFlags flags = windowFlags();
@@ -23,10 +23,12 @@ Dialog::Dialog(QWidget *parent, bool smallScreen)
     setWindowFlags(flags);
 #endif
 
-    if (!smallScreen){
+    if (!smallScreen)
+    {
         lineEdit->setText(tr("Hello world!"));
     }
-    else{
+    else
+    {
         lineEdit->setText(tr("Hello!"));
     }
     setWindowTitle(tr("Wiggly"));
