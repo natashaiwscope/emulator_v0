@@ -194,7 +194,7 @@
     <enum>QLCDNumber::Bin</enum>
    </property>
   </widget>
-  <widget class="QLCDNumber" name="lcdDAC_Chnl2_2">
+  <widget class="QLCDNumber" name="lcdADC_Chnl2">
    <property name="geometry">
     <rect>
      <x>160</x>
@@ -220,7 +220,7 @@
     <enum>QLCDNumber::Bin</enum>
    </property>
   </widget>
-  <widget class="QLCDNumber" name="lcdDAC_Chnl1_2">
+  <widget class="QLCDNumber" name="lcdADC_Chnl1">
    <property name="geometry">
     <rect>
      <x>160</x>
