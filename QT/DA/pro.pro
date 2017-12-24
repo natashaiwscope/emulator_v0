@@ -48,3 +48,8 @@ win32 {
 #   QMAKE_POST_LINK += "copy ..\..\lib\win32\*.* bin  /y /q"
 }
 
+unix {
+    DEFINES += LINUX_WAY
+}
+
+
