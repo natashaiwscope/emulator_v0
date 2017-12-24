@@ -21,8 +21,7 @@
 
 void Dialog::dacTimerExp()
 {
-
-
+    fun_dac_write_channel(dac_Ch1,dac_Ch2);
 }
 
 void Dialog::adcTimerExp()
@@ -67,6 +66,10 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent),ui(new Ui::D
 #ifdef LINUX_WAY
     ext_msgPump = new ExternSig();
 #endif
+            adcTimer.setInterval(100);
+            adcTimer.setSingleShot(true);
+            dacTimer.setInterval(100);
+            dacTimer.setSingleShot(true);
 
     connect(ui->dacSliderCh1,      SIGNAL(valueChanged(int)),SLOT(fn_DAC_Ch1(int)));
     connect(ui->dacSliderCh2,      SIGNAL(valueChanged(int)),SLOT(fn_DAC_Ch2(int)));
@@ -127,14 +130,16 @@ void Dialog::fn_DAC_Ch1(int i)
 {
     dac_Ch1=i;
     ui->lcdDAC_Chnl1->display(i);
-    fun_dac_write_channel(dac_Ch1,dac_Ch2);
+    //fun_dac_write_channel(dac_Ch1,dac_Ch2);
+    dacTimer.start();
 }
 
 void Dialog::fn_DAC_Ch2(int i)
 {
     dac_Ch2=i;
     ui->lcdDAC_Chnl2->display(i);
-    fun_dac_write_channel(dac_Ch1,dac_Ch2);
+    dacTimer.start();
+    //fun_dac_write_channel(dac_Ch1,dac_Ch2);
 }
 
 
