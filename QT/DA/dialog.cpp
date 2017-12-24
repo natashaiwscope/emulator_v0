@@ -21,7 +21,7 @@
 
 void Dialog::dacTimerExp()
 {
-    fun_dac_write_channel(dac_Ch1,dac_Ch2);
+    fun_dac_write_channel(dac_Ch1, dac_Ch2);
 }
 
 void Dialog::adcTimerExp()
@@ -30,19 +30,19 @@ void Dialog::adcTimerExp()
 
 }
 
-Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent),ui(new Ui::Dialog)
+Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent), ui(new Ui::Dialog)
 {
     QLineEdit *lineEdit = new QLineEdit;
     ui->setupUi(this);
     found = false;
-    dac_Ch1=0;
-    dac_Ch2=0;
+    dac_Ch1 = 0;
+    dac_Ch2 = 0;
 
-    adc_Ch1=0;
-    adc_Ch2=0;
+    adc_Ch1 = 0;
+    adc_Ch2 = 0;
 
-    ui->dacSliderCh1->setRange(0,4095);
-    ui->dacSliderCh2->setRange(0,4095);
+    ui->dacSliderCh1->setRange(0, 4095);
+    ui->dacSliderCh2->setRange(0, 4095);
 
     ui->commLED->setMinimumSize(10, 30);
     ui->commLED->setStyleSheet("background: red");
@@ -66,20 +66,20 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent),ui(new Ui::D
 #ifdef LINUX_WAY
     ext_msgPump = new ExternSig();
 #endif
-            adcTimer.setInterval(100);
-            adcTimer.setSingleShot(true);
-            dacTimer.setInterval(100);
-            dacTimer.setSingleShot(true);
+    adcTimer.setInterval(100);
+    adcTimer.setSingleShot(true);
+    dacTimer.setInterval(100);
+    dacTimer.setSingleShot(true);
 
-    connect(ui->dacSliderCh1,      SIGNAL(valueChanged(int)),SLOT(fn_DAC_Ch1(int)));
-    connect(ui->dacSliderCh2,      SIGNAL(valueChanged(int)),SLOT(fn_DAC_Ch2(int)));
+    connect(ui->dacSliderCh1,      SIGNAL(valueChanged(int)), SLOT(fn_DAC_Ch1(int)));
+    connect(ui->dacSliderCh2,      SIGNAL(valueChanged(int)), SLOT(fn_DAC_Ch2(int)));
 
     connect(&dacTimer, SIGNAL(timeout()), this, SLOT(dacTimerExp()));
     connect(&adcTimer, SIGNAL(timeout()), this, SLOT(adcTimerExp()));
 
     connect(ui->oscope_ip, SIGNAL(currentIndexChanged(int)), this, SLOT(selectNewIPDevice(int)));
 
-    connect(ui->readADCButton,     SIGNAL(clicked()),this,SLOT(fn_ADC_clicked()));
+    connect(ui->readADCButton,     SIGNAL(clicked()), this, SLOT(fn_ADC_clicked()));
 
 #ifdef LINUX_WAY
     connect(ext_msgPump, SIGNAL(msg_Pumped()), SIGNAL(msg_Pumped()));
@@ -112,7 +112,7 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent),ui(new Ui::D
 
 void Dialog::fn_ADC_clicked()
 {
-    fun_adc_read(10,10,10);
+    fun_adc_read(10, 10, 10);
 }
 
 Dialog::~Dialog()
@@ -128,7 +128,7 @@ Dialog::~Dialog()
 
 void Dialog::fn_DAC_Ch1(int i)
 {
-    dac_Ch1=i;
+    dac_Ch1 = i;
     ui->lcdDAC_Chnl1->display(i);
     //fun_dac_write_channel(dac_Ch1,dac_Ch2);
     dacTimer.start();
@@ -136,7 +136,7 @@ void Dialog::fn_DAC_Ch1(int i)
 
 void Dialog::fn_DAC_Ch2(int i)
 {
-    dac_Ch2=i;
+    dac_Ch2 = i;
     ui->lcdDAC_Chnl2->display(i);
     dacTimer.start();
     //fun_dac_write_channel(dac_Ch1,dac_Ch2);
