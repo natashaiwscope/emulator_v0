@@ -32,6 +32,24 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent),ui(new Ui::D
     ui->commLED->setMinimumSize(10, 30);
     ui->commLED->setStyleSheet("background: red");
 
+
+    ui->qlbl->setObjectName(QString::fromUtf8("qlbl"));
+    ui->qlbl->setGeometry(QRect(30, 30, 821, 61));
+    QFont font3;
+    font3.setPointSize(14);
+    font3.setBold(true);
+    font3.setWeight(75);
+    ui->qlbl->setFont(font3);
+
+    ui->oscope_ip->setFont(font3);
+    //lineEdit->setFont(font3);
+
+    qlbl->setText("CNT#0");
+
+
+
+
+
     ui->oscope_ip->setSizeAdjustPolicy(QComboBox::AdjustToContents);
 #ifdef LINUX_WAY
     ext_msgPump = new ExternSig();

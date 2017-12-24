@@ -38,6 +38,11 @@ public slots:
     void fn_DAC_Ch1(int);
     void fn_DAC_Ch2(int);
     void msg_PumpedRcvd();
+
+signals:
+    void responseRcvd();
+    void msg_Pumped();
+    void finished();
 };
 
 #endif
