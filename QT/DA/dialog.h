@@ -17,6 +17,10 @@ class Dialog : public QDialog
 public:
     Ui::Dialog *ui;
     Dialog(QWidget *parent = 0, bool smallScreen = false);
+
+public slots:
+    void fn_DAC_Ch1(int);
+    void fn_DAC_Ch2(int);
 };
 
 #endif
