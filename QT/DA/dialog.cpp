@@ -20,6 +20,13 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent),ui(new Ui::D
     ui->lcdDAC_Chnl2->setPalette(pal);
     ui->lcdDAC_Chnl1->setDecMode();
     ui->lcdDAC_Chnl2->setDecMode();
+
+
+    ui->lcdADC_Chnl1->setPalette(pal);
+    ui->lcdADC_Chnl2->setPalette(pal);
+    ui->lcdADC_Chnl1->setDecMode();
+    ui->lcdADC_Chnl2->setDecMode();
+
 }
 
 void Dialog::fn_DAC_Ch1(int i)
