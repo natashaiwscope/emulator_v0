@@ -12,6 +12,7 @@ TARGET = dac_adc_demo
 TEMPLATE = app
 
 CONFIG += c++11
+QMAKE_CXXFLAGS += -std=gnu++11
 
 SOURCES += main.cpp
 SOURCES += mainwindow.cpp 
@@ -30,6 +31,7 @@ FORMS    += plotarea.ui
 INCLUDEPATH += ../../lib/include
 
 DESTDIR      = bin
+
 unix {
 MOC_DIR      = /tmp/$${TARGET}
 RCC_DIR      = /tmp/$${TARGET}
