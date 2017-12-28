@@ -20,7 +20,7 @@ typedef unsigned short  IWenum;
 #define MAX_DATA_PKT_SIZE (10*DATA_PKT_SIZE)
 #define MAX_1K_SIZE 1024
 
-#define MAX_EP_ADC_DAC_SIZE 500
+#define MAX_EP_ADC_DAC_SIZE 512
 
 typedef enum
 {
@@ -583,8 +583,16 @@ typedef struct
     unsigned short        prescale;
     unsigned short        buff_size;
 
-    unsigned short  Ch1[MAX_EP_ADC_DAC_SIZE/2];
-    unsigned short  Ch2[MAX_EP_ADC_DAC_SIZE/2];
+    union
+    {
+        uint32_t adc[256];
+
+        struct
+        {
+            unsigned short  Ch1[256];
+            unsigned short  Ch2[256];
+        };
+    }
 } __attribute__((__packed__)) DAC_ADC;
 
 
