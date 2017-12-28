@@ -592,7 +592,7 @@ typedef struct
             unsigned short  Ch1[256];
             unsigned short  Ch2[256];
         };
-    }
+    };
 } __attribute__((__packed__)) DAC_ADC;
 
 
