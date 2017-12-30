@@ -357,7 +357,8 @@ PREFIX int fun_adc_read(unsigned short period,unsigned short prescale,unsigned s
 PREFIX int fun_dac_write(unsigned short period,unsigned short prescale,unsigned short buff_size);
 PREFIX int fun_dac_write_channel(unsigned short Ch1,unsigned short Ch2);
 
-
+PREFIX unsigned short fun_adc_ch1(unsigned short index);
+PREFIX unsigned short fun_adc_ch2(unsigned short index);
 
 
 PREFIX void RunCFile(char *fileName);

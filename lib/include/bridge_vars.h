@@ -33,6 +33,9 @@ FIX_EXTERN double y2_g1Axis_Array[4095];
 FIX_EXTERN double y1_g2Axis_Array[4095];
 FIX_EXTERN double y2_g2Axis_Array[4095];
 
+FIX_EXTERN double adcCh1[256];
+FIX_EXTERN double adcCh2[256];
+
 FIX_EXTERN PlSignalDataPoint _shared_signal;
 FIX_EXTERN PlSignalDataPoint _shared_scope;
 FIX_EXTERN ScopeDataPoint   _pullSco;
