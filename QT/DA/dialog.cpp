@@ -149,12 +149,12 @@ void Dialog::fn_DAC_Ch2(int i)
 
 void Dialog::fn_ADC_Cnt(int i)
 {
-
+    ui->lcdADC_Chnl1->display(i);
 }
 
 void Dialog::fn_ADC_Timer(int i)
 {
-
+    ui->lcdADC_Chnl2->display(i);
 }
 
 bool Dialog::eventFilter(QObject *object, QEvent *e)
