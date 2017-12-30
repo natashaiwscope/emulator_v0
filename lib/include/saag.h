@@ -585,7 +585,7 @@ typedef struct
 
     union
     {
-        uint32_t adc[256];
+        unsigned int adc[256];
 
         struct
         {

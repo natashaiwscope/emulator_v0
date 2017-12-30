@@ -122,6 +122,7 @@
 #define WM_CONSOLE3         (WM_USER_MSG+84)
 #define WM_USART            (WM_USER_MSG+85)
 #define WM_REBOOT           (WM_USER_MSG+86)
+#define WM_ADC              (WM_USER_MSG+87)
 
 
 typedef void (*callback_alarm)(int, int);
