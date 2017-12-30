@@ -45,6 +45,11 @@ public slots:
     void FoundDataLoggerHWString(QString);
     void fn_DAC_Ch1(int);
     void fn_DAC_Ch2(int);
+
+    void fn_ADC_Cnt(int);
+    void fn_ADC_Timer(int);
+
+
     void msg_PumpedRcvd();
     void fn_ADC_clicked();
 

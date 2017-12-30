@@ -44,6 +44,9 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent), ui(new Ui::
     ui->dacSliderCh1->setRange(0, 4095);
     ui->dacSliderCh2->setRange(0, 4095);
 
+    ui->adcDataCnt->setRange(0, 255);
+    ui->adcTimer->setRange(0, 0xffff);
+
     ui->commLED->setMinimumSize(10, 30);
     ui->commLED->setStyleSheet("background: red");
 
@@ -73,6 +76,10 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent), ui(new Ui::
 
     connect(ui->dacSliderCh1,      SIGNAL(valueChanged(int)), SLOT(fn_DAC_Ch1(int)));
     connect(ui->dacSliderCh2,      SIGNAL(valueChanged(int)), SLOT(fn_DAC_Ch2(int)));
+
+
+    connect(ui->adcDataCnt,      SIGNAL(valueChanged(int)), SLOT(fn_ADC_Cnt(int)));
+    connect(ui->adcTimer,        SIGNAL(valueChanged(int)), SLOT(fn_ADC_Timer(int)));
 
     connect(&dacTimer, SIGNAL(timeout()), this, SLOT(dacTimerExp()));
     connect(&adcTimer, SIGNAL(timeout()), this, SLOT(adcTimerExp()));
@@ -140,6 +147,15 @@ void Dialog::fn_DAC_Ch2(int i)
     dacTimer.start();
 }
 
+void Dialog::fn_ADC_Cnt(int i)
+{
+
+}
+
+void Dialog::fn_ADC_Timer(int i)
+{
+
+}
 
 bool Dialog::eventFilter(QObject *object, QEvent *e)
 {
