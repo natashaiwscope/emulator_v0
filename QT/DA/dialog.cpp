@@ -130,7 +130,6 @@ void Dialog::fn_DAC_Ch1(int i)
 {
     dac_Ch1 = i;
     ui->lcdDAC_Chnl1->display(i);
-    //fun_dac_write_channel(dac_Ch1,dac_Ch2);
     dacTimer.start();
 }
 
@@ -139,7 +138,6 @@ void Dialog::fn_DAC_Ch2(int i)
     dac_Ch2 = i;
     ui->lcdDAC_Chnl2->display(i);
     dacTimer.start();
-    //fun_dac_write_channel(dac_Ch1,dac_Ch2);
 }
 
 
