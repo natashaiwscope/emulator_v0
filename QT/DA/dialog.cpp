@@ -265,6 +265,11 @@ void Dialog::commonMsgHandle(void)
             slot_ReInitDevList();
             break;
 
+        case WM_ADC:
+            ui->lcdADC_Chnl1->display(fun_adc_ch1(0));
+            ui->lcdADC_Chnl2->display(fun_adc_ch2(0));
+
+            break;
         case WM_PLUGIN_TAB:
             break;
         case WM_SCRIPT_TAB:
