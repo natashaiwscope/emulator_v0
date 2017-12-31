@@ -586,6 +586,10 @@ typedef struct
     union
     {
         unsigned int adc[256];
+        struct
+        {
+            unsigned short  usadc[512];
+        };
 
         struct
         {
