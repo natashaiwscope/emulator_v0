@@ -49,6 +49,8 @@ public slots:
     void fn_ADC_Cnt(int);
     void fn_ADC_Timer(int);
 
+    void selectNewIPDevice(int index);
+
 
     void msg_PumpedRcvd();
     void fn_ADC_clicked();

@@ -394,3 +394,12 @@ void Dialog::slot_ReInitDevList()
 
 
 }
+
+void Dialog::selectNewIPDevice(int index)
+{
+    if(ui->oscope_ip->count())
+    {
+        usSelectDevIndex(index);
+    }
+}
+
