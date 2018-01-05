@@ -311,7 +311,6 @@ PREFIX void append_test_csv(char *buffer, unsigned short l);
 
 PREFIX unsigned short usSelectDevIndex(short i);
 PREFIX unsigned short usSelectDevString(const char *ip_string);
-PREFIX void push_download_cfile(const char *filename);
 
 PREFIX unsigned int weigResult(unsigned int i);
 PREFIX unsigned short usGetConnectedDeviceIP(unsigned short i, char *devName);
@@ -328,7 +327,11 @@ PREFIX void WiegSetCLED(unsigned char led1, unsigned char led2, unsigned char le
 PREFIX void WiegSetStatusLine(unsigned char ccolor, char *line);
 PREFIX QColor enum2col(unsigned char i);
 PREFIX void SetOTP(void *v);
+
 PREFIX void push_fw_download_file(const char *filename);
+PREFIX void push_download_cfile(const char *filename);
+PREFIX void push_fatfs_download_file(const char *filename);
+
 PREFIX void heartbeat_1ms();
 //PREFIX unsigned short uart_data_ready();
 
