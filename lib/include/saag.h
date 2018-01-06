@@ -22,6 +22,16 @@ typedef unsigned short  IWenum;
 
 #define MAX_EP_ADC_DAC_SIZE 512
 
+enum
+{
+    STDOUT_DEBUG   = 0,
+    STDOUT_SCRATCH = 1,
+    STDOUT_RS485   = 2,
+    STDOUT_UART2   = 3,
+    STDOUT_UART3   = 4,
+    STDOUT_LAST  
+};
+
 typedef enum
 {
     I2C_OK       = 0x00,
