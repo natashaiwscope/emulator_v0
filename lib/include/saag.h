@@ -61,7 +61,7 @@ typedef struct
     unsigned short i2c_self_addr1;
     unsigned short i2c_self_addr2;
     unsigned short i2c_10bit_mode;
-    unsigned int   i2c_speed;
+    unsigned short i2c_speed;
 } __attribute__((__packed__)) I2C_Comm;
 
 typedef struct
