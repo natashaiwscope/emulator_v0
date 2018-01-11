@@ -79,6 +79,14 @@ typedef union
     I2C_IO   io;
 } __attribute__((__packed__)) I2C_TRANSACTION;
 
+
+typedef struct
+{
+    unsigned short i2c_devCount;
+    unsigned short i2c_addr[512];
+} __attribute__((__packed__)) I2C_Scan_Result;
+
+
 typedef struct
 {
     unsigned int      uart_mode;

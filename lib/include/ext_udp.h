@@ -123,6 +123,7 @@
 #define WM_USART            (WM_USER_MSG+85)
 #define WM_REBOOT           (WM_USER_MSG+86)
 #define WM_ADC              (WM_USER_MSG+87)
+#define WM_I2C_SCAN_RES     (WM_USER_MSG+88)
 
 
 typedef void (*callback_alarm)(int, int);
@@ -261,7 +262,9 @@ PREFIX int fun_uart_term(unsigned short uartNum, unsigned int uartBaud, unsigned
 
 PREFIX int ReadTEST(short uNum, unsigned char *buff);
 PREFIX void ncCreateEPCmd(unsigned short coap_cmd, void *p, unsigned short lenPkt);
-PREFIX void fun_i2c_settings(unsigned long int slaveAddr, unsigned long int is10Bit, unsigned long int i2cSpeed);
+
+PREFIX void fun_i2c_scan();
+PREFIX void fun_i2c_settings(unsigned long int slaveAddr, unsigned long int is10Bit,unsigned int i2cSpeed);
 PREFIX void fun_i2c_write(unsigned short i2c_addr, unsigned short len, unsigned char *buff);
 PREFIX void fun_i2c_read(unsigned short i2c_addr, unsigned short len, unsigned char *buff);
 
@@ -366,6 +369,8 @@ PREFIX unsigned short fun_adc_ch2(unsigned short index);
 
 
 PREFIX void RunCFile(char *fileName);
+PREFIX void tmail();
+
 #ifdef LINUX_WAY
 PREFIX ExternSig *createWidget1();
 #endif
