@@ -66,8 +66,8 @@ typedef struct
 
 typedef struct
 {
-    unsigned short i2c_addr;
-    unsigned short len;
+    unsigned short DevAddress;
+    unsigned short Size;
     unsigned short transaction_type;
     unsigned short transaction_token;
     unsigned short MemAddress;
