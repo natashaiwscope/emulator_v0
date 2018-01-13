@@ -72,7 +72,7 @@ typedef struct
     unsigned short transaction_token;
     unsigned short MemAddress;
     unsigned short MemAddSize;
-    unsigned char  buff[MAX_1K_SIZE];
+    unsigned char  pData[MAX_1K_SIZE];
 } __attribute__((__packed__)) I2C_IO;
 
 typedef union
