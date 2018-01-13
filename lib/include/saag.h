@@ -84,8 +84,8 @@ typedef union
 
 typedef struct
 {
-    unsigned short i2c_devCount;
-    unsigned short i2c_addr[512];
+    unsigned short i2c_DevCount;
+    unsigned short DevAddress[512];
 } __attribute__((__packed__)) I2C_Scan_Result;
 
 
