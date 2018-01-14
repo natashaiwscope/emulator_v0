@@ -27,7 +27,7 @@ RCC_DIR      = c:/tmp/$${TARGET}
 OBJECTS_DIR  = c:/tmp/$${TARGET}
 }
 
-INCLUDEPATH += ../../../../git/emulator_v0/lib/include
+INCLUDEPATH += ../../lib/include
 
 QMAKE_CXXFLAGS_RELEASE  = -O0
 
