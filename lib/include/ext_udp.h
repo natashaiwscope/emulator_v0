@@ -42,28 +42,8 @@
 #define WM_SCROLL_MSG         (WM_USER_MSG+11)
 #define WM_TIMER_MSG          (WM_USER_MSG+12)
 
-#define WM_BOXT               (WM_USER_MSG+13)
-#define WM_BOXR               (WM_USER_MSG+14)
-#define WM_BOXF               (WM_USER_MSG+15)
-#define WM_BANNER             (WM_USER_MSG+16)
-#define WM_CLEAR_MSG          (WM_USER_MSG+17)
-#define WM_APPEND_MSG         (WM_USER_MSG+18)
-#define WM_CAL_MSG            (WM_USER_MSG+19)
-#define WM_CAL_LED            (WM_USER_MSG+20)
-#define WM_INFO_MSG           (WM_USER_MSG+21)
 
-#define WM_WIN_DIS_IMG1       (WM_USER_MSG+22)
-#define WM_WIN_DIS_IMG2       (WM_USER_MSG+23)
-#define WM_WIN_DIS_IMG3       (WM_USER_MSG+24)
-#define WM_WIN_DIS_IMG4       (WM_USER_MSG+25)
-#define WM_WIN_DIS_IMG5       (WM_USER_MSG+26)
-#define WM_WIN_DIS_IMG6       (WM_USER_MSG+27)
-#define WM_CLEAR_LOG          (WM_USER_MSG+28)
-#define WM_LOG                (WM_USER_MSG+29)
-
-#define WM_WIN_PLOT_C1        (WM_USER_MSG+30)
-#define WM_WIN_PLOT_C2        (WM_USER_MSG+31)
-#define WM_WIN_PLOT_C3        (WM_USER_MSG+32)
+#define WM_RESPONSE_ARRIVED   (WM_USER_MSG+13)
 
 #define WM_WIN_APC_BOX        (WM_USER_MSG+33)
 #define WM_TIMER_STOP_MSG     (WM_USER_MSG+34)
@@ -267,6 +247,8 @@ PREFIX void fun_i2c_scan();
 PREFIX void fun_i2c_settings(unsigned int slaveAddr, unsigned int is10Bit,unsigned int i2cSpeed);
 PREFIX unsigned short i2c_devices_addr(short i);
 PREFIX short i2c_devices_cnt();
+PREFIX unsigned short usEthernetPostAvailable();
+PREFIX unsigned short i2c_read_buffer(unsigned char *uch,unsigned short len);
 
 PREFIX void fun_i2c_write(unsigned short i2c_addr, unsigned short len, unsigned char *buff);
 PREFIX void fun_i2c_read(unsigned short i2c_addr, unsigned short len, unsigned char *buff);
