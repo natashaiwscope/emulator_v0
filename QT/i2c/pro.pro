@@ -35,7 +35,7 @@ message ("Host = " $${QMAKE_HOST.arch})
 
 unix {
 contains(QMAKE_HOST.arch, x86_64):{
-    LIBS        += -L../udplib/bin -ludp
+    LIBS        += -L../../lib/linux64 -ludp
 }
 
 contains(QMAKE_HOST.arch, i686):{
