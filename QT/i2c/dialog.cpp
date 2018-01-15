@@ -47,6 +47,11 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent), ui(new Ui::
     ui->commLED->setMinimumSize(10, 30);
     ui->commLED->setStyleSheet("background: red");
 
+    ui->devAddressm24lr_box->setText("0xAE")
+    ui->intAddressm24lr_box->setText("0x91C")
+    ui->intAddrLenm24lr_box->setText("0x2")
+    ui->DataLenm24lr_box->setText("0x1")
+
 
     QFont font3;
     font3.setPointSize(14);
