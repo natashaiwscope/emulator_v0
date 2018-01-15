@@ -264,7 +264,7 @@
    <property name="title">
     <string>I2C Display</string>
    </property>
-   <widget class="QPushButton" name="buttonWriteI2CDevice_2">
+   <widget class="QPushButton" name="buttonMatrixOrbit24WriteI2CDevice">
     <property name="geometry">
      <rect>
       <x>10</x>

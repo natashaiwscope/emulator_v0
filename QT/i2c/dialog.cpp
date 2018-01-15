@@ -71,8 +71,9 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent), ui(new Ui::
 
     connect(ui->oscope_ip, SIGNAL(currentIndexChanged(int)), this, SLOT(selectNewIPDevice(int)));
     connect(ui->i2cBusScanButton, SIGNAL(clicked()), this, SLOT(scanI2CBus()));
-    connect(ui->buttonM24LRWriteI2CDevice, SIGNAL(clicked()), this, SLOT(readI2CDeviceSlot()));
-    connect(ui->buttonWriteI2CDevice, SIGNAL(clicked()), this, SLOT(writeI2CDeviceSlot()));
+    connect(ui->buttonM24LRWriteI2CDevice, SIGNAL(clicked()), this, SLOT(M24LRReadI2CDeviceSlot()));
+    connect(ui->buttonWriteI2CDevice, SIGNAL(clicked()), this, SLOT(M24LRWriteI2CDeviceSlot()));
+    connect(ui->buttonMatrixOrbit24WriteI2CDevice, SIGNAL(clicked()), this, SLOT(M24LRWriteI2CDeviceSlot()));
 
 #ifdef LINUX_WAY
     connect(ext_msgPump, SIGNAL(msg_Pumped()), SIGNAL(msg_Pumped()));
@@ -397,13 +398,13 @@ void hello()
 }
 
 
-void Dialog::readI2CDeviceSlot()
+void Dialog::M24LRReadI2CDeviceSlot()
 {
     QFuture<void> future = QtConcurrent::run(hello);
     qDebug() << "hello from GUI thread " << QThread::currentThread();
 }
 
-void Dialog::writeI2CDeviceSlot()
+void Dialog::M24LRWriteI2CDeviceSlot()
 {
     QFuture<void> future = QtConcurrent::run(hello);
     qDebug() << "hello from GUI thread " << QThread::currentThread();

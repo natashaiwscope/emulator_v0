@@ -44,8 +44,8 @@ protected:
 public slots:
     void FoundDataLoggerHWString(QString);
 
-    void readI2CDeviceSlot();
-    void writeI2CDeviceSlot();
+    void M24LRReadI2CDeviceSlot();
+    void M24LRWriteI2CDeviceSlot();
 
     void fn_ADC_Cnt(int);
     void fn_ADC_Timer(int);
