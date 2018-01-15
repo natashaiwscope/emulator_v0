@@ -10,7 +10,6 @@ namespace Ui
 class Dialog;
 }
 
-
 class Dialog : public QDialog
 {
     Q_OBJECT
@@ -41,8 +40,12 @@ protected:
     void closeEvent(QCloseEvent *event);
     void slot_ReInitDevList();
 
+
 public slots:
     void FoundDataLoggerHWString(QString);
+
+    void readI2CDeviceSlot();
+    void writeI2CDeviceSlot();
 
     void fn_ADC_Cnt(int);
     void fn_ADC_Timer(int);

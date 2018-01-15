@@ -56,10 +56,6 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent), ui(new Ui::
 
     ui->qlbl->setText("CNT#0");
 
-
-
-
-
     ui->oscope_ip->setSizeAdjustPolicy(QComboBox::AdjustToContents);
 #ifdef LINUX_WAY
     ext_msgPump = new ExternSig();
@@ -75,6 +71,8 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent), ui(new Ui::
 
     connect(ui->oscope_ip, SIGNAL(currentIndexChanged(int)), this, SLOT(selectNewIPDevice(int)));
     connect(ui->i2cBusScanButton, SIGNAL(clicked()), this, SLOT(scanI2CBus()));
+    connect(ui->buttonReadI2CDevice, SIGNAL(clicked()), this, SLOT(readI2CDeviceSlot()));
+    connect(ui->buttonWriteI2CDevice, SIGNAL(clicked()), this, SLOT(writeI2CDeviceSlot()));
 
 #ifdef LINUX_WAY
     connect(ext_msgPump, SIGNAL(msg_Pumped()), SIGNAL(msg_Pumped()));
@@ -390,4 +388,23 @@ void Dialog::selectNewIPDevice(int index)
 void Dialog::scanI2CBus()
 {
     fun_i2c_scan();
+}
+
+void hello()
+{
+    qDebug() << "Hello from thread " << QThread::currentThread();
+    fflush(stdout);
+}
+
+
+void Dialog::readI2CDeviceSlot()
+{
+    QFuture<void> future = QtConcurrent::run(hello);
+    qDebug() << "hello from GUI thread " << QThread::currentThread();
+}
+
+void Dialog::writeI2CDeviceSlot()
+{
+    QFuture<void> future = QtConcurrent::run(hello);
+    qDebug() << "hello from GUI thread " << QThread::currentThread();
 }
