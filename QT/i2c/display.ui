@@ -151,7 +151,7 @@
      </font>
     </property>
    </widget>
-   <widget class="QLineEdit" name="intAddressDatam24lr_box">
+   <widget class="QLineEdit" name="Datam24lr_box">
     <property name="geometry">
      <rect>
       <x>290</x>
