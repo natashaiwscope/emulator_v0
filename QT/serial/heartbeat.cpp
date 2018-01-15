@@ -101,6 +101,8 @@ HeartBeat::HeartBeat(QWidget *parent): settingsUi(new Ui::SettingsDialog)
     connect(d_ram_script, SIGNAL(toggled(bool)), this, SLOT(slot_Show_Script(bool)));
     connect(d_sync, SIGNAL(toggled(bool)), this, SLOT(slot_Sync_CScript(bool)));
     connect(d_run_script, SIGNAL(toggled(bool)), this, SLOT(slot_Run_Script_In_Device(bool)));
+
+
     connect(d_reboot, SIGNAL(toggled(bool)), this, SLOT(slot_Reboot(bool)));
     connect(d_fwupdate, SIGNAL(toggled(bool)), this, SLOT(slot_FwUpdate(bool)));
 
@@ -154,7 +156,7 @@ void HeartBeat::slot_Show_Script(bool x)
     editor->setFileName("autoexec.c");
     editor->show();
     editor->setWindowTitle(QObject::tr("AutoExec.C"));
-
+    tabWidget->setCurrentIndex(3);
 }
 
 void HeartBeat::slot_Run_Script_In_Device(bool x)
@@ -405,13 +407,15 @@ void HeartBeat::createToolBars()
     d_ram_script->setCheckable(true);
     fileToolBar->addAction(d_ram_script);
 
-    d_run_script = new QAction(QIcon(":/images/go.png"), tr("&Run \"C\" Script"), tBar);
-    d_run_script->setCheckable(true);
-    fileToolBar->addAction(d_run_script);
 
     d_sync = new QAction(QIcon(":/images/led_sync.png"), tr("&Download \"C\" Script"), tBar);
     d_sync->setCheckable(true);
     fileToolBar->addAction(d_sync);
+
+    d_run_script = new QAction(QIcon(":/images/go.png"), tr("&Run \"C\" Script"), tBar);
+    d_run_script->setCheckable(true);
+    fileToolBar->addAction(d_run_script);
+
 
     sdCard = new QAction(QIcon(":/images/floppy.png"), tr("&SaveIP"), this);
     sdCard->setShortcuts(QKeySequence::Save);
