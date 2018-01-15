@@ -132,7 +132,6 @@ private:
     void createToolBars();
     void createStatusBar();
     void createDockWindows();
-    void createTabWidget();
 
     bool found;
     Highlighter *highlighter;

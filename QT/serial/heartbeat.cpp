@@ -54,7 +54,7 @@ HeartBeat::HeartBeat(QWidget *parent): settingsUi(new Ui::SettingsDialog)
     printf("starting listerner \n");
     tBar          = new QToolBar();
 
-    editor        = new CodeEditor(0);
+    editor         = new CodeEditor(0);
     cConsole3      = new Console(3,this);
     cConsole2      = new Console(2,this);
     cConsole1      = new Console(1,this);
@@ -73,7 +73,16 @@ HeartBeat::HeartBeat(QWidget *parent): settingsUi(new Ui::SettingsDialog)
     createActions();
     createToolBars();
     createStatusBar();
-    createTabWidget();
+
+    tabWidget    = new QTabWidget(this);
+    setCentralWidget(tabWidget);
+
+    tabWidget->addTab(cConsole1, tr("\"(RS485) UART1\""));
+    tabWidget->addTab(cConsole2, tr("\"Console UART2\""));
+    tabWidget->addTab(cConsole3, tr("\"Console UART3\""));
+    tabWidget->addTab(editor,  tr("\"Edit\" autoexec.c \"C\""));
+
+    tabWidget->setCurrentIndex(0);
 
     connect(this, SIGNAL(consoleInp3()), cConsole3, SLOT(consoleInpSlot()));
     connect(this, SIGNAL(consoleInp2()), cConsole2, SLOT(consoleInpSlot()));
@@ -488,18 +497,6 @@ void HeartBeat::createStatusBar()
 }
 //! [8]
 
-void HeartBeat::createTabWidget()
-{
-    tabWidget    = new QTabWidget(this);
-    setCentralWidget(tabWidget);
-
-    tabWidget->addTab(cConsole3, tr("\"Console UART3\""));
-    tabWidget->addTab(cConsole2, tr("\"Console UART2\""));
-    tabWidget->addTab(cConsole1, tr("\"Console UART1\""));
-    tabWidget->addTab(editor,  tr("\"Edit\" autoexec.c \"C\""));
-
-    tabWidget->setCurrentIndex(0);
-}
 
 void HeartBeat::comm_start()
 {
