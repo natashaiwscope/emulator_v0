@@ -104,7 +104,8 @@ private slots:
     void slot_Edit_OR_PUSH_INI(bool x);
     void slot_Edit_OR_PUSH_C_Script(bool x);
     void slot_Show_Script(bool x);
-    void slot_Run_Script_In_PC(bool x);
+    void slot_Sync_CScript(bool x);
+    void slot_Run_Script_In_Device(bool);
     void slot_Reboot(bool x);
     void slot_FwUpdate(bool x);
     void slot_script_load_and_run();
@@ -180,6 +181,7 @@ private:
     QAction *d_ini_script;
     QAction *d_autoexec_script;
     QAction *d_run_script;
+    QAction *d_sync;
     QAction *d_ram_script;
 
 protected:
