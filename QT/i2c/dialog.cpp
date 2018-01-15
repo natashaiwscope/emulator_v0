@@ -424,6 +424,7 @@ void Dialog::M24LRReadI2CDeviceSlot()
     unsigned int devAddr       = ui->devAddressm24lr_box->text().toLong(&ok, 16);
     unsigned int intAddr       = ui->intAddressm24lr_box->text().toLong(&ok, 16);
     unsigned int intAddrSize   = ui->intAddrLenm24lr_box->text().toLong(&ok, 16);
+    unsigned int intDataLen    = ui->ui->DataLenm24lr_box->text().toLong(&ok, 16);
 
     /* as we using 3 different devices,
      * when response comes back WM_RESPONSE_ARRIVED
@@ -433,8 +434,10 @@ void Dialog::M24LRReadI2CDeviceSlot()
     i2cDevType=1; // <<== memorize
     I2C_Mem_Read_IT(devAddr,intAddr,intAddrSize,NULL,1);
     qDebug() << "devAddr =" << devAddr << "\r\n";
-    qDebug() << "intAddr =" << devAddr << "\r\n";
-    qDebug() << "devAddr =" << devAddr << "\r\n";
+    qDebug() << "intAddr =" << intAddr << "\r\n";
+    qDebug() << "intAddrSize =" << intAddrSize << "\r\n";
+    qDebug() << "intDLen =" << intDataLen << "\r\n";
+    fflush(stdout);
 
 }
 
