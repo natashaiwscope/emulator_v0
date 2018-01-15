@@ -211,8 +211,14 @@ void Dialog::commonMsgHandle(void)
         switch (winMsg)
         {
         case WM_RESPONSE_ARRIVED:
+            {
+                unsigned char uch[100];
             printf("wPar=%d lPar=%d\r\n", wPar, lPar);
-            fflush(stdout);
+                i2c_read_buffer(uch,100);
+                printf("read value=%d\r\n",uch[0]);
+                fflush(stdout);
+            }
+
             break;
 
         case WM_I2C_SCAN_RES:
@@ -402,6 +408,7 @@ void Dialog::M24LRReadI2CDeviceSlot()
 {
     QFuture<void> future = QtConcurrent::run(hello);
     qDebug() << "hello from GUI thread " << QThread::currentThread();
+    I2C_Mem_Read_IT(0xae,0x91c,2,NULL,1);
 }
 
 void Dialog::M24LRWriteI2CDeviceSlot()
