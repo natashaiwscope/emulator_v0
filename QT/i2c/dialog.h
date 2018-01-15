@@ -26,6 +26,7 @@ public:
 
     QTimer      dacTimer;
     QTimer      adcTimer;
+    int         i2cDevType;
 
 #ifndef LINUX_WAY
     bool winEvent(MSG *m, long *result);
@@ -60,6 +61,7 @@ public slots:
     void dacTimerExp();
     void adcTimerExp();
     void scanI2CBus();
+
 
 signals:
     void responseRcvd();

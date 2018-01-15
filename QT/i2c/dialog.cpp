@@ -41,6 +41,8 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent), ui(new Ui::
     adc_Ch1 = 0;
     adc_Ch2 = 0;
 
+    i2cDevType = 0;
+
     ui->commLED->setMinimumSize(10, 30);
     ui->commLED->setStyleSheet("background: red");
 
@@ -213,10 +215,18 @@ void Dialog::commonMsgHandle(void)
         case WM_RESPONSE_ARRIVED:
             {
                 unsigned char uch[100];
-            printf("wPar=%d lPar=%d\r\n", wPar, lPar);
-                i2c_read_buffer(uch,100);
-                printf("read value=%d\r\n",uch[0]);
-                fflush(stdout);
+                if(i2cDevType==1)  // <<== you are waiting for m24l response
+                {
+                    char buff[100];
+                    char uch[1024];
+                    int i=0;
+
+                    /* max response will be 1024 */
+                    i=i2c_read_buffer(uch,1024);
+
+                    sprintf(buff,"0x%02x",uch[0]);
+                    ui->Datam24lr_box->setText(buff);
+                }
             }
 
             break;
@@ -409,6 +419,19 @@ void Dialog::M24LRReadI2CDeviceSlot()
     QFuture<void> future = QtConcurrent::run(hello);
     qDebug() << "hello from GUI thread " << QThread::currentThread();
     I2C_Mem_Read_IT(0xae,0x91c,2,NULL,1);
+
+    bool ok;
+    unsigned int devAddr       = devAddressm24lr_box.toLong(&ok, 16);
+    unsigned int intAddr       = intAddressm24lr_box.toLong(&ok, 16);
+    unsigned int intAddrSize   = intAddrLenm24lr_box.toLong(&ok, 16);
+
+    /* as we using 3 different devices,
+     * when response comes back WM_RESPONSE_ARRIVED
+     * we will know that which device response was 
+     * expected, user can pick any number just for 
+     * own */
+    i2cDevType=1; // <<== memorize
+    I2C_Mem_Read_IT(devAddr,intAddr,intAddrSize,NULL,1);
 }
 
 void Dialog::M24LRWriteI2CDeviceSlot()
