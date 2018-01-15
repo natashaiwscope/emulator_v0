@@ -3,13 +3,13 @@ int main(void)
 {
     int i, j;
     char buffer[100];
-    for (j = 0; j < 10; j++)
-    for (i = 0; i < 10; i++)
+    for (j = 0; j < 5; j++)
+    for (i = 1; i <= 9; i++)
     {
         led_on(i);
-        osDelay(2);
+        osDelay(25);
         led_off(i);
-        osDelay(2);
+        osDelay(21);
     }
 
     return 0;
