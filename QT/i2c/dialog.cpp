@@ -424,7 +424,7 @@ void Dialog::M24LRReadI2CDeviceSlot()
     unsigned int devAddr       = ui->devAddressm24lr_box->text().toLong(&ok, 16);
     unsigned int intAddr       = ui->intAddressm24lr_box->text().toLong(&ok, 16);
     unsigned int intAddrSize   = ui->intAddrLenm24lr_box->text().toLong(&ok, 16);
-    unsigned int intDataLen    = ui->ui->DataLenm24lr_box->text().toLong(&ok, 16);
+    unsigned int intDataLen    = ui->DataLenm24lr_box->text().toLong(&ok, 16);
 
     /* as we using 3 different devices,
      * when response comes back WM_RESPONSE_ARRIVED
