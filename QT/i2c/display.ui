@@ -117,7 +117,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;I2C Device Address&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="intAddressm24lr_box_2">
+   <widget class="QLineEdit" name="intAddressm24lr_box">
     <property name="geometry">
      <rect>
       <x>290</x>
