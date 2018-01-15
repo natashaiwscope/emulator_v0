@@ -74,7 +74,7 @@ public:
         oscope_ip->setGeometry(QRect(30, 20, 191, 41));
         commLED = new QLabel(Dialog);
         commLED->setObjectName(QString::fromUtf8("commLED"));
-        commLED->setGeometry(QRect(30, 80, 151, 41));
+        commLED->setGeometry(QRect(840, 30, 151, 41));
         i2c_addr_cmb = new QComboBox(Dialog);
         i2c_addr_cmb->setObjectName(QString::fromUtf8("i2c_addr_cmb"));
         i2c_addr_cmb->setGeometry(QRect(600, 90, 221, 51));
@@ -120,16 +120,6 @@ public:
         buttonReadI2CDevice->setObjectName(QString::fromUtf8("buttonReadI2CDevice"));
         buttonReadI2CDevice->setGeometry(QRect(20, 250, 221, 51));
         buttonReadI2CDevice->setFont(font);
-        qlbl_3->raise();
-        qlbl_2->raise();
-        intAddressLen_box->raise();
-        devAddressm24lr_box->raise();
-        intAddressData_box->raise();
-        buttonWriteI2CDevice->raise();
-        qlbl_5->raise();
-        qlbl_4->raise();
-        intAddress_box->raise();
-        buttonReadI2CDevice->raise();
         groupBox_2 = new QGroupBox(Dialog);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
         groupBox_2->setGeometry(QRect(10, 510, 551, 261));
@@ -184,14 +174,6 @@ public:
         devAddressHumidity_box->setObjectName(QString::fromUtf8("devAddressHumidity_box"));
         devAddressHumidity_box->setGeometry(QRect(170, 230, 221, 41));
         devAddressHumidity_box->setFont(font);
-        lcdADC_Chnl2->raise();
-        lcdADC_Chnl1->raise();
-        buttonWriteI2CDevice_3->raise();
-        buttonWriteI2CDevice_3->raise();
-        lcdADC_Chnl1->raise();
-        lcdADC_Chnl2->raise();
-        qlbl_7->raise();
-        devAddressHumidity_box->raise();
 
         retranslateUi(Dialog);
 
