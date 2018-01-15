@@ -117,7 +117,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;I2C Device Address&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="intAddressLen_box">
+   <widget class="QLineEdit" name="intAddressm24lr_box_2">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -151,7 +151,7 @@
      </font>
     </property>
    </widget>
-   <widget class="QLineEdit" name="intAddressData_box">
+   <widget class="QLineEdit" name="intAddressDatam24lr_box">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -214,7 +214,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Internal Address Len&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="intAddress_box">
+   <widget class="QLineEdit" name="intAddressm24lr_box">
     <property name="geometry">
      <rect>
       <x>290</x>
@@ -364,7 +364,7 @@
    <property name="title">
     <string>Read Himidity/Temperature</string>
    </property>
-   <widget class="QPushButton" name="buttonWriteI2CDevice_3">
+   <widget class="QPushButton" name="buttonReadHumidityTemp2CDevice">
     <property name="geometry">
      <rect>
       <x>20</x>
