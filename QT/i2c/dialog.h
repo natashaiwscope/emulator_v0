@@ -46,6 +46,7 @@ public slots:
 
     void M24LRReadI2CDeviceSlot();
     void M24LRWriteI2CDeviceSlot();
+    void MatrixOrbitalI2CWrite();
 
     void fn_ADC_Cnt(int);
     void fn_ADC_Timer(int);

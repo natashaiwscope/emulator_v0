@@ -409,3 +409,7 @@ void Dialog::M24LRWriteI2CDeviceSlot()
     QFuture<void> future = QtConcurrent::run(hello);
     qDebug() << "hello from GUI thread " << QThread::currentThread();
 }
+
+void Dialog::MatrixOrbitalI2CWrite()
+{
+}
