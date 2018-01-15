@@ -218,7 +218,7 @@ void Dialog::commonMsgHandle(void)
                 if(i2cDevType==1)  // <<== you are waiting for m24l response
                 {
                     char buff[100];
-                    char uch[1024];
+                    unsigned char uch[1024];
                     int i=0;
 
                     /* max response will be 1024 */
@@ -421,9 +421,9 @@ void Dialog::M24LRReadI2CDeviceSlot()
     I2C_Mem_Read_IT(0xae,0x91c,2,NULL,1);
 
     bool ok;
-    unsigned int devAddr       = devAddressm24lr_box.toLong(&ok, 16);
-    unsigned int intAddr       = intAddressm24lr_box.toLong(&ok, 16);
-    unsigned int intAddrSize   = intAddrLenm24lr_box.toLong(&ok, 16);
+    unsigned int devAddr       = ui->devAddressm24lr_box->text().toLong(&ok, 16);
+    unsigned int intAddr       = ui->intAddressm24lr_box->text().toLong(&ok, 16);
+    unsigned int intAddrSize   = ui->intAddrLenm24lr_box->text().toLong(&ok, 16);
 
     /* as we using 3 different devices,
      * when response comes back WM_RESPONSE_ARRIVED
@@ -432,6 +432,10 @@ void Dialog::M24LRReadI2CDeviceSlot()
      * own */
     i2cDevType=1; // <<== memorize
     I2C_Mem_Read_IT(devAddr,intAddr,intAddrSize,NULL,1);
+    qDebug() << "devAddr =" << devAddr << "\r\n";
+    qDebug() << "intAddr =" << devAddr << "\r\n";
+    qDebug() << "devAddr =" << devAddr << "\r\n";
+
 }
 
 void Dialog::M24LRWriteI2CDeviceSlot()
