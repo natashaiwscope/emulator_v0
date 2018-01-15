@@ -18,6 +18,7 @@
 #else
 #include <windows.h>
 #endif
+#include "matrix_lcd.h"
 
 void Dialog::dacTimerExp()
 {
@@ -75,7 +76,11 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent), ui(new Ui::
     connect(ui->i2cBusScanButton, SIGNAL(clicked()), this, SLOT(scanI2CBus()));
     connect(ui->buttonM24LRWriteI2CDevice, SIGNAL(clicked()), this, SLOT(M24LRReadI2CDeviceSlot()));
     connect(ui->buttonWriteI2CDevice, SIGNAL(clicked()), this, SLOT(M24LRWriteI2CDeviceSlot()));
-    connect(ui->buttonMatrixOrbit24WriteI2CDevice, SIGNAL(clicked()), this, SLOT(M24LRWriteI2CDeviceSlot()));
+
+    // LCD Display part
+    connect(ui->buttonMatrixOrbit24WriteI2CDevice, SIGNAL(clicked()), this, SLOT(WriteMatrixDisplay()));
+    connect(ui->buttonClearScreen, SIGNAL(clicked()), this, SLOT(ClearMatrixDisplay()));
+    // LCD Display part
 
 #ifdef LINUX_WAY
     connect(ext_msgPump, SIGNAL(msg_Pumped()), SIGNAL(msg_Pumped()));
@@ -447,6 +452,22 @@ void Dialog::M24LRWriteI2CDeviceSlot()
     qDebug() << "hello from GUI thread " << QThread::currentThread();
 }
 
-void Dialog::MatrixOrbitalI2CWrite()
+void Dialog::WriteMatrixDisplay()
 {
+    unsigned char i_display_str[512];
+    //Get string from text box
+    QString str  = ui->MatrixLCDData_box->text();
+
+    //Copy into uchar buffer
+    memcpy(i_display_str, str.toStdString().c_str() ,str.size());
+    fun_i2c_write(0x50,str.size(),i_display_str);
+
+}
+void Dialog::ClearMatrixDisplay()
+{
+    unsigned char i_display_cmd[3];
+    i_display_cmd[0]= I2C_COMMAND;
+    i_display_cmd[1]= CLEAR_DISPLAY;
+    //Clears matrix orbital disply
+    fun_i2c_write(0x50,2,i_display_cmd);
 }

@@ -361,7 +361,7 @@
      </font>
     </property>
    </widget>
-   <widget class="QPushButton" name="buttonWriteI2CDevice_4">
+   <widget class="QPushButton" name="buttonClearScreen">
     <property name="geometry">
      <rect>
       <x>340</x>
