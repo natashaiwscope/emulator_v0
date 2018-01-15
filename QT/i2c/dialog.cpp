@@ -71,7 +71,7 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent), ui(new Ui::
 
     connect(ui->oscope_ip, SIGNAL(currentIndexChanged(int)), this, SLOT(selectNewIPDevice(int)));
     connect(ui->i2cBusScanButton, SIGNAL(clicked()), this, SLOT(scanI2CBus()));
-    connect(ui->buttonReadI2CDevice, SIGNAL(clicked()), this, SLOT(readI2CDeviceSlot()));
+    connect(ui->buttonM24LRWriteI2CDevice, SIGNAL(clicked()), this, SLOT(readI2CDeviceSlot()));
     connect(ui->buttonWriteI2CDevice, SIGNAL(clicked()), this, SLOT(writeI2CDeviceSlot()));
 
 #ifdef LINUX_WAY

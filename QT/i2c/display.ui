@@ -231,7 +231,7 @@
      </font>
     </property>
    </widget>
-   <widget class="QPushButton" name="buttonReadI2CDevice">
+   <widget class="QPushButton" name="buttonM24LRWriteI2CDevice">
     <property name="geometry">
      <rect>
       <x>20</x>
