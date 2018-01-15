@@ -46,8 +46,8 @@
   <widget class="QLabel" name="commLED">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>80</y>
+     <x>840</x>
+     <y>30</y>
      <width>151</width>
      <height>41</height>
     </rect>
@@ -251,17 +251,6 @@
      <string>Read I2C Device</string>
     </property>
    </widget>
-   <zorder>qlbl_3</zorder>
-   <zorder>qlbl_2</zorder>
-   <zorder>intAddressLen_box</zorder>
-   <zorder>devAddressm24lr_box</zorder>
-   <zorder>intAddressData_box</zorder>
-   <zorder>buttonWriteI2CDevice</zorder>
-   <zorder>qlbl_5</zorder>
-   <zorder>qlbl_4</zorder>
-   <zorder>intAddress_box</zorder>
-   <zorder>buttonReadI2CDevice</zorder>
-   <zorder>groupBox_3</zorder>
   </widget>
   <widget class="QGroupBox" name="groupBox_2">
    <property name="geometry">
@@ -477,14 +466,6 @@
      </font>
     </property>
    </widget>
-   <zorder>lcdADC_Chnl2</zorder>
-   <zorder>lcdADC_Chnl1</zorder>
-   <zorder>buttonWriteI2CDevice_3</zorder>
-   <zorder>buttonWriteI2CDevice_3</zorder>
-   <zorder>lcdADC_Chnl1</zorder>
-   <zorder>lcdADC_Chnl2</zorder>
-   <zorder>qlbl_7</zorder>
-   <zorder>devAddressHumidity_box</zorder>
   </widget>
  </widget>
  <resources/>
