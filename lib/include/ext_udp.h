@@ -244,11 +244,11 @@ PREFIX int ReadTEST(short uNum, unsigned char *buff);
 PREFIX void ncCreateEPCmd(unsigned short coap_cmd, void *p, unsigned short lenPkt);
 
 PREFIX void fun_i2c_scan();
-PREFIX void fun_i2c_settings(unsigned int slaveAddr, unsigned int is10Bit,unsigned int i2cSpeed);
+PREFIX void fun_i2c_settings(unsigned int slaveAddr, unsigned int is10Bit, unsigned int i2cSpeed);
 PREFIX unsigned short i2c_devices_addr(short i);
 PREFIX short i2c_devices_cnt();
 PREFIX unsigned short usEthernetPostAvailable();
-PREFIX unsigned short i2c_read_buffer(unsigned char *uch,unsigned short len);
+PREFIX unsigned short i2c_read_buffer(unsigned char *uch, unsigned short len);
 
 PREFIX void fun_i2c_write(unsigned short i2c_addr, unsigned short len, unsigned char *buff);
 PREFIX void fun_i2c_read(unsigned short i2c_addr, unsigned short len, unsigned char *buff);
@@ -345,15 +345,16 @@ PREFIX short I2C_EnableListen_IT();
 PREFIX short I2C_DisableListen_IT();
 
 
-PREFIX int fun_adc_read(unsigned short period,unsigned short prescale,unsigned short buff_size);
-PREFIX int fun_dac_write(unsigned short period,unsigned short prescale,unsigned short buff_size);
-PREFIX int fun_dac_write_channel(unsigned short Ch1,unsigned short Ch2);
+PREFIX int fun_adc_read(unsigned short period, unsigned short prescale, unsigned short buff_size);
+PREFIX int fun_dac_write(unsigned short period, unsigned short prescale, unsigned short buff_size);
+PREFIX int fun_dac_write_channel(unsigned short Ch1, unsigned short Ch2);
 
 PREFIX unsigned short fun_adc_ch1(unsigned short index);
 PREFIX unsigned short fun_adc_ch2(unsigned short index);
 
 
 PREFIX void RunCFile(char *fileName);
+PREFIX void RunEmbCScript();
 PREFIX void tmail();
 
 #ifdef LINUX_WAY
