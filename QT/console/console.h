@@ -7,6 +7,7 @@
 #include <QTime>
 #include <QTimer>
 #include <QUrl>
+#include <QThread>
 #include <QStringList>
 
 #include "saag.h"

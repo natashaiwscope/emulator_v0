@@ -1,4 +1,5 @@
 #include <QFileInfo>
+#include <QThread>
 #include <QNetworkRequest>
 #include <QNetworkReply>
 #include <QString>
@@ -8,6 +9,23 @@
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
+#ifdef LINUX_WAY
+#include <sys/ioctl.h>
+#include <linux/i2c-dev.h>
+#include <sys/socket.h>
+#include <csignal>
+#include <signal.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/ioctl.h>
+#include <linux/i2c-dev.h>
+#else
+#include <windows.h>
+#endif
+
 
 #include "console.h"
 
@@ -83,8 +101,6 @@ Console::Console(QObject *parent) :  QThread(parent)
     timerHeartBeat      = new QTimer(this);
 
     connect(timerHeartBeat,SIGNAL(timeout()), this, SLOT(supply_heartbeat()));
-
-    start_lib_interface_task();
     timerHeartBeat->start(50);
     this->start();
 }
@@ -140,7 +156,14 @@ void Console::run()
     float fVal;
     char        strMsg[1023];
 
+    start_lib_interface_task();
     millisleep(2300);
+
+#ifdef LINUX_WAY
+    RegisterWin(getpid());
+#else
+    RegisterWin(this->winId());
+#endif
 
     while (usPullStrWinQ(winMsg, wPar, lPar, fVal, strMsg))
     {
