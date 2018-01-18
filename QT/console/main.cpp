@@ -53,6 +53,18 @@ int main(int argc, char **argv)
                 printf("addr=0x%02x\r\n", i2c_devices_addr(0));
                 fflush(stdout);
 
+
+
+    I2C_Mem_Read_IT(0xa2,0x002,2,NULL,1);
+    WaitForResult(WM_RESPONSE_ARRIVED);
+    unsigned char uch[256];
+                i2c_read_buffer(uch,100);
+                printf("read value=%d\r\n",uch[0]);
+                fflush(stdout);
+
+
+
+
     while(1)
     {
         qDebug() << "Device is connected\r\n";
