@@ -157,27 +157,20 @@ void Console::run()
     char        strMsg[1023];
 
     start_lib_interface_task();
-    millisleep(2300);
-
-#ifdef LINUX_WAY
-    RegisterWin(getpid());
-#else
-    RegisterWin(this->winId());
-#endif
-
-    while (usPullStrWinQ(winMsg, wPar, lPar, fVal, strMsg))
+    do
     {
-        switch (winMsg)
-        {
-        case WM_CONNECTED:
-            //DEBUG_LINE_OPTION;
-            qDebug() << " \n..... Found hardware on LAN IP Address :" << strMsg;
-            fflush(stdout);
-            slot_ReInitDevList();
-            break;
-        }
-        millisleep(300);
+        usPullStrWinQ(winMsg, wPar, lPar, fVal, strMsg);
+        millisleep(400);
     }
+    while(winMsg!=WM_CONNECTED);
+   slot_ReInitDevList();
+
+    while(1)
+    {
+        qDebug() << "Device is connected\r\n";
+        millisleep(1000);
+    }
+
 
 
 }
