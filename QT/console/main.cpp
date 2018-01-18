@@ -32,29 +32,24 @@ int main(int argc, char **argv)
 {
     start_lib_interface_task();
 
-
     //Wait until you are connected
     WaitForResult(WM_CONNECTED);
 
+    //fn_get_ver();
     //Now Scan I2C Bus
-   fun_i2c_scan();
-
-    //Wait until you are connected
+    fun_i2c_scan();
     WaitForResult(WM_RESPONSE_ARRIVED);
-    
-
     //Print result
     qDebug() << "Number of Devices=" << i2c_devices_cnt();
     printf("addr=0x%02x\r\n", i2c_devices_addr(0));
-    printf("addr=0x%02x\r\n", i2c_devices_addr(1));
     fflush(stdout);
 
     //Now Scan I2C Bus
     fun_i2c_scan();
     WaitForResult(WM_RESPONSE_ARRIVED);
+    //Print result
                 qDebug() << "Number of Devices=" << i2c_devices_cnt();
                 printf("addr=0x%02x\r\n", i2c_devices_addr(0));
-                printf("addr=0x%02x\r\n", i2c_devices_addr(1));
                 fflush(stdout);
 
     while(1)
