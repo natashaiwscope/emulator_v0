@@ -30,6 +30,7 @@ int WaitForResult(int result)
 
 int main(int argc, char **argv)
 {
+    // this start Ethernet bride framework
     start_lib_interface_task();
 
     //Wait until you are connected
