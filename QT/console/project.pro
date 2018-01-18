@@ -2,9 +2,7 @@
 TARGET = console
 CONFIG  += console
 
-SOURCES      += console.cpp
 SOURCES      += main.cpp
-HEADERS      += console.h
 
 DESTDIR      = bin
 unix {

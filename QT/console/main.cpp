@@ -10,31 +10,58 @@
 #include <QMutex>
 #include <QThread>
 #include <QStringList>
-
-#include "console.h"
+#include "ext_udp.h"
 
 using namespace std;
 
+int WaitForResult(int result)
+{
+    unsigned short winMsg, wPar, lPar;
+    float fVal;
+    char        strMsg[1023];
+
+    do
+    {
+        usPullStrWinQ(winMsg, wPar, lPar, fVal, strMsg);
+        millisleep(1);
+    }
+    while(winMsg!=result);
+}
+
 int main(int argc, char **argv)
 {
-    int n, rc;
-    int fd;
-    uint8_t buf[4096];
-    int len;
+    start_lib_interface_task();
 
-    QCoreApplication app(argc, argv);
-    QStringList arguments = app.arguments();
-    arguments.takeFirst();      // remove the first argument, which is the program's name
-    if (arguments.isEmpty())
+
+    //Wait until you are connected
+    WaitForResult(WM_CONNECTED);
+
+    //Now Scan I2C Bus
+   fun_i2c_scan();
+
+    //Wait until you are connected
+    WaitForResult(WM_RESPONSE_ARRIVED);
+    
+
+    //Print result
+    qDebug() << "Number of Devices=" << i2c_devices_cnt();
+    printf("addr=0x%02x\r\n", i2c_devices_addr(0));
+    printf("addr=0x%02x\r\n", i2c_devices_addr(1));
+    fflush(stdout);
+
+    //Now Scan I2C Bus
+    fun_i2c_scan();
+    WaitForResult(WM_RESPONSE_ARRIVED);
+                qDebug() << "Number of Devices=" << i2c_devices_cnt();
+                printf("addr=0x%02x\r\n", i2c_devices_addr(0));
+                printf("addr=0x%02x\r\n", i2c_devices_addr(1));
+                fflush(stdout);
+
+    while(1)
     {
+        qDebug() << "Device is connected\r\n";
+        millisleep(1000);
     }
-
-    Console *cmd = new Console();
-
-    cmd->append(arguments);
-
-    QObject::connect(cmd, SIGNAL(finished()), &app, SLOT(quit()));
-    app.exec();
 
     return 0;
 }
