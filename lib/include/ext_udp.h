@@ -201,6 +201,9 @@ enum
     Qttransparent
 };
 
+PREFIX unsigned short nrf_read(unsigned char *rx_buffer);
+PREFIX unsigned short nrf_write(unsigned char *tx_buffer,unsigned short txCnt);
+PREFIX void nrf_set_address(unsigned char *rx_addr,unsigned char *tx_addr);
 
 PREFIX void exit_all();
 PREFIX unsigned short us_isDevReady();
@@ -299,6 +302,7 @@ PREFIX void append_test_csv(char *buffer, unsigned short l);
 
 PREFIX unsigned short usSelectDevIndex(short i);
 PREFIX unsigned short usSelectDevString(const char *ip_string);
+PREFIX unsigned short usSelectDev(int ipaddr);
 
 PREFIX unsigned int weigResult(unsigned int i);
 PREFIX unsigned short usGetConnectedDeviceIP(unsigned short i, char *devName);
@@ -356,6 +360,7 @@ PREFIX unsigned short fun_adc_ch2(unsigned short index);
 PREFIX void RunCFile(char *fileName);
 PREFIX void RunEmbCScript();
 PREFIX void tmail();
+PREFIX unsigned char ip2string(unsigned int ip, char *buffer, unsigned short len);
 
 #ifdef LINUX_WAY
 PREFIX ExternSig *createWidget1();
