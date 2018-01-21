@@ -63,8 +63,8 @@ typedef struct
 
 typedef struct
 {
-    unsigned char data_cnt;
-    unsigned char data_cnt;
+    unsigned char rx_cnt;
+    unsigned char tx_cnt;
 
     unsigned char tx_data[256];
     unsigned char rx_data[256];
