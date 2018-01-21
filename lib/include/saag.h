@@ -57,8 +57,8 @@ enum
 
 typedef struct
 {
-    unsigned char rx_addr[4];
-    unsigned char tx_addr[4];
+    unsigned char rx_mac[4];
+    unsigned char tx_mac[4];
 } __attribute__((__packed__)) NRF_address;
 
 typedef struct
