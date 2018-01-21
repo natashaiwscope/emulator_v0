@@ -57,17 +57,18 @@ enum
 
 typedef struct
 {
-    unsigned char nrf_rx_addr[4]
-    unsigned char nrf_tx_addr[4]
+    unsigned char nrf_rx_addr[4];
+    unsigned char nrf_tx_addr[4];
+} __attribute__((__packed__)) NRF_address;
 
-    unsigned char nrf_tx_int;
-    unsigned char nrf_rx_int;
+typedef struct
+{
     unsigned char rx_data_cnt;
     unsigned char tx_data_cnt;
 
-    unsigned char nrf_tx_data[256]
-    unsigned char nrf_rx_data[256]
-} __attribute__((__packed__)) NRF;
+    unsigned char nrf_tx_data[256];
+    unsigned char nrf_rx_data[256];
+} __attribute__((__packed__)) NRF_data;
 
 typedef struct
 {
