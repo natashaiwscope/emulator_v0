@@ -46,6 +46,9 @@ int main(int argc, char **argv)
     fflush(stdout);
 
     //Now Scan I2C Bus
+    //fun_i2c_scan();
+    unsigned char itx_mac[4]={0x12,0x34,0x56,0x78};
+    //nrf_set_address(itx_mac,itx_mac);
     fun_i2c_scan();
     WaitForResult(WM_RESPONSE_ARRIVED);
     //Print result
@@ -55,7 +58,7 @@ int main(int argc, char **argv)
 
 
 
-    I2C_Mem_Read_IT(0xa2,0x002,2,NULL,1);
+    I2C_Mem_Read(0xa2,0x002,2,NULL,1);
     WaitForResult(WM_RESPONSE_ARRIVED);
     unsigned char uch[256];
                 i2c_read_buffer(uch,100);
