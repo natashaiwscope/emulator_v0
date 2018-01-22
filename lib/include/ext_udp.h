@@ -201,9 +201,12 @@ enum
     Qttransparent
 };
 
+PREFIX unsigned int override_device_address(const char *ipstring);
 PREFIX unsigned short nrf_read(unsigned char *rx_buffer);
 PREFIX unsigned short nrf_write(unsigned char *tx_buffer,unsigned short txCnt);
 PREFIX void nrf_set_address(unsigned char *rx_mac,unsigned char *tx_mac);
+PREFIX void nrf_set_chnl_datasize(unsigned short chnl,unsigned short size);
+PREFIX unsigned int override_device_address(const char *ipstring);
 
 PREFIX void exit_all();
 PREFIX unsigned short us_isDevReady();
@@ -250,7 +253,7 @@ PREFIX void fun_i2c_scan();
 PREFIX void fun_i2c_settings(unsigned int slaveAddr, unsigned int is10Bit, unsigned int i2cSpeed);
 PREFIX unsigned short i2c_devices_addr(short i);
 PREFIX short i2c_devices_cnt();
-PREFIX unsigned short usEthernetPostAvailable();
+PREFIX unsigned short usUDPAvailable();
 PREFIX unsigned short i2c_read_buffer(unsigned char *uch, unsigned short len);
 
 PREFIX void fun_i2c_write(unsigned short i2c_addr, unsigned short len, unsigned char *buff);
@@ -291,7 +294,6 @@ PREFIX unsigned short usFetchOneCSVRecord();
 PREFIX unsigned short WiegScanCSVFetchedCard();
 PREFIX void fn_scan_raw(unsigned int cardNum);
 PREFIX unsigned short WiegScanCard(unsigned long facCode, unsigned long cardNum);
-PREFIX void WiegScanLED();
 PREFIX void fn_scan_wieg(unsigned long fcode, unsigned long cardNum);
 
 PREFIX void Q2C(QString temp, char *outstr);

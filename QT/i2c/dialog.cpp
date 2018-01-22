@@ -428,7 +428,7 @@ void Dialog::M24LRReadI2CDeviceSlot()
 {
     QFuture<void> future = QtConcurrent::run(hello);
     qDebug() << "hello from GUI thread " << QThread::currentThread();
-    I2C_Mem_Read_IT(0xae,0x91c,2,NULL,1);
+    I2C_Mem_Read(0xae,0x91c,2,NULL,1);
 
     bool ok;
     unsigned int devAddr       = ui->devAddressm24lr_box->text().toLong(&ok, 16);
@@ -442,7 +442,7 @@ void Dialog::M24LRReadI2CDeviceSlot()
      * expected, user can pick any number just for 
      * own */
     i2cDevType=1; // <<== memorize
-    I2C_Mem_Read_IT(devAddr,intAddr,intAddrSize,NULL,1);
+    I2C_Mem_Read(devAddr,intAddr,intAddrSize,NULL,1);
     qDebug() << "devAddr =" << devAddr << "\r\n";
     qDebug() << "intAddr =" << intAddr << "\r\n";
     qDebug() << "intAddrSize =" << intAddrSize << "\r\n";
