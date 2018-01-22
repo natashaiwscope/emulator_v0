@@ -203,7 +203,7 @@ enum
 
 PREFIX unsigned short nrf_read(unsigned char *rx_buffer);
 PREFIX unsigned short nrf_write(unsigned char *tx_buffer,unsigned short txCnt);
-PREFIX void nrf_set_address(unsigned char *rx_addr,unsigned char *tx_addr);
+PREFIX void nrf_set_address(unsigned char *rx_mac,unsigned char *tx_mac);
 
 PREFIX void exit_all();
 PREFIX unsigned short us_isDevReady();

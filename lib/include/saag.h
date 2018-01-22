@@ -77,6 +77,7 @@ typedef struct
     unsigned short i2c_self_addr2;
     unsigned short i2c_10bit_mode;
     unsigned short i2c_speed;
+    unsigned short i2c_timeout;
 } __attribute__((__packed__)) I2C_Comm;
 
 typedef struct
@@ -87,6 +88,7 @@ typedef struct
     unsigned short transaction_token;
     unsigned short MemAddress;
     unsigned short MemAddSize;
+    unsigned short Result;
     unsigned char  pData[MAX_1K_SIZE];
 } __attribute__((__packed__)) I2C_IO;
 
