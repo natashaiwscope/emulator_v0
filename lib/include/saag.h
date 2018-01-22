@@ -59,6 +59,8 @@ typedef struct
 {
     unsigned char rx_mac[4];
     unsigned char tx_mac[4];
+    unsigned short chnl;
+    unsigned short size;
 } __attribute__((__packed__)) NRF_address;
 
 typedef struct
