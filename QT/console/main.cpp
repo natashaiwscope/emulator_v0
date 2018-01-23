@@ -30,40 +30,36 @@ int WaitForResult(int result)
 
 int main(int argc, char **argv)
 {
+    unsigned char buf[2];
     // this start Ethernet bride framework
-    start_lib_interface_task();
-
     //Wait until you are connected
+    start_lib_interface_task();
     WaitForResult(WM_CONNECTED);
+    while(usUDPAvailable());
 
-    //fn_get_ver();
+
     //Now Scan I2C Bus
     fun_i2c_scan();
-    WaitForResult(WM_RESPONSE_ARRIVED);
-    //Print result
+    while(!usUDPAvailable());
     qDebug() << "Number of Devices=" << i2c_devices_cnt();
     printf("addr=0x%02x\r\n", i2c_devices_addr(0));
+    printf("addr=0x%02x\r\n", i2c_devices_addr(1));
     fflush(stdout);
 
-    //Now Scan I2C Bus
-    //fun_i2c_scan();
-    unsigned char itx_mac[4]={0x12,0x34,0x56,0x78};
-    //nrf_set_address(itx_mac,itx_mac);
     fun_i2c_scan();
-    WaitForResult(WM_RESPONSE_ARRIVED);
-    //Print result
-                qDebug() << "Number of Devices=" << i2c_devices_cnt();
-                printf("addr=0x%02x\r\n", i2c_devices_addr(0));
-                fflush(stdout);
+    while(!usUDPAvailable());
+    qDebug() << "Number of Devices=" << i2c_devices_cnt();
+    printf("addr=0x%02x\r\n", i2c_devices_addr(0));
+    printf("addr=0x%02x\r\n", i2c_devices_addr(1));
+    fflush(stdout);
 
 
-
-    I2C_Mem_Read(0xa2,0x002,2,NULL,1);
-    WaitForResult(WM_RESPONSE_ARRIVED);
+    I2C_Mem_Read(0xae,0x91c,2,buf,1);
+    while(!usUDPAvailable());
     unsigned char uch[256];
-                i2c_read_buffer(uch,100);
-                printf("read value=%d\r\n",uch[0]);
-                fflush(stdout);
+    i2c_read_buffer(uch,100);
+    printf("read value=%d\r\n",uch[0]);
+    fflush(stdout);
 
 
 
