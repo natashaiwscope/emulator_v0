@@ -22,6 +22,13 @@ FIX_EXTERN  unsigned int isGlobalError;
 FIX_EXTERN  unsigned char usExitAllThread;
 FIX_EXTERN  SAAGVersion  devVersion;
 
+FIX_EXTERN  volatile unsigned int isClientUDP_Running;
+FIX_EXTERN  volatile unsigned int isBroadcastUDP_Running;
+FIX_EXTERN  volatile unsigned int isServerUDP_Running;
+
+FIX_EXTERN  volatile unsigned int isHeartBeat_Running;
+FIX_EXTERN  volatile unsigned int isMainDevIOTask_Running;
+
 FIX_EXTERN double x_Axis[11200];
 FIX_EXTERN double xCh1_Array[11200];
 FIX_EXTERN double xCh2_Array[11200];
