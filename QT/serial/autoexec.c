@@ -7,7 +7,7 @@ int main(void)
     for (i = 1; i <= 9; i++)
     {
         led_on(i);
-        osDelay(259);
+        osDelay(29);
         led_off(i);
         osDelay(21);
     }

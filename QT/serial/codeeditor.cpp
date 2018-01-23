@@ -44,7 +44,7 @@ CodeEditor::CodeEditor(quint16 mode, QWidget *parent) : QPlainTextEdit(parent)
 
     QTextDocument *doc = this->document();
     QFont font = doc->defaultFont();
-    font.setPointSize(60);
+    font.setPointSize(30);
     font.setFamily("Courier New");
     font.setBold(true);
     doc->setDefaultFont(font);
