@@ -34,6 +34,26 @@ enum
 
 typedef enum
 {
+    EUART_WORDLENGTH_8B = 0x00,
+    EUART_WORDLENGTH_9B = 0x01
+} EUART_WordLen;
+
+typedef enum
+{
+    EUART_STOPBITS_1 = 0x00,
+    EUART_STOPBITS_2 = 0x01
+} EUART_StopBit;
+
+typedef enum
+{
+    EUART_PARITY_NONE = 0x00,
+    EUART_PARITY_EVEN = 0x01,
+    EUART_PARITY_ODD  = 0x02
+} EUART_Parity;
+
+
+typedef enum
+{
     I2C_OK       = 0x00,
     I2C_ERROR,
     I2C_BUSY,
