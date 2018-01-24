@@ -58,7 +58,7 @@ int main(int argc, char **argv)
     while(!usUDPAvailable());
     unsigned char uch[256];
     i2c_read_buffer(uch,100);
-    printf("read value=%d\r\n",uch[0]);
+    printf("read value=0x%02x\r\n",uch[0]);
     fflush(stdout);
 
 
