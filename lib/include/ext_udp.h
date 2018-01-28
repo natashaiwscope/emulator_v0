@@ -201,12 +201,12 @@ enum
     Qttransparent
 };
 
-PREFIX unsigned int override_device_address(const char *ipstring);
+PREFIX void pick_known_device(const char *pstring);
 PREFIX unsigned short nrf_read(unsigned char *rx_buffer);
 PREFIX unsigned short nrf_write(unsigned char *tx_buffer, unsigned short txCnt);
 PREFIX void nrf_set_address(unsigned char *rx_mac, unsigned char *tx_mac);
 PREFIX void nrf_set_chnl_datasize(unsigned short chnl, unsigned short size);
-PREFIX unsigned int override_device_address(const char *ipstring);
+PREFIX unsigned short write_tcp_string(char *buff, short len);
 
 PREFIX void exit_all();
 PREFIX unsigned short us_isDevReady();
@@ -231,7 +231,6 @@ PREFIX unsigned short us_isDevReady();
 PREFIX int isWinRegistered();
 
 PREFIX void start_lib_interface_task();
-PREFIX void start_lib_interface_task_fixip(const char *ipaddr);
 PREFIX void stop_lib_interface_task();
 PREFIX short test(unsigned short *i);
 PREFIX void usTestMsg(unsigned short winMsg, unsigned short wPar, unsigned short lPar);
@@ -241,6 +240,7 @@ PREFIX void usTestMsg(unsigned short winMsg, unsigned short wPar, unsigned short
 PREFIX unsigned short fnLED_Off(unsigned short ledNum);
 PREFIX unsigned short fnLED_On(unsigned short ledNum);
 
+PREFIX void set_uart_comm_mode();
 PREFIX void fun_uart_start(unsigned short bus_num, unsigned short bits, unsigned long speed, unsigned short stopbit, unsigned short parity);
 
 PREFIX int fun_uart_term(unsigned short uartNum, unsigned int uartBaud, unsigned int uartStop, unsigned int uartDataBits, unsigned int parity);
