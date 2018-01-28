@@ -13,6 +13,7 @@
 #include "ext_udp.h"
 
 using namespace std;
+void RUN_I2C_Example();
 
 void append(const QStringList &s)
 {
@@ -67,13 +68,7 @@ void append(const QStringList &s)
             fflush(stdout);
         }
     }
-
-    //g_setTextMode();
-
 }
-
-
-
 
 int WaitForResult(int result)
 {
@@ -91,13 +86,26 @@ int WaitForResult(int result)
 
 int main(int argc, char **argv)
 {
-    unsigned char buf[2];
     // this start Ethernet bride framework
     //Wait until you are connected
     start_lib_interface_task();
     WaitForResult(WM_CONNECTED);
     while(usUDPAvailable());
 
+    RUN_I2C_Example();
+
+    while(1)
+    {
+        qDebug() << "Device is connected\r\n";
+        millisleep(1000);
+    }
+
+    return 0;
+}
+
+void RUN_I2C_Example()
+{
+    unsigned char buf[2];
     //Now Scan I2C Bus
     fun_i2c_scan();
     while(!usUDPAvailable());
@@ -122,14 +130,4 @@ int main(int argc, char **argv)
     fflush(stdout);
 
 
-
-
-    while(1)
-    {
-        qDebug() << "Device is connected\r\n";
-        millisleep(1000);
-    }
-
-    return 0;
 }
-
