@@ -14,6 +14,67 @@
 
 using namespace std;
 
+void append(const QStringList &s)
+{
+    QStringList cmdlinearg = s;
+
+    qDebug() << "    \n-------------------------------------";
+    qDebug() << "    \nStarting Console Application Interface";
+    qDebug() << "    \n ..... Scanning LAN .....";
+    qDebug() << "    \n-------------------------------------";
+    fflush(stdout);
+
+    for (int i = 0; i < cmdlinearg.size(); ++i)
+    {
+        //qDebug() << cmdlinearg.at(i) << endl;
+        if (cmdlinearg.at(i) == "put")
+        {
+        }
+        else if (cmdlinearg.at(i) == "get")
+        {
+        }
+        else if (cmdlinearg.at(i) == "run")
+        {
+        }
+        else if (cmdlinearg.at(i).contains("remip="))
+        {
+            QRegExp rx("=");// match a comma or a space
+            QString  str = cmdlinearg.at(i);
+
+            QStringList list = str.split(rx, QString::SkipEmptyParts);
+
+            qDebug() << "ip addr specified was" << endl;
+            qDebug() << "list 0" <<  list.at(0);
+            qDebug() << "list 1" <<  list.at(1);
+        }
+        else if (cmdlinearg.at(i).contains("fw="))
+        {
+            QRegExp rx("=");// match a comma or a space
+            QString  str = cmdlinearg.at(i);
+
+            QStringList list = str.split(rx, QString::SkipEmptyParts);
+
+            qDebug() << "ip addr specified was" << endl;
+            qDebug() << "list 0" <<  list.at(0);
+            qDebug() << "list 1" <<  list.at(1);
+
+            fflush(stdout);
+
+        }
+        else if (cmdlinearg.at(i) == "reboot")
+        {
+            qDebug() << "REBOOT DEVICE\r\n";
+            fflush(stdout);
+        }
+    }
+
+    //g_setTextMode();
+
+}
+
+
+
+
 int WaitForResult(int result)
 {
     unsigned short winMsg, wPar, lPar;
