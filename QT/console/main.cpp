@@ -37,10 +37,6 @@ int main(int argc, char **argv)
     WaitForResult(WM_CONNECTED);
     while(usUDPAvailable());
 
-    qDebug() << "---- TEST\r\n";
-    write_tcp_string("\0",1);
-    fflush(stdout);
-
     //Now Scan I2C Bus
     fun_i2c_scan();
     while(!usUDPAvailable());
