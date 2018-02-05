@@ -201,21 +201,69 @@ enum
     Qttransparent
 };
 
+// Main Enter and Exit
+PREFIX void enter_eth_lib();
+PREFIX void exit_eth_lib();
 PREFIX void pick_known_device(const char *pstring);
+
+
+PREFIX unsigned short us_isDevReady();
+PREFIX int millisleep(unsigned long ms);
+PREFIX int osDelay(unsigned long ms);
+
+//UART RS485 speed/Read/Write
+PREFIX void set_uart_comm_mode();
+PREFIX int fun_uart_term(unsigned short uartNum, unsigned int uartBaud, unsigned int uartStop, unsigned int uartDataBits, unsigned int parity);
+PREFIX unsigned short uart_read(unsigned char bus_num, unsigned char *buff);
+PREFIX unsigned short uart_write(unsigned char bus_num, unsigned char *buff, unsigned short len);
+
+// As these function peform i2c operation.
+// so i tried to keep same name as STM32F4 Cube library
+// I2C Functions
+PREFIX short I2C_Master_Transmit(uint16_t DevAddress, uint8_t *pData, uint16_t Size);
+PREFIX short I2C_Master_Receive(uint16_t DevAddress, uint16_t Size);
+PREFIX short I2C_Slave_Transmit(uint8_t *pData, uint16_t Size);
+PREFIX short I2C_Slave_Receive(uint8_t *pData, uint16_t Size);
+PREFIX short I2C_Mem_Write(uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+PREFIX short I2C_Mem_Read(uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size);
+PREFIX short I2C_IsDeviceReady(uint16_t DevAddress, uint32_t Trials);
+PREFIX short I2C_Master_Transmit_IT(uint16_t DevAddress, uint8_t *pData, uint16_t Size);
+PREFIX short I2C_Master_Receive_IT(uint16_t DevAddress, uint8_t *pData, uint16_t Size);
+PREFIX short I2C_Slave_Transmit_IT(uint8_t *pData, uint16_t Size);
+PREFIX short I2C_Slave_Receive_IT(uint8_t *pData, uint16_t Size);
+PREFIX short I2C_Master_Sequential_Transmit_IT(uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t XferOptions);
+PREFIX short I2C_Master_Sequential_Receive_IT(uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t XferOptions);
+
+// Slave I2C is in plate not yet implemented in hardware
+PREFIX short I2C_Slave_Sequential_Transmit_IT(uint8_t *pData, uint16_t Size, uint32_t XferOptions);
+PREFIX short I2C_Slave_Sequential_Receive_IT(uint8_t *pData, uint16_t Size, uint32_t XferOptions);
+PREFIX short I2C_Master_Abort_IT(uint16_t DevAddress);
+PREFIX short I2C_EnableListen_IT();
+PREFIX short I2C_DisableListen_IT();
+
+PREFIX void fun_i2c_scan();
+PREFIX void fun_i2c_settings(unsigned int slaveAddr, unsigned int is10Bit, unsigned int i2cSpeed);
+PREFIX unsigned short i2c_devices_addr(short i);
+PREFIX short i2c_devices_cnt();
+PREFIX unsigned short usUDPAvailable();
+PREFIX unsigned short i2c_read_buffer(unsigned char *uch, unsigned short len);
+PREFIX void fun_i2c_write(unsigned short i2c_addr, unsigned short len, unsigned char *buff);
+PREFIX void fun_i2c_read(unsigned short i2c_addr, unsigned short len, unsigned char *buff);
+
+
+// nrf2401 chip
 PREFIX unsigned short nrf_read(unsigned char *rx_buffer);
 PREFIX unsigned short nrf_write(unsigned char *tx_buffer, unsigned short txCnt);
 PREFIX void nrf_set_address(unsigned char *rx_mac, unsigned char *tx_mac);
 PREFIX void nrf_set_chnl_datasize(unsigned short chnl, unsigned short size);
 PREFIX unsigned short write_tcp_string(char *buff, short len);
 
-PREFIX void exit_all();
-PREFIX unsigned short us_isDevReady();
+// LED Control
 PREFIX unsigned short usLED_On(unsigned short ledNum);
 PREFIX unsigned short usLED_Off(unsigned short ledNum);
-PREFIX unsigned short usDevWrite(unsigned short cmd, unsigned char *buff, unsigned long len);
-PREFIX unsigned short usDevRead(unsigned short cmd, unsigned char *buff, unsigned long len);
-PREFIX int millisleep(unsigned long ms);
-PREFIX int osDelay(unsigned long ms);
+
+
+
 PREFIX unsigned char usPullStrWinHLQ(unsigned short &winMsg, unsigned char *ucArr, float &fVal, char *str);
 PREFIX unsigned char usPullStrWinQ(unsigned short &winMsg, unsigned short &wPar, unsigned short &lPar, float &fVal, char *str);
 PREFIX int u3PullWinQ(unsigned short &winMsg, unsigned short &wPar, unsigned short &lPar);
@@ -230,9 +278,6 @@ PREFIX unsigned short pull_gui_text(char *cstr, unsigned short len);
 PREFIX unsigned short us_isDevReady();
 PREFIX int isWinRegistered();
 
-PREFIX void start_lib_interface_task();
-PREFIX void stop_lib_interface_task();
-PREFIX short test(unsigned short *i);
 PREFIX void usTestMsg(unsigned short winMsg, unsigned short wPar, unsigned short lPar);
 
 /* following functions are common between "C" Script and std "C" gcc interface */
@@ -240,28 +285,13 @@ PREFIX void usTestMsg(unsigned short winMsg, unsigned short wPar, unsigned short
 PREFIX unsigned short fnLED_Off(unsigned short ledNum);
 PREFIX unsigned short fnLED_On(unsigned short ledNum);
 
-PREFIX void set_uart_comm_mode();
-PREFIX void fun_uart_start(unsigned short bus_num, unsigned short bits, unsigned long speed, unsigned short stopbit, unsigned short parity);
-
-PREFIX int fun_uart_term(unsigned short uartNum, unsigned int uartBaud, unsigned int uartStop, unsigned int uartDataBits, unsigned int parity);
 
 //PREFIX void deviceDisconnect();
 
 PREFIX int ReadTEST(short uNum, unsigned char *buff);
 PREFIX void ncCreateEPCmd(unsigned short coap_cmd, void *p, unsigned short lenPkt);
 
-PREFIX void fun_i2c_scan();
-PREFIX void fun_i2c_settings(unsigned int slaveAddr, unsigned int is10Bit, unsigned int i2cSpeed);
-PREFIX unsigned short i2c_devices_addr(short i);
-PREFIX short i2c_devices_cnt();
-PREFIX unsigned short usUDPAvailable();
-PREFIX unsigned short i2c_read_buffer(unsigned char *uch, unsigned short len);
 
-PREFIX void fun_i2c_write(unsigned short i2c_addr, unsigned short len, unsigned char *buff);
-PREFIX void fun_i2c_read(unsigned short i2c_addr, unsigned short len, unsigned char *buff);
-
-PREFIX unsigned short uart_read(unsigned char bus_num, unsigned char *buff);
-PREFIX unsigned short uart_write(unsigned char bus_num, unsigned char *buff, unsigned short len);
 
 PREFIX int fun_incap_start(int i, int len);
 PREFIX int fun_outcap_start(int i, int len);
@@ -329,25 +359,6 @@ PREFIX void push_fatfs_download_file(const char *filename);
 
 PREFIX void heartbeat_1ms();
 //PREFIX unsigned short uart_data_ready();
-
-PREFIX short I2C_Master_Transmit(uint16_t DevAddress, uint8_t *pData, uint16_t Size);
-PREFIX short I2C_Master_Receive(uint16_t DevAddress, uint16_t Size);
-PREFIX short I2C_Slave_Transmit(uint8_t *pData, uint16_t Size);
-PREFIX short I2C_Slave_Receive(uint8_t *pData, uint16_t Size);
-PREFIX short I2C_Mem_Write(uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-PREFIX short I2C_Mem_Read(uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size);
-PREFIX short I2C_IsDeviceReady(uint16_t DevAddress, uint32_t Trials);
-PREFIX short I2C_Master_Transmit_IT(uint16_t DevAddress, uint8_t *pData, uint16_t Size);
-PREFIX short I2C_Master_Receive_IT(uint16_t DevAddress, uint8_t *pData, uint16_t Size);
-PREFIX short I2C_Slave_Transmit_IT(uint8_t *pData, uint16_t Size);
-PREFIX short I2C_Slave_Receive_IT(uint8_t *pData, uint16_t Size);
-PREFIX short I2C_Master_Sequential_Transmit_IT(uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t XferOptions);
-PREFIX short I2C_Master_Sequential_Receive_IT(uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t XferOptions);
-PREFIX short I2C_Slave_Sequential_Transmit_IT(uint8_t *pData, uint16_t Size, uint32_t XferOptions);
-PREFIX short I2C_Slave_Sequential_Receive_IT(uint8_t *pData, uint16_t Size, uint32_t XferOptions);
-PREFIX short I2C_Master_Abort_IT(uint16_t DevAddress);
-PREFIX short I2C_EnableListen_IT();
-PREFIX short I2C_DisableListen_IT();
 
 
 PREFIX int fun_adc_read(unsigned short period, unsigned short prescale, unsigned short buff_size);

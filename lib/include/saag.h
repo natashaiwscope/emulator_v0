@@ -425,6 +425,7 @@ typedef struct  FW_Pkt
 {
     unsigned int offset;
     unsigned int len;
+    unsigned int crc;
     union
     {
         unsigned char  uc_p[MAX_1K_SIZE];
