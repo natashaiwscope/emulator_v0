@@ -30,7 +30,7 @@ int WaitForResult(int result)
 
 int main(int argc, char **argv)
 {
-    start_lib_interface_task();
+    enter_eth_lib();
     WaitForResult(WM_CONNECTED);
     // Now Ready for Data
 
@@ -66,6 +66,7 @@ int main(int argc, char **argv)
         qDebug() << "Device is connected\r\n";
         millisleep(1000);
     }
+    exit_eth_lib();
 
     return 0;
 }

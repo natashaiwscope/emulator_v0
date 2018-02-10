@@ -33,7 +33,7 @@ int main(int argc, char **argv)
     unsigned char buf[2];
     // this start Ethernet bride framework
     //Wait until you are connected
-    start_lib_interface_task();
+    enter_eth_lib();
     WaitForResult(WM_CONNECTED);
     while(usUDPAvailable());
 

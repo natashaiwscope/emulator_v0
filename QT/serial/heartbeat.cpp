@@ -112,7 +112,7 @@ HeartBeat::HeartBeat(QWidget *parent): settingsUi(new Ui::SettingsDialog)
     RegisterWin(this->winId());
 #endif
 
-    start_lib_interface_task();
+    enter_eth_lib();
 
 }
 
@@ -648,7 +648,7 @@ void HeartBeat::slot_script_run()
 
 HeartBeat::~HeartBeat()
 {
-    exit_all();
+    exit_eth_lib();
     osDelay(100);
 
     fflush(stdout);
