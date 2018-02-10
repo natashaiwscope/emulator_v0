@@ -88,7 +88,7 @@ int main(int argc, char **argv)
 {
     // this start Ethernet bride framework
     //Wait until you are connected
-    start_lib_interface_task();
+    enter_eth_lib();
     WaitForResult(WM_CONNECTED);
     while(usUDPAvailable());
 
@@ -99,6 +99,7 @@ int main(int argc, char **argv)
         qDebug() << "Device is connected\r\n";
         millisleep(1000);
     }
+    exit_eth_lib();
 
     return 0;
 }
