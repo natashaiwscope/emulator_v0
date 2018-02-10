@@ -114,7 +114,7 @@ Dialog::Dialog(QWidget *parent, bool smallScreen) : QDialog(parent), ui(new Ui::
 #else
     RegisterWin(this->winId());
 #endif
-    start_lib_interface_task();
+    enter_eth_lib();
 }
 
 void Dialog::fn_ADC_clicked()
@@ -124,6 +124,7 @@ void Dialog::fn_ADC_clicked()
 
 Dialog::~Dialog()
 {
+    exit_eth_lib();
     exit_all();
     osDelay(100);
 
