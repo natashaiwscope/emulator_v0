@@ -75,6 +75,36 @@ enum
     __IW_Nosig = 0x80
 };
 
+#define SML_PKT_SIZE 32
+#define MED_PKT_SIZE 64
+typedef struct  SML_pkt
+{
+    unsigned short cmd;
+    unsigned short subcmd;
+    unsigned short res1;
+    unsigned short res2;
+    union
+    {
+        unsigned char  uc_p[SML_PKT_SIZE-8];
+        char            c_p[SML_PKT_SIZE-8];
+    };
+} __attribute__((__packed__)) SML_Pkt;
+
+typedef struct  MED_pkt
+{
+    unsigned short cmd;
+    unsigned short subcmd;
+    unsigned short res1;
+    unsigned short res2;
+    union
+    {
+        unsigned char  uc_p[MED_PKT_SIZE-8];
+        char            c_p[MED_PKT_SIZE-8];
+    };
+} __attribute__((__packed__)) MED_Pkt;
+
+
+
 typedef struct
 {
     unsigned char rx_mac[4];
