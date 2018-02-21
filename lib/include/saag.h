@@ -80,9 +80,9 @@ enum
 typedef struct  SML_pkt
 {
     unsigned short cmd;
+    unsigned short endianNess;
     unsigned short subcmd;
-    unsigned short res1;
-    unsigned short res2;
+    unsigned short reserved;
     union
     {
         unsigned char  uc_p[SML_PKT_SIZE-8];
@@ -93,9 +93,9 @@ typedef struct  SML_pkt
 typedef struct  MED_pkt
 {
     unsigned short cmd;
+    unsigned short endianNess;
     unsigned short subcmd;
-    unsigned short res1;
-    unsigned short res2;
+    unsigned short reserved;
     union
     {
         unsigned char  uc_p[MED_PKT_SIZE-8];
