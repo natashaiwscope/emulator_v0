@@ -83,7 +83,7 @@ typedef struct  SML_pkt
     unsigned short endianNess;
     unsigned short subcmd;
     unsigned short reserved;
-    union
+    union 
     {
         unsigned char  uc_p[SML_PKT_SIZE-8];
         char            c_p[SML_PKT_SIZE-8];
@@ -673,15 +673,15 @@ typedef struct
     unsigned short        prescale;
     unsigned short        buff_size;
 
-    union
+    union raw
     {
         unsigned int adc[256];
-        struct
+        struct usadc
         {
             unsigned short  usadc[512];
         };
 
-        struct
+        struct Ch1Ch2
         {
             unsigned short  Ch1[256];
             unsigned short  Ch2[256];
