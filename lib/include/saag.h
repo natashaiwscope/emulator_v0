@@ -77,6 +77,8 @@ enum
 
 #define SML_PKT_SIZE 32
 #define MED_PKT_SIZE 64
+#define BIG_PKT_SIZE 1280
+
 typedef struct  SML_pkt
 {
     unsigned short cmd;
@@ -102,6 +104,19 @@ typedef struct  MED_pkt
         char            c_p[MED_PKT_SIZE-8];
     };
 } __attribute__((__packed__)) MED_Pkt;
+
+typedef struct  BIG_pkt
+{
+    unsigned short cmd;
+    unsigned short endianNess;
+    unsigned short subcmd;
+    unsigned short reserved;
+    union
+    {
+        unsigned char  uc_p[BIG_PKT_SIZE-8];
+        char            c_p[BIG_PKT_SIZE-8];
+    };
+} __attribute__((__packed__)) BIG_Pkt;
 
 
 
