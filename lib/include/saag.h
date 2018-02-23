@@ -90,7 +90,7 @@ typedef struct  SML_pkt
         unsigned char  uc_p[SML_PKT_SIZE-8];
         char            c_p[SML_PKT_SIZE-8];
     };
-} __attribute__((__packed__)) SML_Pkt;
+} __attribute__((__packed__)) SML_pkt;
 
 typedef struct  MED_pkt
 {
@@ -103,7 +103,7 @@ typedef struct  MED_pkt
         unsigned char  uc_p[MED_PKT_SIZE-8];
         char            c_p[MED_PKT_SIZE-8];
     };
-} __attribute__((__packed__)) MED_Pkt;
+} __attribute__((__packed__)) MED_pkt;
 
 typedef struct  BIG_pkt
 {
@@ -116,7 +116,7 @@ typedef struct  BIG_pkt
         unsigned char  uc_p[BIG_PKT_SIZE-8];
         char            c_p[BIG_PKT_SIZE-8];
     };
-} __attribute__((__packed__)) BIG_Pkt;
+} __attribute__((__packed__)) BIG_pkt;
 
 
 
