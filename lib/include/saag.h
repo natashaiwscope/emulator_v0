@@ -697,6 +697,7 @@ typedef struct
     unsigned int        _halUID[3];
     unsigned char       _master_addr[6];
     unsigned char       _self_addr[6];
+    unsigned char       _prefChannel[8];
 } __attribute__((__packed__)) WSAAGVersion;
 
 
