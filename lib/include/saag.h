@@ -673,6 +673,36 @@ typedef struct
 
 typedef struct
 {
+    unsigned short      __usedLen;
+    unsigned char       __prodName[32];
+    unsigned char       __verNum[32];
+    unsigned char       __serNum[32];
+    unsigned char       __date[32];
+    unsigned char       __time[32];
+
+    unsigned int        __crc;
+    unsigned int        __len;
+    unsigned int        __csum;
+
+    unsigned short        verMajor;
+    unsigned short        verMinor;
+    unsigned short        verBgFix;
+    unsigned short        verBldNm;
+    unsigned int         __str_addr;
+    unsigned int         __end_addr;
+
+    unsigned int        _halVersion;
+    unsigned int        _halRevID;
+    unsigned int        _halDEVID;
+    unsigned int        _halUID[3];
+    unsigned char       _master_addr[6];
+    unsigned char       _self_addr[6];
+} __attribute__((__packed__)) WSAAGVersion;
+
+
+
+typedef struct
+{
     unsigned short        ID_ProgramMem;
     unsigned short        ID1_High;
     unsigned short        ID1_Low;
