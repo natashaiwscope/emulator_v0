@@ -82,8 +82,9 @@ enum
 typedef struct  SML_pkt
 {
     unsigned short cmd;
-    unsigned short endianNess;
-    unsigned short subcmd;
+    unsigned char  subcmd;
+    unsigned char  endianNess;
+    unsigned short used_size;
     unsigned short reserved;
     union 
     {
