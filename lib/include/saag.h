@@ -79,6 +79,20 @@ enum
 #define MED_PKT_SIZE 64
 #define BIG_PKT_SIZE 1280
 
+typedef struct st_id
+{
+    union id
+    {
+        unsigned int uid_d0;
+        unsigned int uid_d1;
+        unsigned int uid_d2;
+    };
+    union id_arr
+    {
+        unsigned int uid_d[12];
+    };
+} st_id;
+
 typedef struct  SML_pkt
 {
     unsigned short cmd;
