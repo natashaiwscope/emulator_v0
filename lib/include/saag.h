@@ -79,17 +79,17 @@ enum
 #define MED_PKT_SIZE 64
 #define BIG_PKT_SIZE 1280
 
-typedef struct st_id
+typedef union st_id
 {
-    union
+    struct
     {
         unsigned int uid_d0;
         unsigned int uid_d1;
         unsigned int uid_d2;
     };
-    union
+    struct
     {
-        unsigned int uid_d[12];
+        unsigned char uid_d[12];
     };
 } st_id;
 
