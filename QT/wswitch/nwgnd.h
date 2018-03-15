@@ -22,6 +22,7 @@
 #include "csql_db.h"
 #include "ui_nwgnd.h"
 #include "saag.h"
+#include "csql_db.h"
 
 QT_BEGIN_NAMESPACE
 class WheelBox;
@@ -50,6 +51,7 @@ private:
 
     QString csvFileName;
     QString cFileName;
+    DatabaseManager  *db;
     //string q2s(const QString &s);
 signals:
     void stringMsg(int newValue, QString s);

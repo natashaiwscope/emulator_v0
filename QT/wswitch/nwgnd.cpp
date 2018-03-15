@@ -47,6 +47,7 @@ Nwgnd::Nwgnd(QWidget *parent) : QWidget(parent)
 
     connect(ui.pushButtonAck,     SIGNAL(clicked()),     this,     SLOT(run_CSV()));
 
+    db=new DatabaseManager();
     //ui.debug_WinC_Code->setTextBackgroundColor(QColor(0, 0, 255, 127));
 
 }
