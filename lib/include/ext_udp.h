@@ -104,6 +104,7 @@
 #define WM_REBOOT           (WM_USER_MSG+86)
 #define WM_ADC              (WM_USER_MSG+87)
 #define WM_I2C_SCAN_RES     (WM_USER_MSG+88)
+#define WM_NRF_SWITCH       (WM_USER_MSG+89)
 
 
 typedef void (*callback_alarm)(int, int);
@@ -368,6 +369,10 @@ PREFIX int fun_dac_write_channel(unsigned short Ch1, unsigned short Ch2);
 PREFIX unsigned short fun_adc_ch1(unsigned short index);
 PREFIX unsigned short fun_adc_ch2(unsigned short index);
 
+PREFIX void init_nrf();
+PREFIX int fun_nr_write(unsigned short cmd, unsigned short subcmd, const void *b, unsigned short len);
+PREFIX int fun_nr_read(unsigned short cmd, unsigned short subcmd, const void *b, unsigned short len);
+PREFIX int fun_get_spkt(void *spkt);
 
 PREFIX void RunCFile(char *fileName);
 PREFIX void RunEmbCScript();
