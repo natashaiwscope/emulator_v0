@@ -57,7 +57,7 @@ Nwgnd::~Nwgnd()
 }
 
 
-void Nwgnd::slot_WIEG_RESULT()
+void Nwgnd::slot_SWITCH_RESULT()
 {
     qDebug() << __FUNCTION__ << "\r\n";
     fflush(stdout);

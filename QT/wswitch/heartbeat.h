@@ -171,19 +171,7 @@ signals:
     void sig_script_run();
     void do_plot();
 
-    void sig_WIEG_RESULT();
-    void sig_CSCRIPT_SCOPE(int);
-    void sig_CSCRIPT_SIGNAL(int);
-    void sig_CSCRIPT_GPIO(int);
-    void sig_CSCRIPT_I2C(int);
-    void sig_CSCRIPT_I2C_READ(int);
-    void sig_CSCRIPT_I2C_WRITE(int);
-    void sig_CSCRIPT_INCAP(int);
-    void sig_CSCRIPT_OUTCAP(int);
-    void sig_CSCRIPT_UART(int);
-    void sig_CSCRIPT_UART_READ(int);
-    void sig_CSCRIPT_UART_WRITE(int);
-    void sig_CSCRIPT_Extern(int);
+    void sig_SWITCH_RESULT();
 
 
 

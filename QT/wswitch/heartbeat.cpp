@@ -84,7 +84,7 @@ HeartBeat::HeartBeat(QWidget *parent)
     connect(d_reboot, SIGNAL(toggled(bool)), this, SLOT(slot_Reboot(bool)));
     connect(d_fwupdate, SIGNAL(toggled(bool)), this, SLOT(slot_FwUpdate(bool)));
 
-    connect(this,SIGNAL(sig_WIEG_RESULT()),nwgnd, SLOT(slot_WIEG_RESULT()));
+    connect(this,SIGNAL(sig_SWITCH_RESULT()),nwgnd, SLOT(slot_SWITCH_RESULT()));
 
 #ifdef LINUX_WAY
     RegisterWin(getpid());
@@ -521,7 +521,7 @@ void HeartBeat::commonMsgHandle(void)
             break;
 
         case WM_WIEGAND_RESULT:
-                Q_EMIT sig_WIEG_RESULT();
+                Q_EMIT sig_SWITCH_RESULT();
             break;
 
         case WM_WIEGAND:
