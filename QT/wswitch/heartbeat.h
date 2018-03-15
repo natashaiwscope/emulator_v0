@@ -11,7 +11,6 @@
 
 #include "highlighter.h"
 
-#include "codeeditor.h"
 #include "shared_struct.h"
 #include "nwgnd.h"
 #include "ext_udp.h"

@@ -9,19 +9,12 @@ SOURCES += csql_db.cpp
 HEADERS += csql_db.h
 
 HEADERS      += heartbeat.h
-#HEADERS      += tftpc.h
 
 SOURCES      += main.cpp
 SOURCES      += heartbeat.cpp
 
 HEADERS += led.h
 SOURCES += led.cpp
-
-SOURCES += codeeditor.cpp
-HEADERS += codeeditor.h
-
-SOURCES += highlighter.cpp
-HEADERS += highlighter.h
 
 #RP= ../../../scratch1
 RP= ../..
