@@ -60,6 +60,7 @@ Nwgnd::~Nwgnd()
 
 void Nwgnd::slot_SWITCH_RESULT()
 {
+    ui.grnLED->setStyleSheet("background: green");
     qDebug() << __FUNCTION__ << "\r\n";
     fflush(stdout);
 }
