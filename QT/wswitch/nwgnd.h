@@ -62,7 +62,6 @@ public slots:
 signals:
 
 private Q_SLOTS:
-    void scan_Wieg();
 public Q_SLOTS:
     void slot_WIEG_RESULT();
 };
