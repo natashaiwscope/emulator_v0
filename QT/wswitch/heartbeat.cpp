@@ -548,63 +548,6 @@ void HeartBeat::commonMsgHandle(void)
 
             break;
 
-        case WM_CSCRIPT_SETTINGS:
-            switch (wPar)
-            {
-            case CSCRIPT_SCOPE:
-                Q_EMIT sig_CSCRIPT_SCOPE(wPar);
-                break;
-            case CSCRIPT_SIGNAL:
-                Q_EMIT sig_CSCRIPT_SIGNAL(wPar);
-                break;
-            case CSCRIPT_GPIO:
-                DEBUG_LINE_OPTION
-                break;
-            case CSCRIPT_I2C:
-                DEBUG_LINE_OPTION
-                break;
-            case CSCRIPT_I2C_READ:
-                DEBUG_LINE_OPTION
-                break;
-            case CSCRIPT_I2C_WRITE:
-                DEBUG_LINE_OPTION
-                break;
-            case CSCRIPT_INCAP:
-                DEBUG_LINE_OPTION
-                break;
-            case CSCRIPT_OUTCAP:
-                DEBUG_LINE_OPTION
-                break;
-            case CSCRIPT_UART:
-                DEBUG_LINE_OPTION
-                break;
-            case CSCRIPT_UART_READ:
-                DEBUG_LINE_OPTION
-                break;
-            case CSCRIPT_UART_WRITE:
-                DEBUG_LINE_OPTION
-                break;
-            case CSCRIPT_LINE:
-                //lineEdit->setText(strMsg);
-                break;
-            case CSCRIPT_LED:
-            case CSCRIPT_LCD_DEC:
-            case CSCRIPT_LCD_HEX:
-            case CSCRIPT_LCD_BIN:
-            case CSCRIPT_BANNER:
-            case CSCRIPT_GRAPH1:
-            case CSCRIPT_GRAPH2:
-            case CSCRIPT_TEXT:
-            case CSCRIPT_CLEAR_TEXT:
-                Q_EMIT sig_CSCRIPT_Extern(wPar);
-                break;
-            default:
-                DEBUG_LINE_OPTION
-                break;
-
-            };
-
-            break;
 
         default:
 
