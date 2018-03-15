@@ -66,9 +66,16 @@ void Nwgnd::AckWireless()
 
 void Nwgnd::slot_SWITCH_RESULT()
 {
-    ui.timeoutLED->setStyleSheet("background: lightGreen");
+    ui.timeoutLED->setStyleSheet("background: green");
     qDebug() << __FUNCTION__ << "\r\n";
+
+    QDateTime UTC(QDateTime::currentDateTimeUtc());
+    QDateTime local(UTC.toLocalTime());
+    qDebug() << "Local time is:" << local.toString();
     fflush(stdout);
+
+    ui.raw_wirelessTIME->setText(local.toString());
+
 }
 
 void Nwgnd::saveRecord()
