@@ -66,6 +66,10 @@ void Nwgnd::AckWireless()
 
 void Nwgnd::slot_SWITCH_RESULT()
 {
+    SML_pkt _spkt;
+    st_id   sid;
+    char buffer[100];
+
     ui.timeoutLED->setStyleSheet("background: green");
     qDebug() << __FUNCTION__ << "\r\n";
 
@@ -75,6 +79,16 @@ void Nwgnd::slot_SWITCH_RESULT()
     fflush(stdout);
 
     ui.raw_wirelessTIME->setText(local.toString());
+    fun_get_spkt(&_spkt);
+
+        memcpy(&sid,   _spkt.uc_p, sizeof(st_id));
+
+        sprintf(buffer,"[0x%08x][0x%08x][0x%08x]", sid.uid_d0, sid.uid_d1, sid.uid_d2);
+        ui.raw_wirelessID->setText(buffer);
+
+        //printf("cmd= %d len=%d\r\n", spkt->subcmd, spkt->used_size);
+        //printf("id = 0x%08x 0x%08x 0x%08x \r\n", sid.uid_d0, sid.uid_d1, sid.uid_d2);
+        //fflush(stdout);
 
 }
 
