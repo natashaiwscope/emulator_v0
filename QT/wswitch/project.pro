@@ -1,7 +1,5 @@
 
 TARGET = wiegemu
-FORMS         = extern_inf.ui
-FORMS        += settingsdialog.ui
 FORMS        += nwgnd.ui
 
 SOURCES += nwgnd.cpp
