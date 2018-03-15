@@ -90,26 +90,13 @@ private slots:
 
     void supply_heartbeat();
     void timerExpired();
-    void delayRAMCodeTimerrExpired();
     void onActionCommand(QString);
-
-    void newScriptSlot();
-    void PushRTCTimeSlot();
-    void autoExecScriptSlot();
 
     void slotEditAutoExecScriptC(bool);
     void FoundDataLoggerHWString(QString);
     void HeartBeatTimerSyncSlot();
 
-    void slot_Edit_OR_PUSH_INI(bool x);
-    void slot_Edit_OR_PUSH_C_Script(bool x);
-    void slot_Show_Script(bool x);
-    void slot_Run_Script_In_PC(bool x);
     void slot_Reboot(bool x);
-    void slot_FwUpdate(bool x);
-    void slot_script_load_and_run();
-    void slot_script_run();
-    void slot_FormatSDCard();
 
 private:
     QTimer      delayRAMCodeTimer;

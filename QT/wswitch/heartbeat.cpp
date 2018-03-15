@@ -83,7 +83,6 @@ HeartBeat::HeartBeat(QWidget *parent)
     connect(editor, SIGNAL(code_edit_text_changed()), this, SLOT(update_code_buffer()));
     connect(&delayRAMCodeTimer, SIGNAL(timeout()), this, SLOT(delayRAMCodeTimerrExpired()));
 
-    connect(d_ram_script, SIGNAL(toggled(bool)), this, SLOT(slot_Show_Script(bool)));
     connect(d_run_script, SIGNAL(toggled(bool)), this, SLOT(slot_Run_Script_In_PC(bool)));
     connect(d_reboot, SIGNAL(toggled(bool)), this, SLOT(slot_Reboot(bool)));
     connect(d_fwupdate, SIGNAL(toggled(bool)), this, SLOT(slot_FwUpdate(bool)));
@@ -134,70 +133,9 @@ void HeartBeat::HeartBeatTimerSyncSlot()
 }
 
 
-void HeartBeat::slot_Show_Script(bool x)
-{
-
-    editor->setMode(0);
-    editor->setFileName("autoexec.c");
-    editor->show();
-    editor->setWindowTitle(QObject::tr("AutoExec.C"));
-
-}
-
-void HeartBeat::slot_Run_Script_In_PC(bool x)
-{
-    RunCFile("autoexec.c");
-}
-
 void HeartBeat::slot_Reboot(bool x)
 {
     RebootCurrentDevice();
-}
-
-void HeartBeat::slot_Edit_OR_PUSH_INI(bool x)
-{
-    iMode = 1;
-    if (timer.isActive())
-    {
-        timer.stop();
-        d_ini_script->setChecked(false);
-        printf("INI Single Click\n");
-        Q_EMIT sig_pushFile("autoexec.ini");
-    }
-    else
-    {
-        timer.setInterval(550);
-        timer.setSingleShot(true);
-        timer.start();
-    }
-}
-
-void HeartBeat::slot_Edit_OR_PUSH_C_Script(bool x)
-{
-    iMode = 2;
-
-    if (timer.isActive())
-    {
-        timer.stop();
-        d_autoexec_script->setChecked(false);
-        Q_EMIT sig_pushFile("autoexec.c");
-        printf("C Script Single Click\n");
-    }
-    else
-    {
-        timer.setInterval(550);
-        timer.setSingleShot(true);
-        timer.start();
-    }
-}
-
-void HeartBeat::delayRAMCodeTimerrExpired()
-{
-    //printf(c_code_data);
-    //fflush(stdout);
-    /* time to send code to hardware */
-
-
 }
 
 void HeartBeat::timerExpired()
@@ -251,50 +189,6 @@ void HeartBeat::timerExpired()
     //if(d_ini_script->isChecked())
 
     fflush(stdout);
-}
-
-void HeartBeat::PushRTCTimeSlot()
-{
-
-}
-
-void HeartBeat::autoExecScriptSlot()
-{
-    QDesktopServices desk;
-    //desk.openUrl(QUrl("file://HeartBeat.cpp"));
-    desk.openUrl(QUrl("mainwindow.cpp"));
-}
-
-void HeartBeat::newScriptSlot()
-{
-    QTreeWidget *rem_Filelist;
-    rem_Filelist = new QTreeWidget;
-
-    rem_Filelist->setEnabled(false);
-    rem_Filelist->setRootIsDecorated(false);
-    rem_Filelist->setHeaderLabels(QStringList() << tr("Name") << tr("Size")  << tr("Time"));
-
-    rem_Filelist->header()->setStretchLastSection(true);
-    rem_Filelist->setEnabled(true);
-    rem_Filelist->style()->pixelMetric(QStyle::PM_ScrollBarExtent);
-
-    rem_Filelist->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-    rem_Filelist->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-
-    QList<QTreeWidgetItem *> items;
-    for (int i = 0; i < 1; ++i)
-    {
-        items.append(new QTreeWidgetItem((QTreeWidget *)0, QStringList(QString("item: %1").arg(i))));
-        rem_Filelist->insertTopLevelItems(0, items);
-    }
-
-    for (int i = 0; i < 5; i++)
-    {
-        //rem_Filelist->resizeColumnToContents(i);
-    }
-    printf("new script \n");
-    fflush(stdout);
-    rem_Filelist->show();
 }
 
 void HeartBeat::createActions()
@@ -629,17 +523,6 @@ void HeartBeat::browse_and_send()
     }
 }
 
-void HeartBeat::slot_script_load_and_run()
-{
-    unsigned short len;
-
-}
-
-void HeartBeat::slot_script_run()
-{
-    unsigned short len;
-}
-
 HeartBeat::~HeartBeat()
 {
     exit_eth_lib();
@@ -821,13 +704,6 @@ void HeartBeat::commonMsgHandle(void)
     }
 }
 
-void HeartBeat::slot_FormatSDCard()
-{
-    unsigned short len;
-    printf("format SD card clicked\r\n");
-    fflush(stdout);
-}
-
 void HeartBeat::selectNewIPDevice(int index)
 {
     if(oscope_ip->count())
@@ -835,31 +711,6 @@ void HeartBeat::selectNewIPDevice(int index)
         usSelectDevIndex(index);
     }
 }
-
-void HeartBeat::slot_FwUpdate(bool x)
-{
-    //push_fw_download_file("../../../scratch1/mcapi/v01/direct.bin");
-    push_fw_download_file("/tmp/direct.bin");
-#if 0
-    QFileDialog::Options options;
-    QString selectedFilter;
-    fileName = QFileDialog::getOpenFileName(this,
-                                            tr("QFileDialog::getOpenFileName()"),
-                                            "",
-                                            tr("All Files (*);;BIN Files (*.bin)"),
-                                            &selectedFilter,
-                                            options);
-
-    if (!fileName.isEmpty())
-    {
-        memset(asciifileName, '\0', sizeof(asciifileName));
-        strcpy(asciifileName, fileName.toStdString().c_str());
-        push_fw_download_file((const char *)asciifileName);
-        //Q_EMIT sig_pushFile(fileName);
-    }
-#endif
-}
-
 
 void HeartBeat::onActionCommand(QString s)
 {
