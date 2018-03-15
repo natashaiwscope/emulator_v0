@@ -108,17 +108,10 @@ private:
     void createMenus();
     void createToolBars();
     void createStatusBar();
-    void createDockWindows();
     void createTabWidget();
 
     bool found;
-    Highlighter *highlighter;
 
-    QTextEdit *textEdit1;
-    QTextEdit *textEdit2;
-    QTextEdit *textEdit3;
-    QListWidget *customerList;
-    QListWidget *paragraphsList;
     QComboBox    *oscope_ip;
     QLabel *qlbl;
 

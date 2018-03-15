@@ -67,7 +67,6 @@ HeartBeat::HeartBeat(QWidget *parent)
     createToolBars();
     createStatusBar();
     createTabWidget();
-    //createDockWindows();
 
     //setWindowTitle(tr("Data Logger"));
 
@@ -350,24 +349,6 @@ void HeartBeat::comm_end()
 }
 
 //! [9]
-void HeartBeat::createDockWindows()
-{
-    QDockWidget *dock = new QDockWidget(tr("UART1RX"), this);
-    dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
-    textEdit1 = new QTextEdit(dock);
-    dock->setWidget(textEdit1);
-
-    addDockWidget(Qt::RightDockWidgetArea, dock);
-    //viewMenu->addAction(dock->toggleViewAction());
-
-    dock = new QDockWidget(tr("UART2RX"), this);
-    textEdit2 = new QTextEdit(dock);
-    dock->setWidget(textEdit2);
-
-    addDockWidget(Qt::LeftDockWidgetArea, dock);
-    //viewMenu->addAction(dock->toggleViewAction());
-}
-
 bool HeartBeat::eventFilter(QObject *object, QEvent *e)
 {
     if ( e->type() == QEvent::Resize )
