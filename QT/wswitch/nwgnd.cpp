@@ -59,14 +59,14 @@ Nwgnd::~Nwgnd()
 
 void Nwgnd::AckWireless()
 {
-    ui.grnLED->setStyleSheet("background: gray");
+    ui.timeoutLED->setStyleSheet("background: gray");
     qDebug() << __FUNCTION__ << "\r\n";
     fflush(stdout);
 }
 
 void Nwgnd::slot_SWITCH_RESULT()
 {
-    ui.grnLED->setStyleSheet("background: green");
+    ui.timeoutLED->setStyleSheet("background: lightGreen");
     qDebug() << __FUNCTION__ << "\r\n";
     fflush(stdout);
 }

@@ -312,10 +312,10 @@
     <widget class="QLabel" name="timeoutLED">
      <property name="geometry">
       <rect>
-       <x>510</x>
-       <y>10</y>
-       <width>40</width>
-       <height>30</height>
+       <x>10</x>
+       <y>100</y>
+       <width>891</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="palette">
