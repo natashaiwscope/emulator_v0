@@ -501,7 +501,9 @@ void HeartBeat::commonMsgHandle(void)
             tabWidget->setCurrentIndex(3);
             break;
 
-        case WM_WIEGAND_RESULT:
+        case WM_NRF_SWITCH:
+            qDebug() << "WM RESULT\r\n";
+            fflush(stdout);
                 Q_EMIT sig_SWITCH_RESULT();
             break;
 
