@@ -9,8 +9,6 @@
 #include <QUdpSocket>
 #include <qcombobox.h>
 
-#include "highlighter.h"
-
 #include "shared_struct.h"
 #include "nwgnd.h"
 #include "ext_udp.h"
