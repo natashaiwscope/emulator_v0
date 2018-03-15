@@ -66,6 +66,7 @@ signals:
 private Q_SLOTS:
 public Q_SLOTS:
     void slot_SWITCH_RESULT();
+    void AckWireless();
 };
 
 #endif

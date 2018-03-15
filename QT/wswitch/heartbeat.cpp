@@ -502,8 +502,6 @@ void HeartBeat::commonMsgHandle(void)
             break;
 
         case WM_NRF_SWITCH:
-            qDebug() << "WM RESULT\r\n";
-            fflush(stdout);
                 Q_EMIT sig_SWITCH_RESULT();
             break;
 

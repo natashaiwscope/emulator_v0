@@ -45,7 +45,7 @@ Nwgnd::Nwgnd(QWidget *parent) : QWidget(parent)
     model_device = new QStandardItemModel();
     model_device->setHorizontalHeaderLabels(QStringList() << "Name" << "MAC" << "IPAddr");
 
-    connect(ui.pushButtonAck,     SIGNAL(clicked()),     this,     SLOT(run_CSV()));
+    connect(ui.pushButtonAck,     SIGNAL(clicked()),     this,     SLOT(AckWireless()));
 
     db=new DatabaseManager();
     db->openDB();
@@ -57,6 +57,12 @@ Nwgnd::~Nwgnd()
 {
 }
 
+void Nwgnd::AckWireless()
+{
+    ui.grnLED->setStyleSheet("background: gray");
+    qDebug() << __FUNCTION__ << "\r\n";
+    fflush(stdout);
+}
 
 void Nwgnd::slot_SWITCH_RESULT()
 {
