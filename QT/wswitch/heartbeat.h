@@ -61,7 +61,6 @@ public:
     unsigned char iMode;
     ioTxtGrpthExchStrct  iGuiUpdate;
 
-    CodeEditor   *editor;
     Nwgnd      *nwgnd;
 
     Ui::HeartBeat      *ui;
@@ -92,7 +91,6 @@ private slots:
     void timerExpired();
     void onActionCommand(QString);
 
-    void slotEditAutoExecScriptC(bool);
     void FoundDataLoggerHWString(QString);
     void HeartBeatTimerSyncSlot();
 
@@ -195,14 +193,6 @@ public slots:
     void SaveDeviceIPAddr();
     void CheckDeviceSlot();
     void browse_and_send();
-    void getFile();
-    void update_code_buffer()
-    {
-        memcpy(c_code_data, editor->c_code_data, sizeof(c_code_data));
-        delayRAMCodeTimer.setInterval(550);
-        delayRAMCodeTimer.setSingleShot(true);
-        delayRAMCodeTimer.start();
-    }
     void comm_start();
     void comm_end();
     void msg_PumpedRcvd();

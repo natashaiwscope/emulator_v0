@@ -50,9 +50,7 @@ HeartBeat::HeartBeat(QWidget *parent)
 {
     printf("starting listerner \n");
     tBar          = new QToolBar();
-
     nwgnd         = new Nwgnd(this);
-    editor        = new CodeEditor(0);
 
 #ifdef LINUX_WAY
     ext_msgPump = new ExternSig();
@@ -80,7 +78,6 @@ HeartBeat::HeartBeat(QWidget *parent)
     connect(oscope_ip, SIGNAL(currentIndexChanged(int)), this, SLOT(selectNewIPDevice(int)));
 
 
-    connect(editor, SIGNAL(code_edit_text_changed()), this, SLOT(update_code_buffer()));
     connect(&delayRAMCodeTimer, SIGNAL(timeout()), this, SLOT(delayRAMCodeTimerrExpired()));
 
     connect(d_run_script, SIGNAL(toggled(bool)), this, SLOT(slot_Run_Script_In_PC(bool)));
@@ -140,55 +137,6 @@ void HeartBeat::slot_Reboot(bool x)
 
 void HeartBeat::timerExpired()
 {
-    if (iMode == 1)
-    {
-        editor->setMode(0);
-        editor->setFileName("autoexec.ini");
-        editor->show();
-        editor->setWindowTitle(QObject::tr("AutoExec.INI"));
-        iMode = 0;
-    }
-    else if (iMode == 2)
-    {
-        editor->setMode(0);
-        editor->setFileName("autoexec.c");
-        editor->show();
-        editor->setWindowTitle(QObject::tr("AutoExec.C"));
-        iMode = 0;
-    }
-    else if (iMode == 3)
-    {
-        editor->setMode(0);
-        iMode = 0;
-        Q_EMIT sig_script_run();
-    }
-    else if (iMode == 4)
-    {
-        QString fileName("autoexec.c");
-        iMode = 4;
-        if (!fileName.isEmpty())
-        {
-            QFile file(fileName);
-            if (!file.open(QFile::ReadOnly))
-            {
-                return;
-            }
-
-            QByteArray data = file.readAll();
-            if (data.size() < 4095)
-                memcpy(c_code_data, data.data(), data.size());
-            else
-                memcpy(c_code_data, data.data(), 4095);
-
-            delayRAMCodeTimer.setInterval(550);
-            delayRAMCodeTimer.setSingleShot(true);
-            delayRAMCodeTimer.start();
-        }
-    }
-
-    //if(d_ini_script->isChecked())
-
-    fflush(stdout);
 }
 
 void HeartBeat::createActions()
@@ -388,16 +336,7 @@ void HeartBeat::createTabWidget()
     setCentralWidget(tabWidget);
 
     tabWidget->addTab(nwgnd, tr("\"NWGND\""));
-    tabWidget->addTab(editor,  tr("\"Edit\" autoexec.c \"C\""));
-    //tabWidget->addTab(qConsole, tr("\"Console\""));
-    //oscope       = new Oscope(tabWidget,this);
-    //osignal      = new Osignal(tabWidget,this);
-
     tabWidget->setCurrentIndex(0);
-
-    //connect(this,SIGNAL(do_plot()),oscope,SLOT(do_plot));
-
-    //tabWidget->addTab(oscope);
 }
 
 void HeartBeat::comm_start()
@@ -477,35 +416,6 @@ void HeartBeat::FoundDataLoggerHWString(QString s)
 
 }
 
-void HeartBeat::slotEditAutoExecScriptC(bool n)
-{
-    //editor=new CodeEditor("autoexec.c");
-    if (timer.isActive())
-    {
-        iMode = 0;
-        timer.stop();
-
-        editor->setMode(1);
-        editor->setFileName("autoexec.c");
-        editor->show();
-        editor->setWindowTitle(QObject::tr("AutoExec.C"));
-        tabWidget->setCurrentIndex(2);
-    }
-    else
-    {
-        timer.setInterval(550);
-        timer.setSingleShot(true);
-        timer.start();
-        iMode = 4;
-    }
-}
-
-
-void HeartBeat::getFile()
-{
-
-}
-
 void HeartBeat::browse_and_send()
 {
     QFileDialog::Options options;
@@ -530,7 +440,6 @@ HeartBeat::~HeartBeat()
 
     fflush(stdout);
     delete tBar;
-    delete editor;
 #ifdef LINUX_WAY
     delete ext_msgPump;
 #endif
