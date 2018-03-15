@@ -44,7 +44,6 @@ public:
     WiegnedCard w;
 
 private:
-    RecordData *sinRec;
     QStandardItemModel *model_cardTable;
     QStandardItemModel *model_device;
     unsigned short mindex;
@@ -56,19 +55,14 @@ signals:
     void stringMsg(int newValue, QString s);
 
 public slots:
+    void saveRecord();
     void wiegnStatusLine(unsigned char l1, char *line);
     void wiegnCLEDPump(unsigned char l1, unsigned char l2, unsigned l3);
     void wiegnPLEDPump(unsigned char l1, unsigned char l2, unsigned l3);
 signals:
 
 private Q_SLOTS:
-    void browse_C_Code();
-    void browse_CSV();
-    void run_C_Code();
-    void run_CSV();
     void scan_Wieg();
-    void scan_WiegRAW();
-    void scan_WiegBIN();
 public Q_SLOTS:
     void slot_WIEG_RESULT();
 };
