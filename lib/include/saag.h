@@ -110,8 +110,9 @@ typedef struct  SML_pkt
 typedef struct  MED_pkt
 {
     unsigned short cmd;
-    unsigned short endianNess;
-    unsigned short subcmd;
+    unsigned char  subcmd;
+    unsigned char  endianNess;
+    unsigned short used_size;
     unsigned short reserved;
     union
     {
@@ -123,8 +124,9 @@ typedef struct  MED_pkt
 typedef struct  BIG_pkt
 {
     unsigned short cmd;
-    unsigned short endianNess;
-    unsigned short subcmd;
+    unsigned char  subcmd;
+    unsigned char  endianNess;
+    unsigned short used_size;
     unsigned short reserved;
     union
     {
