@@ -93,6 +93,21 @@ typedef union st_id
     };
 } st_id;
 
+typedef struct Sock_Par
+{
+    unsigned short instance;
+    unsigned short port;
+    char ip_addr[256];
+} Sock_Par;
+
+typedef struct Sock_WrPar
+{
+    unsigned short instance;
+    unsigned short len;
+    char wrdata[1280];
+} Sock_WrPar;
+
+
 typedef struct  SML_pkt
 {
     unsigned short cmd;
