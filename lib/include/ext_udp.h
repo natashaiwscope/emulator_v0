@@ -105,6 +105,7 @@
 #define WM_ADC              (WM_USER_MSG+87)
 #define WM_I2C_SCAN_RES     (WM_USER_MSG+88)
 #define WM_NRF_SWITCH       (WM_USER_MSG+89)
+#define WM_CLI              (WM_USER_MSG+90)
 
 
 typedef void (*callback_alarm)(int, int);
@@ -378,6 +379,7 @@ PREFIX void RunCFile(char *fileName);
 PREFIX void RunEmbCScript();
 PREFIX void tmail();
 PREFIX unsigned char ip2string(unsigned int ip, char *buffer, unsigned short len);
+PREFIX void wake_cli(char *clibuff);
 
 #ifdef LINUX_WAY
 PREFIX ExternSig *createWidget1();

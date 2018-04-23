@@ -29,7 +29,7 @@ enum
     STDOUT_RS485   = 2,
     STDOUT_UART2   = 3,
     STDOUT_UART3   = 4,
-    STDOUT_LAST  
+    STDOUT_LAST
 };
 
 typedef enum
@@ -115,7 +115,7 @@ typedef struct  SML_pkt
     unsigned char  endianNess;
     unsigned short used_size;
     unsigned short reserved;
-    union 
+    union
     {
         unsigned char  uc_p[SML_PKT_SIZE-8];
         char            c_p[SML_PKT_SIZE-8];
@@ -701,6 +701,11 @@ typedef struct
     unsigned int        _halRevID;
     unsigned int        _halDEVID;
     unsigned int        _halUID[3];
+
+    unsigned int        _iptype;
+    unsigned int        _ip4;
+    unsigned char       _ip6[16];;
+
 } __attribute__((__packed__)) SAAGVersion;
 
 typedef struct
