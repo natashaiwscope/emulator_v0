@@ -704,7 +704,7 @@ typedef struct
 
     unsigned int        _iptype;
     unsigned int        _ip4;
-    unsigned char       _ip6[16];;
+    char       _ip_str[16];;
 
 } __attribute__((__packed__)) SAAGVersion;
 
