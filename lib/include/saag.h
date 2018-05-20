@@ -686,6 +686,10 @@ typedef struct
     unsigned char       __date[32];
     unsigned char       __time[32];
 
+    char                _ip_str[16];;
+    unsigned int        _iptype;
+    unsigned int        _ip4;
+
     unsigned int        __crc;
     unsigned int        __len;
     unsigned int        __csum;
@@ -701,10 +705,6 @@ typedef struct
     unsigned int        _halRevID;
     unsigned int        _halDEVID;
     unsigned int        _halUID[3];
-
-    unsigned int        _iptype;
-    unsigned int        _ip4;
-    char       _ip_str[16];;
 
 } __attribute__((__packed__)) SAAGVersion;
 
