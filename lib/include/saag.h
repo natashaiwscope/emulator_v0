@@ -200,6 +200,17 @@ typedef union
 
 typedef struct
 {
+    unsigned short gen_port;
+
+    unsigned short val1;
+    unsigned short val2;
+    unsigned short val3;
+    unsigned short val4;
+} __attribute__((__packed__)) GEN_port;
+
+
+typedef struct
+{
     unsigned short i2c_DevCount;
     unsigned short DevAddress[512];
 } __attribute__((__packed__)) I2C_Scan_Result;

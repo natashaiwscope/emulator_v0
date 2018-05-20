@@ -207,6 +207,7 @@ enum
 PREFIX void enter_eth_lib();
 PREFIX void exit_eth_lib();
 PREFIX void pick_known_device(const char *pstring);
+PREFIX unsigned short add_device_quick(char *sipaddr);
 
 
 PREFIX unsigned short us_isDevReady();
@@ -336,7 +337,7 @@ PREFIX void append_csv(char *buffer, unsigned short l);
 PREFIX void append_test_csv(char *buffer, unsigned short l);
 
 PREFIX unsigned short usSelectDevIndex(short i);
-PREFIX unsigned short usSelectDevString(const char *ip_string);
+PREFIX unsigned int usSelectDevString(const char *ip_string);
 PREFIX unsigned short usSelectDev(int ipaddr);
 
 PREFIX unsigned int weigResult(unsigned int i);
