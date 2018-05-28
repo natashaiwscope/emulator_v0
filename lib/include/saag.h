@@ -202,6 +202,11 @@ typedef struct
 {
     unsigned short gen_port;
 
+    unsigned short mode1;
+    unsigned short mode2;
+    unsigned short mode3;
+    unsigned short mode4;
+
     unsigned short val1;
     unsigned short val2;
     unsigned short val3;
