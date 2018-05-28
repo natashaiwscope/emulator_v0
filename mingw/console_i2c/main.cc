@@ -74,5 +74,6 @@ int main(void)
     qDebug() << "WiFi Connected\r\n";
 
     exit_eth_lib();
+    osDelay(100);
     return 0;
 }
