@@ -70,8 +70,17 @@ int main(void)
     if(!WaitWiFiMsg(WM_CONNECTED))
     {
         qDebug() << "Wait Time Failed\r\n";
+        return -1;
     }
-    qDebug() << "WiFi Connected\r\n";
+
+    qDebug() << "------------------\r\n";
+    qDebug() << "  WiFi Connected\r\n";
+    qDebug() << "------------------\r\n";
+
+
+
+
+
 
     exit_eth_lib();
     osDelay(100);
