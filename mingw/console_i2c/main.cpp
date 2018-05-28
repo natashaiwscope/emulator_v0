@@ -1,4 +1,5 @@
 #include <QCoreApplication>
+#include <QStringList>
 #include <iostream>
 #include <stdio.h>
 #include <stddef.h>
@@ -9,7 +10,6 @@
 #include <unistd.h>
 #include <QMutex>
 #include <QThread>
-#include <QStringList>
 #include "ext_udp.h"
 
 using namespace std;
@@ -22,17 +22,24 @@ static void cb(int a, int b)
 
 #define WAIT_TIME_OUT 100
 
-static unsigned short WaitWiFiMsg(unsigned short iMsg)
+static void DELAY(unsigned short i)
 {
-    unsigned short iCntr=0;
-    unsigned short iReady = 0;
+        // 10 millisecond delay
+        #if defined(__WIN32__) || defined(_WIN32) || defined(WIN32) || defined(__WINDOWS__) || defined(__TOS_WIN__)
+        Sleep(i);
+        #else  /* presume POSIX */
+        usleep(i*1000);
+        #endif
+}
 
+static unsigned short WaitWiFiMsg(unsigned short iMsg,unsigned short waitTime)
+{
+    unsigned short iReady = 0;
     unsigned short winMsg, wPar, lPar;
     float          fVal;
     char           strMsg[1023];
 
-    iCntr=0;
-    for(;;)
+    while(waitTime)
     {
         iReady = usPullStrWinQ(winMsg, wPar, lPar, fVal, strMsg);
         if(iReady)
@@ -43,12 +50,14 @@ static unsigned short WaitWiFiMsg(unsigned short iMsg)
             }
         }
 
-        if(iCntr>WAIT_TIME_OUT)
+        if(!waitTime)
         {
             return 0;
         }
-        osDelay(10);
-        iCntr++;
+
+        DELAY(100);
+
+        waitTime--;
     }
     return 0;
 }
@@ -67,7 +76,7 @@ int main(void)
     RegisterWin(NULL);
 #endif
 
-    if(!WaitWiFiMsg(WM_CONNECTED))
+    if(!WaitWiFiMsg(WM_CONNECTED,5000))
     {
         qDebug() << "Wait Time Failed\r\n";
         return -1;
@@ -82,6 +91,7 @@ int main(void)
 
 
 
+    osDelay(100);
     exit_eth_lib();
     osDelay(100);
     return 0;

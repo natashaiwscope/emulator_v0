@@ -2,11 +2,7 @@
 TARGET = console
 CONFIG  += console
 
-SOURCES      += main.cc
-INCLUDEPATH += cli
-#INCLUDEPATH += /usr/include/pocketsphinx
-INCLUDEPATH += /usr/include/x86_64-linux-gnu/sphinxbase
-#    LIBS += -lpocketsphinx -lsphinxbase -lsphinxad
+SOURCES      += main.cpp
 
 DESTDIR      = bin
 unix {
@@ -52,17 +48,8 @@ unix {
 
 
 
-INCLUDEPATH  += .
-INCLUDEPATH  += led
-#INCLUDEPATH  += ../common
-#INCLUDEPATH  += ../../../common/endpoints
-#INCLUDEPATH  += ../../ext_common
-INCLUDEPATH  += ../../../../git/emulator_v0/lib/include
-
-FILE_PATH     = ../common
-
+INCLUDEPATH  += ../../lib/include
 LIBS         += -lm
-
 
 unix {
 QWT_LOCATION = /usr/local/qwt-6.0.2
