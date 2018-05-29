@@ -1,8 +1,0 @@
-﻿
-void process_gp(void *vptr, unsigned short len)
-#define NEW_BOARD_TYPE  REV1
-unsigned short usGenPortConfig(unsigned short pinNum,unsigned short pinConfig)
-    DIGITAL_INPUT   = 0,
-    ANALOG_INPUT    = 1,
-    DIGITAL_OUTPUT  = 2
-void process_gp(void *vptr, unsigned short len)
