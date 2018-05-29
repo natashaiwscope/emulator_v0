@@ -60,6 +60,14 @@ typedef enum
     I2C_TIMEOUT1
 } I2C_StatusTypeDef;
 
+
+enum
+{
+    DIGITAL_INPUT   = 0,
+    ANALOG_INPUT    = 1,
+    DIGITAL_OUTPUT  = 2
+};
+
 enum
 {
     __IW_Sin = 0,
